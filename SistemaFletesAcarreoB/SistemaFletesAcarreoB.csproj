@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,141 +55,159 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarAuto.cs">
+    <Compile Include="Modelo\AUTOS.cs">
+      <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CHOFER.cs">
+      <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\FACTURA.cs">
+      <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\KILOMETRO.cs">
+      <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MATERIALES.cs">
+      <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SistemaAcarreoModelo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaAcarreoModelo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SistemaAcarreoModelo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SistemaAcarreoModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\AgregarAuto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarAuto.Designer.cs">
+    <Compile Include="Vista\AgregarAuto.Designer.cs">
       <DependentUpon>AgregarAuto.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarChofer.cs">
+    <Compile Include="Vista\AgregarChofer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarChofer.Designer.cs">
+    <Compile Include="Vista\AgregarChofer.Designer.cs">
       <DependentUpon>AgregarChofer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarMaterial.cs">
+    <Compile Include="Vista\AgregarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarMaterial.Designer.cs">
+    <Compile Include="Vista\AgregarMaterial.Designer.cs">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="CambiarPrecioMaterial.cs">
+    <Compile Include="Vista\CambiarPrecioMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CambiarPrecioMaterial.Designer.cs">
+    <Compile Include="Vista\CambiarPrecioMaterial.Designer.cs">
       <DependentUpon>CambiarPrecioMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Factura.cs">
+    <Compile Include="Controlador\ControladorAuto.cs" />
+    <Compile Include="Controlador\ControladorChofer.cs" />
+    <Compile Include="Controlador\ControladorMateriales.cs" />
+    <Compile Include="Vista\Factura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Factura.Designer.cs">
+    <Compile Include="Vista\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Vista\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vista\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoAuto.cs">
+    <Compile Include="Vista\ListaDeAutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoAuto.Designer.cs">
-      <DependentUpon>InfoAuto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InfoChofer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InfoChofer.Designer.cs">
-      <DependentUpon>InfoChofer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListaDeAutos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListaDeAutos.Designer.cs">
+    <Compile Include="Vista\ListaDeAutos.Designer.cs">
       <DependentUpon>ListaDeAutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaDeChoferes.cs">
+    <Compile Include="Vista\ListaDeChoferes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaDeChoferes.Designer.cs">
+    <Compile Include="Vista\ListaDeChoferes.Designer.cs">
       <DependentUpon>ListaDeChoferes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaDeMateriales.cs">
+    <Compile Include="Vista\ListaDeMateriales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaDeMateriales.Designer.cs">
+    <Compile Include="Vista\ListaDeMateriales.Designer.cs">
       <DependentUpon>ListaDeMateriales.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaPrincipal.cs">
+    <Compile Include="Modelo\ModeloAuto.cs" />
+    <Compile Include="Modelo\ModeloChofer.cs" />
+    <Compile Include="Modelo\ModeloMateriales.cs" />
+    <Compile Include="Vista\PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaPrincipal.Designer.cs">
+    <Compile Include="Vista\PantallaPrincipal.Designer.cs">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PKilometro.cs">
+    <Compile Include="Vista\PKilometro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PKilometro.Designer.cs">
+    <Compile Include="Vista\PKilometro.Designer.cs">
       <DependentUpon>PKilometro.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VentanaDeVenta.cs">
+    <Compile Include="Vista\VentanaDeVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaDeVenta.Designer.cs">
+    <Compile Include="Vista\VentanaDeVenta.Designer.cs">
       <DependentUpon>VentanaDeVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerChoferesYAutos.cs">
+    <Compile Include="Vista\VerChoferesYAutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerChoferesYAutos.Designer.cs">
+    <Compile Include="Vista\VerChoferesYAutos.Designer.cs">
       <DependentUpon>VerChoferesYAutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerFctura.cs">
+    <Compile Include="Vista\VerFctura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerFctura.Designer.cs">
+    <Compile Include="Vista\VerFctura.Designer.cs">
       <DependentUpon>VerFctura.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AgregarAuto.resx">
+    <EmbeddedResource Include="Vista\AgregarAuto.resx">
       <DependentUpon>AgregarAuto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarChofer.resx">
+    <EmbeddedResource Include="Vista\AgregarChofer.resx">
       <DependentUpon>AgregarChofer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarMaterial.resx">
+    <EmbeddedResource Include="Vista\AgregarMaterial.resx">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CambiarPrecioMaterial.resx">
+    <EmbeddedResource Include="Vista\CambiarPrecioMaterial.resx">
       <DependentUpon>CambiarPrecioMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Factura.resx">
+    <EmbeddedResource Include="Vista\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoAuto.resx">
-      <DependentUpon>InfoAuto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InfoChofer.resx">
-      <DependentUpon>InfoChofer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeAutos.resx">
+    <EmbeddedResource Include="Vista\ListaDeAutos.resx">
       <DependentUpon>ListaDeAutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeChoferes.resx">
+    <EmbeddedResource Include="Vista\ListaDeChoferes.resx">
       <DependentUpon>ListaDeChoferes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeMateriales.resx">
+    <EmbeddedResource Include="Vista\ListaDeMateriales.resx">
       <DependentUpon>ListaDeMateriales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaPrincipal.resx">
+    <EmbeddedResource Include="Vista\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PKilometro.resx">
+    <EmbeddedResource Include="Vista\PKilometro.resx">
       <DependentUpon>PKilometro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -193,15 +220,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="VentanaDeVenta.resx">
+    <EmbeddedResource Include="Vista\VentanaDeVenta.resx">
       <DependentUpon>VentanaDeVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerChoferesYAutos.resx">
+    <EmbeddedResource Include="Vista\VerChoferesYAutos.resx">
       <DependentUpon>VerChoferesYAutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerFctura.resx">
+    <EmbeddedResource Include="Vista\VerFctura.resx">
       <DependentUpon>VerFctura.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Modelo\SistemaAcarreoModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SistemaAcarreoModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\SistemaAcarreoModelo.edmx.diagram">
+      <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -271,6 +306,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banner2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo\SistemaAcarreoModelo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SistemaAcarreoModelo.Context.cs</LastGenOutput>
+      <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
+    </Content>
+    <Content Include="Modelo\SistemaAcarreoModelo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
+      <LastGenOutput>SistemaAcarreoModelo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

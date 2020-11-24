@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SISTEMAFLETESACARREOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AUTOS">
+    <Key>
+      <PropertyRef Name="Num_Placas" />
+    </Key>
+    <Property Name="Num_Placas" Type="Int32" Nullable="false" />
+    <Property Name="Marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Kilometraje" Type="Int32" />
+    <Property Name="Cap_A" Type="Int32" />
+    <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA__Fact_pl__534D60F1" FromRole="AUTOS" ToRole="FACTURA" />
+  </EntityType>
+  <EntityType Name="CHOFER">
+    <Key>
+      <PropertyRef Name="lICENCIA_C" />
+    </Key>
+    <Property Name="lICENCIA_C" Type="Int32" Nullable="false" />
+    <Property Name="N_Chofer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoP_C" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoM_C" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Edad" Type="Int32" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="F_Nac" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA__Fact_ma__52593CB8" FromRole="CHOFER" ToRole="FACTURA" />
+  </EntityType>
+  <EntityType Name="FACTURA">
+    <Key>
+      <PropertyRef Name="Boleta_no" />
+    </Key>
+    <Property Name="Boleta_no" Type="Int32" Nullable="false" />
+    <Property Name="Maquina" Type="Int32" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Hora" Type="Time" Precision="7" />
+    <Property Name="Materiales" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Total_metros" Type="Int32" />
+    <Property Name="Total_viajes" Type="Int32" />
+    <Property Name="PP_Metro" Type="Int32" />
+    <Property Name="Subtotal" Type="Int32" />
+    <Property Name="IVA" Type="Int32" />
+    <Property Name="Total" Type="Int32" />
+    <Property Name="Fact_material" Type="Int32" />
+    <Property Name="Fact_licencia" Type="Int32" />
+    <Property Name="Fact_placas" Type="Int32" />
+    <Property Name="Fact_Kilometro" Type="Int32" />
+    <NavigationProperty Name="AUTOS" Relationship="Self.FK__FACTURA__Fact_pl__534D60F1" FromRole="FACTURA" ToRole="AUTOS" />
+    <NavigationProperty Name="CHOFER" Relationship="Self.FK__FACTURA__Fact_ma__52593CB8" FromRole="FACTURA" ToRole="CHOFER" />
+    <NavigationProperty Name="KILOMETRO" Relationship="Self.FK__FACTURA__Fact_Ki__5441852A" FromRole="FACTURA" ToRole="KILOMETRO" />
+    <NavigationProperty Name="MATERIALES1" Relationship="Self.FK__FACTURA__Fact_ma__5165187F" FromRole="FACTURA" ToRole="MATERIALES" />
+  </EntityType>
+  <EntityType Name="KILOMETRO">
+    <Key>
+      <PropertyRef Name="Id_Kilometro" />
+    </Key>
+    <Property Name="Id_Kilometro" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Int32" />
+    <Property Name="Precio_nuevo" Type="Int32" />
+    <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA__Fact_Ki__5441852A" FromRole="KILOMETRO" ToRole="FACTURA" />
+  </EntityType>
+  <EntityType Name="MATERIALES">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_M" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Precio" Type="Int32" />
+    <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA__Fact_ma__5165187F" FromRole="MATERIALES" ToRole="FACTURA" />
+  </EntityType>
+  <Association Name="FK__FACTURA__Fact_pl__534D60F1">
+    <End Role="AUTOS" Type="Self.AUTOS" Multiplicity="0..1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTOS">
+        <PropertyRef Name="Num_Placas" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="Fact_placas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURA__Fact_ma__52593CB8">
+    <End Role="CHOFER" Type="Self.CHOFER" Multiplicity="0..1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHOFER">
+        <PropertyRef Name="lICENCIA_C" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="Fact_material" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURA__Fact_Ki__5441852A">
+    <End Role="KILOMETRO" Type="Self.KILOMETRO" Multiplicity="0..1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KILOMETRO">
+        <PropertyRef Name="Id_Kilometro" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="Fact_Kilometro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURA__Fact_ma__5165187F">
+    <End Role="MATERIALES" Type="Self.MATERIALES" Multiplicity="0..1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MATERIALES">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="Fact_material" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SISTEMAFLETESACARREOSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AUTOS" EntityType="Self.AUTOS" />
+    <EntitySet Name="CHOFER" EntityType="Self.CHOFER" />
+    <EntitySet Name="FACTURA" EntityType="Self.FACTURA" />
+    <EntitySet Name="KILOMETRO" EntityType="Self.KILOMETRO" />
+    <EntitySet Name="MATERIALES" EntityType="Self.MATERIALES" />
+    <AssociationSet Name="FK__FACTURA__Fact_pl__534D60F1" Association="Self.FK__FACTURA__Fact_pl__534D60F1">
+      <End Role="AUTOS" EntitySet="AUTOS" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURA__Fact_ma__52593CB8" Association="Self.FK__FACTURA__Fact_ma__52593CB8">
+      <End Role="CHOFER" EntitySet="CHOFER" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURA__Fact_Ki__5441852A" Association="Self.FK__FACTURA__Fact_Ki__5441852A">
+      <End Role="KILOMETRO" EntitySet="KILOMETRO" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURA__Fact_ma__5165187F" Association="Self.FK__FACTURA__Fact_ma__5165187F">
+      <End Role="MATERIALES" EntitySet="MATERIALES" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

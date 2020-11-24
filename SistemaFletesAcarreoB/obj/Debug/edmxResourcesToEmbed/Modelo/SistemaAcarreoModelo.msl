@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SISTEMAFLETESACARREOSModelStoreContainer" CdmEntityContainer="SISTEMAFLETESACARREOSEntities">
+    <EntitySetMapping Name="AUTOS">
+      <EntityTypeMapping TypeName="SISTEMAFLETESACARREOSModel.AUTOS">
+        <MappingFragment StoreEntitySet="AUTOS">
+          <ScalarProperty Name="Num_Placas" ColumnName="Num_Placas" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Cap_A" ColumnName="Cap_A" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHOFER">
+      <EntityTypeMapping TypeName="SISTEMAFLETESACARREOSModel.CHOFER">
+        <MappingFragment StoreEntitySet="CHOFER">
+          <ScalarProperty Name="lICENCIA_C" ColumnName="lICENCIA_C" />
+          <ScalarProperty Name="N_Chofer" ColumnName="N_Chofer" />
+          <ScalarProperty Name="ApellidoP_C" ColumnName="ApellidoP_C" />
+          <ScalarProperty Name="ApellidoM_C" ColumnName="ApellidoM_C" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="F_Nac" ColumnName="F_Nac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURA">
+      <EntityTypeMapping TypeName="SISTEMAFLETESACARREOSModel.FACTURA">
+        <MappingFragment StoreEntitySet="FACTURA">
+          <ScalarProperty Name="Boleta_no" ColumnName="Boleta_no" />
+          <ScalarProperty Name="Maquina" ColumnName="Maquina" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Materiales" ColumnName="Materiales" />
+          <ScalarProperty Name="Total_metros" ColumnName="Total_metros" />
+          <ScalarProperty Name="Total_viajes" ColumnName="Total_viajes" />
+          <ScalarProperty Name="PP_Metro" ColumnName="PP_Metro" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Fact_material" ColumnName="Fact_material" />
+          <ScalarProperty Name="Fact_licencia" ColumnName="Fact_licencia" />
+          <ScalarProperty Name="Fact_placas" ColumnName="Fact_placas" />
+          <ScalarProperty Name="Fact_Kilometro" ColumnName="Fact_Kilometro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KILOMETRO">
+      <EntityTypeMapping TypeName="SISTEMAFLETESACARREOSModel.KILOMETRO">
+        <MappingFragment StoreEntitySet="KILOMETRO">
+          <ScalarProperty Name="Id_Kilometro" ColumnName="Id_Kilometro" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Precio_nuevo" ColumnName="Precio_nuevo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATERIALES">
+      <EntityTypeMapping TypeName="SISTEMAFLETESACARREOSModel.MATERIALES">
+        <MappingFragment StoreEntitySet="MATERIALES">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre_M" ColumnName="Nombre_M" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
