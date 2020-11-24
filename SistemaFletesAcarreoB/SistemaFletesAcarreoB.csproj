@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC9D0D3C-F26E-4002-AED9-E47D206907B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaFletesAcarreoB</RootNamespace>
+    <AssemblyName>SistemaFletesAcarreoB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarAuto.Designer.cs">
+      <DependentUpon>AgregarAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarChofer.Designer.cs">
+      <DependentUpon>AgregarChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMaterial.Designer.cs">
+      <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarPrecioMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarPrecioMaterial.Designer.cs">
+      <DependentUpon>CambiarPrecioMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAuto.Designer.cs">
+      <DependentUpon>InfoAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoChofer.Designer.cs">
+      <DependentUpon>InfoChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeAutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDeAutos.Designer.cs">
+      <DependentUpon>ListaDeAutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeChoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDeChoferes.Designer.cs">
+      <DependentUpon>ListaDeChoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDeMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDeMateriales.Designer.cs">
+      <DependentUpon>ListaDeMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal.Designer.cs">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKilometro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKilometro.Designer.cs">
+      <DependentUpon>PKilometro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentanaDeVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaDeVenta.Designer.cs">
+      <DependentUpon>VentanaDeVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerChoferesYAutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerChoferesYAutos.Designer.cs">
+      <DependentUpon>VerChoferesYAutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerFctura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerFctura.Designer.cs">
+      <DependentUpon>VerFctura.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarAuto.resx">
+      <DependentUpon>AgregarAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarChofer.resx">
+      <DependentUpon>AgregarChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMaterial.resx">
+      <DependentUpon>AgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiarPrecioMaterial.resx">
+      <DependentUpon>CambiarPrecioMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAuto.resx">
+      <DependentUpon>InfoAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoChofer.resx">
+      <DependentUpon>InfoChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeAutos.resx">
+      <DependentUpon>ListaDeAutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeChoferes.resx">
+      <DependentUpon>ListaDeChoferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDeMateriales.resx">
+      <DependentUpon>ListaDeMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKilometro.resx">
+      <DependentUpon>PKilometro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VentanaDeVenta.resx">
+      <DependentUpon>VentanaDeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerChoferesYAutos.resx">
+      <DependentUpon>VerChoferesYAutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerFctura.resx">
+      <DependentUpon>VerFctura.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P4.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P5.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P6.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P7.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p8.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\añadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\añadir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuariodefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autodefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meterialdefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

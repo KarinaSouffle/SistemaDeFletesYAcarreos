@@ -1,0 +1,79 @@
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe.config
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csprojAssemblyReference.cache
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Form1.resources
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Properties.Resources.resources
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.GenerateResource.cache
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CoreCompileInputs.cache
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Pantalla_Principal.resources
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.PKilometro.resources
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerFctura.resources
+C:\Users\Samantha Hermosa\source\repos\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerChoferesYAutos.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe.config
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csprojAssemblyReference.cache
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Form1.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeMateriales.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Pantalla_Principal.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.PKilometro.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Properties.Resources.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerChoferesYAutos.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerFctura.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.GenerateResource.cache
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CoreCompileInputs.cache
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe.config
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csprojAssemblyReference.cache
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarAuto.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarChofer.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarMaterial.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.CambiarPrecioMaterial.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Factura.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Form1.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.InfoAuto.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.InfoChofer.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeAutos.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeMateriales.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Pantalla_Principal.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.PKilometro.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Properties.Resources.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VentanaDeVenta.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerChoferesYAutos.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerFctura.resources
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.GenerateResource.cache
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CoreCompileInputs.cache
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Equipo - Windows 10\Desktop\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe.config
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.pdb
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csprojAssemblyReference.cache
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarAuto.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarChofer.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarMaterial.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.CambiarPrecioMaterial.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Factura.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Form1.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.InfoAuto.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.InfoChofer.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeAutos.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeMateriales.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Pantalla_Principal.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.PKilometro.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Properties.Resources.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VentanaDeVenta.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerChoferesYAutos.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerFctura.resources
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.GenerateResource.cache
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CoreCompileInputs.cache
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.exe
+C:\Users\Samantha Hermosa\Desktop\SistemaFletesAcarreoB (2)\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.pdb
