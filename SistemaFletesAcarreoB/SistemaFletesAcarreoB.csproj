@@ -85,6 +85,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
     </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Vista\AgregarAuto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +251,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SISTEMAFLETESACARREOSDataSet.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

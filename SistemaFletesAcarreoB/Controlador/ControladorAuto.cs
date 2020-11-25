@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaFletesAcarreoB.Controlador
 {
-    class ControladorAuto
+    public class ControladorAuto
     {
     }
 }

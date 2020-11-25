@@ -146,6 +146,7 @@
             this.btn_Añadir.TabIndex = 18;
             this.btn_Añadir.Text = "Añadir";
             this.btn_Añadir.UseVisualStyleBackColor = false;
+            this.btn_Añadir.Click += new System.EventHandler(this.btn_Añadir_Click);
             // 
             // AgregarMaterial
             // 

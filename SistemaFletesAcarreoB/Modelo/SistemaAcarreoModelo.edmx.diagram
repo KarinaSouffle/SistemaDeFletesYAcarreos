@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.CHOFER" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.FACTURA" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.KILOMETRO" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.MATERIALES" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.MATERIALES" Width="1.5" PointX="7" PointY="3.25" IsExpanded="true" />
         <AssociationConnector Association="SISTEMAFLETESACARREOSModel.FK__FACTURA__Fact_pl__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="SISTEMAFLETESACARREOSModel.FK__FACTURA__Fact_ma__52593CB8" ManuallyRouted="false" />
         <AssociationConnector Association="SISTEMAFLETESACARREOSModel.FK__FACTURA__Fact_Ki__5441852A" ManuallyRouted="false" />

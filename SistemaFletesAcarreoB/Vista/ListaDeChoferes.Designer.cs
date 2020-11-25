@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_VolverLC = new System.Windows.Forms.Button();
             this.btn_AñadirC = new System.Windows.Forms.Button();
             this.dgv_Choferes = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido_Paterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido_Materno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHOFERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,8 +61,22 @@
             this.lbl_APaterno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.cHOFERTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter();
+            this.cHOFERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lICENCIACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nChoferDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoMCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Choferes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_VolverLC
@@ -93,6 +107,9 @@
             // 
             // dgv_Choferes
             // 
+            this.dgv_Choferes.AllowUserToAddRows = false;
+            this.dgv_Choferes.AllowUserToDeleteRows = false;
+            this.dgv_Choferes.AutoGenerateColumns = false;
             this.dgv_Choferes.BackgroundColor = System.Drawing.Color.DarkRed;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -104,43 +121,48 @@
             this.dgv_Choferes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Choferes.ColumnHeadersHeight = 29;
             this.dgv_Choferes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Apellido_Paterno,
-            this.Apellido_Materno});
+            this.lICENCIACDataGridViewTextBoxColumn,
+            this.nChoferDataGridViewTextBoxColumn,
+            this.apellidoPCDataGridViewTextBoxColumn,
+            this.apellidoMCDataGridViewTextBoxColumn,
+            this.sexoDataGridViewTextBoxColumn,
+            this.edadDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.fNacDataGridViewTextBoxColumn});
+            this.dgv_Choferes.DataSource = this.cHOFERBindingSource1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Choferes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Choferes.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgv_Choferes.Location = new System.Drawing.Point(54, 72);
             this.dgv_Choferes.Name = "dgv_Choferes";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Choferes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Choferes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Choferes.Size = new System.Drawing.Size(517, 420);
             this.dgv_Choferes.TabIndex = 9;
+            this.dgv_Choferes.Enter += new System.EventHandler(this.dgv_Choferes_Enter);
             // 
-            // Column1
+            // cHOFERBindingSource
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
+            this.cHOFERBindingSource.DataMember = "CHOFER";
+            this.cHOFERBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
-            // Column2
+            // sISTEMAFLETESACARREOSDataSet
             // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            // 
-            // Apellido_Paterno
-            // 
-            this.Apellido_Paterno.HeaderText = "Apellido Paterno";
-            this.Apellido_Paterno.Name = "Apellido_Paterno";
-            // 
-            // Apellido_Materno
-            // 
-            this.Apellido_Materno.HeaderText = "Apellido Materno";
-            this.Apellido_Materno.Name = "Apellido_Materno";
+            this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
+            this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_Editar
             // 
@@ -422,6 +444,70 @@
             this.btn_Eliminar.TabIndex = 32;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // cHOFERTableAdapter
+            // 
+            this.cHOFERTableAdapter.ClearBeforeFill = true;
+            // 
+            // cHOFERBindingSource1
+            // 
+            this.cHOFERBindingSource1.DataMember = "CHOFER";
+            this.cHOFERBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            // 
+            // lICENCIACDataGridViewTextBoxColumn
+            // 
+            this.lICENCIACDataGridViewTextBoxColumn.DataPropertyName = "lICENCIA_C";
+            this.lICENCIACDataGridViewTextBoxColumn.HeaderText = "lICENCIA_C";
+            this.lICENCIACDataGridViewTextBoxColumn.Name = "lICENCIACDataGridViewTextBoxColumn";
+            // 
+            // nChoferDataGridViewTextBoxColumn
+            // 
+            this.nChoferDataGridViewTextBoxColumn.DataPropertyName = "N_Chofer";
+            this.nChoferDataGridViewTextBoxColumn.HeaderText = "N_Chofer";
+            this.nChoferDataGridViewTextBoxColumn.Name = "nChoferDataGridViewTextBoxColumn";
+            // 
+            // apellidoPCDataGridViewTextBoxColumn
+            // 
+            this.apellidoPCDataGridViewTextBoxColumn.DataPropertyName = "ApellidoP_C";
+            this.apellidoPCDataGridViewTextBoxColumn.HeaderText = "ApellidoP_C";
+            this.apellidoPCDataGridViewTextBoxColumn.Name = "apellidoPCDataGridViewTextBoxColumn";
+            // 
+            // apellidoMCDataGridViewTextBoxColumn
+            // 
+            this.apellidoMCDataGridViewTextBoxColumn.DataPropertyName = "ApellidoM_C";
+            this.apellidoMCDataGridViewTextBoxColumn.HeaderText = "ApellidoM_C";
+            this.apellidoMCDataGridViewTextBoxColumn.Name = "apellidoMCDataGridViewTextBoxColumn";
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            // 
+            // edadDataGridViewTextBoxColumn
+            // 
+            this.edadDataGridViewTextBoxColumn.DataPropertyName = "Edad";
+            this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
+            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            // 
+            // fNacDataGridViewTextBoxColumn
+            // 
+            this.fNacDataGridViewTextBoxColumn.DataPropertyName = "F_Nac";
+            this.fNacDataGridViewTextBoxColumn.HeaderText = "F_Nac";
+            this.fNacDataGridViewTextBoxColumn.Name = "fNacDataGridViewTextBoxColumn";
             // 
             // ListaDeChoferes
             // 
@@ -438,9 +524,14 @@
             this.Name = "ListaDeChoferes";
             this.Text = "ListaDeChoferes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ListaDeChoferes_Load);
+            this.MouseEnter += new System.EventHandler(this.ListaDeChoferes_MouseEnter);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Choferes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,10 +544,6 @@
         private System.Windows.Forms.DataGridView dgv_Choferes;
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Label lbl_Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Paterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Materno;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_SetLicencia;
         private System.Windows.Forms.Label lbl_SetDomicilio;
@@ -479,5 +566,18 @@
         private System.Windows.Forms.Label lbl_APaterno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Eliminar;
+        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter cHOFERTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lICENCIACDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nChoferDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource1;
     }
 }

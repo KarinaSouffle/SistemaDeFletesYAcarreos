@@ -28,37 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dtv_ListaMateriales = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.dgv_ListaMateriales = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_VolverPKPP = new System.Windows.Forms.Button();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_ListaMateriales)).BeginInit();
+            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
+            this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMateriales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_Editar
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(889, 78);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 40);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Editar.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Editar.ForeColor = System.Drawing.Color.White;
+            this.btn_Editar.Location = new System.Drawing.Point(889, 78);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(83, 40);
+            this.btn_Editar.TabIndex = 33;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dtv_ListaMateriales
+            // dgv_ListaMateriales
             // 
-            this.dtv_ListaMateriales.BackgroundColor = System.Drawing.Color.DarkRed;
+            this.dgv_ListaMateriales.AllowUserToAddRows = false;
+            this.dgv_ListaMateriales.AllowUserToDeleteRows = false;
+            this.dgv_ListaMateriales.AutoGenerateColumns = false;
+            this.dgv_ListaMateriales.BackgroundColor = System.Drawing.Color.DarkRed;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,15 +75,16 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtv_ListaMateriales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtv_ListaMateriales.ColumnHeadersHeight = 29;
-            this.dtv_ListaMateriales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dtv_ListaMateriales.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dtv_ListaMateriales.Location = new System.Drawing.Point(48, 75);
-            this.dtv_ListaMateriales.Name = "dtv_ListaMateriales";
+            this.dgv_ListaMateriales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_ListaMateriales.ColumnHeadersHeight = 29;
+            this.dgv_ListaMateriales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombreMDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgv_ListaMateriales.DataSource = this.mATERIALESBindingSource;
+            this.dgv_ListaMateriales.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dgv_ListaMateriales.Location = new System.Drawing.Point(48, 75);
+            this.dgv_ListaMateriales.Name = "dgv_ListaMateriales";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,26 +92,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtv_ListaMateriales.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_ListaMateriales.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtv_ListaMateriales.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtv_ListaMateriales.Size = new System.Drawing.Size(795, 424);
-            this.dtv_ListaMateriales.TabIndex = 32;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre Material";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Precio";
-            this.Column3.Name = "Column3";
+            this.dgv_ListaMateriales.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_ListaMateriales.Size = new System.Drawing.Size(795, 424);
+            this.dgv_ListaMateriales.TabIndex = 32;
+            this.dgv_ListaMateriales.MouseEnter += new System.EventHandler(this.dgv_ListaMateriales_MouseEnter);
             // 
             // button1
             // 
@@ -151,6 +147,39 @@
             this.btn_Eliminar.TabIndex = 35;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            // 
+            // sISTEMAFLETESACARREOSDataSet
+            // 
+            this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
+            this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mATERIALESBindingSource
+            // 
+            this.mATERIALESBindingSource.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            // 
+            // mATERIALESTableAdapter
+            // 
+            this.mATERIALESTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // nombreMDataGridViewTextBoxColumn
+            // 
+            this.nombreMDataGridViewTextBoxColumn.DataPropertyName = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.HeaderText = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.Name = "nombreMDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // ListaDeMateriales
             // 
@@ -160,14 +189,17 @@
             this.ClientSize = new System.Drawing.Size(1009, 520);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.lbl_Nombre);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dtv_ListaMateriales);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.dgv_ListaMateriales);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_VolverPKPP);
             this.Name = "ListaDeMateriales";
             this.Text = "ListaDeMateriales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dtv_ListaMateriales)).EndInit();
+            this.Load += new System.EventHandler(this.ListaDeMateriales_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMateriales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,14 +207,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dtv_ListaMateriales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.DataGridView dgv_ListaMateriales;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_VolverPKPP;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Button btn_Eliminar;
+        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
+        private System.Windows.Forms.BindingSource mATERIALESBindingSource;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }

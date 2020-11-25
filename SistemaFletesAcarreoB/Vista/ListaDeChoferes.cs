@@ -8,6 +8,9 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using SistemaFletesAcarreoB.Controlador;
+using SistemaFletesAcarreoB.Modelo;
 
 namespace SistemaFletesAcarreoB
 {
@@ -36,7 +39,68 @@ namespace SistemaFletesAcarreoB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Aun no hay Choferes registrados.");
+            var material = new MATERIALES();
+            int indice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
+            int IdParametro = Int32.Parse(dgv_Choferes.Rows[indice].Cells[0].Value.ToString());
+
+            ModeloChofer.eliminarChofer(IdParametro);
+            var nuevoChofer = new CHOFER();
+            nuevoChofer.lICENCIA_C = IdParametro;
+            nuevoChofer.N_Chofer = dgv_Choferes.Rows[indice].Cells[1].Value.ToString();
+            nuevoChofer.ApellidoP_C = dgv_Choferes.Rows[indice].Cells[2].Value.ToString();
+            nuevoChofer.ApellidoM_C = dgv_Choferes.Rows[indice].Cells[3].Value.ToString();
+            nuevoChofer.Sexo = dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
+            nuevoChofer.Edad = Convert.ToInt32(dgv_Choferes.Rows[indice].Cells[5].Value.ToString());
+            nuevoChofer.Telefono = Convert.ToInt32(dgv_Choferes.Rows[indice].Cells[6].Value.ToString());
+            nuevoChofer.Correo = dgv_Choferes.Rows[indice].Cells[7].Value.ToString();
+            nuevoChofer.F_Nac = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[8].Value.ToString());
+
+            ModeloChofer.crearChofer(nuevoChofer);
+        }
+
+        private void ListaDeChoferes_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet.CHOFER' Puede moverla o quitarla según sea necesario.
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
+
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            int resultado = Int32.Parse(dgv_Choferes.Rows[Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString())].Cells[0].Value.ToString());
+            ModeloChofer.eliminarChofer(resultado);
+            MessageBox.Show("El Chofer " + resultado + " ha sido eliminado");
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
+
+        }
+
+        private void dgv_Choferes_MouseEnter(object sender, EventArgs e)
+        {
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
+            
+
+        }
+
+        private void ListaDeChoferes_MouseEnter(object sender, EventArgs e)
+        {
+
+            int indice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
+            int IdParametro = Int32.Parse(dgv_Choferes.Rows[indice].Cells[0].Value.ToString());
+
+            lbl_SetLicencia.Text = IdParametro.ToString();
+            lbl_SetNombre.Text = dgv_Choferes.Rows[indice].Cells[1].Value.ToString();
+            lbl_SetAPaterno.Text = dgv_Choferes.Rows[indice].Cells[2].Value.ToString();
+            lbl_SetAMaterno.Text = dgv_Choferes.Rows[indice].Cells[3].Value.ToString();
+            lbl_SetSexo.Text = dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
+            lbl_SetEdad.Text = dgv_Choferes.Rows[indice].Cells[5].Value.ToString();
+            lbl_SetTelefono.Text = dgv_Choferes.Rows[indice].Cells[6].Value.ToString();
+            lbl_SetCorreo.Text = dgv_Choferes.Rows[indice].Cells[7].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[8].Value.ToString());
+        }
+
+        private void dgv_Choferes_Enter(object sender, EventArgs e)
+        {
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
 
         }
     }
