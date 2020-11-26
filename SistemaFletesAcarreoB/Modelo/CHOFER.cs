@@ -26,9 +26,10 @@ namespace SistemaFletesAcarreoB.Modelo
         public string ApellidoM_C { get; set; }
         public string Sexo { get; set; }
         public Nullable<int> Edad { get; set; }
-        public Nullable<int> Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Correo { get; set; }
         public Nullable<System.DateTime> F_Nac { get; set; }
+        public string Chofer_Direccion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA> FACTURA { get; set; }

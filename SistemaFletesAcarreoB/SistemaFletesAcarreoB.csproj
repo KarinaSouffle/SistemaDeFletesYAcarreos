@@ -90,6 +90,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SISTEMAFLETESACARREOSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Vista\AgregarAuto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +287,61 @@
     <None Include="SISTEMAFLETESACARREOSDataSet.xss">
       <DependentUpon>SISTEMAFLETESACARREOSDataSet.xsd</DependentUpon>
     </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet1.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet1.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet2.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet2.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet3.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet3.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet4.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet4.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet5.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet5.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet5.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -324,19 +404,19 @@
     <None Include="Resources\banner2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Modelo\SistemaAcarreoModelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SistemaAcarreoModelo.Context.cs</LastGenOutput>
       <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
+      <LastGenOutput>SistemaAcarreoModelo.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Modelo\SistemaAcarreoModelo.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SistemaAcarreoModelo.edmx</DependentUpon>
       <LastGenOutput>SistemaAcarreoModelo.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

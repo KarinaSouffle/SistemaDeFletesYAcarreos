@@ -32,10 +32,10 @@ namespace SistemaFletesAcarreoB
             nuevoChofer.ApellidoM_C = txt_AMaterno.Text;
             nuevoChofer.Sexo = txt_Sexo.Text;
             nuevoChofer.Edad = Convert.ToInt32(txt_Edad.Text);
-            nuevoChofer.Telefono = Convert.ToInt32(txt_Telefono.Text);
+            nuevoChofer.Telefono = txt_Telefono.Text;
             nuevoChofer.Correo = txt_Correo.Text;
-            //nuevoChofer.
             nuevoChofer.F_Nac = dt_FechaNac.Value;
+            nuevoChofer.Chofer_Direccion = txt_Domicilio.Text;
             try
             {
                 ModeloChofer.crearChofer(nuevoChofer);

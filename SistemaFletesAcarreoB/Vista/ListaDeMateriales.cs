@@ -65,7 +65,7 @@ namespace SistemaFletesAcarreoB
             this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
         }
 
-        private void dgv_ListaMateriales_MouseEnter(object sender, EventArgs e)
+        private void ListaDeMateriales_Activated(object sender, EventArgs e)
         {
             this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
         }

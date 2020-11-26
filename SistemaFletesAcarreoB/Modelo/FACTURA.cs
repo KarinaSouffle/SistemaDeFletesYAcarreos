@@ -27,7 +27,7 @@ namespace SistemaFletesAcarreoB.Modelo
         public Nullable<int> Total { get; set; }
         public Nullable<int> Fact_material { get; set; }
         public Nullable<int> Fact_licencia { get; set; }
-        public Nullable<int> Fact_placas { get; set; }
+        public string Fact_placas { get; set; }
         public Nullable<int> Fact_Kilometro { get; set; }
     
         public virtual AUTOS AUTOS { get; set; }

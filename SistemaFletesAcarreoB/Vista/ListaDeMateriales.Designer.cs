@@ -34,19 +34,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.dgv_ListaMateriales = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_VolverPKPP = new System.Windows.Forms.Button();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
-            this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMateriales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Editar
@@ -97,7 +97,34 @@
             this.dgv_ListaMateriales.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_ListaMateriales.Size = new System.Drawing.Size(795, 424);
             this.dgv_ListaMateriales.TabIndex = 32;
-            this.dgv_ListaMateriales.MouseEnter += new System.EventHandler(this.dgv_ListaMateriales_MouseEnter);
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // nombreMDataGridViewTextBoxColumn
+            // 
+            this.nombreMDataGridViewTextBoxColumn.DataPropertyName = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.HeaderText = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.Name = "nombreMDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // mATERIALESBindingSource
+            // 
+            this.mATERIALESBindingSource.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            // 
+            // sISTEMAFLETESACARREOSDataSet
+            // 
+            this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
+            this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -149,37 +176,9 @@
             this.btn_Eliminar.UseVisualStyleBackColor = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-            // sISTEMAFLETESACARREOSDataSet
-            // 
-            this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
-            this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mATERIALESBindingSource
-            // 
-            this.mATERIALESBindingSource.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
-            // 
             // mATERIALESTableAdapter
             // 
             this.mATERIALESTableAdapter.ClearBeforeFill = true;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            // 
-            // nombreMDataGridViewTextBoxColumn
-            // 
-            this.nombreMDataGridViewTextBoxColumn.DataPropertyName = "Nombre_M";
-            this.nombreMDataGridViewTextBoxColumn.HeaderText = "Nombre_M";
-            this.nombreMDataGridViewTextBoxColumn.Name = "nombreMDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // ListaDeMateriales
             // 
@@ -196,10 +195,11 @@
             this.Name = "ListaDeMateriales";
             this.Text = "ListaDeMateriales";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.ListaDeMateriales_Activated);
             this.Load += new System.EventHandler(this.ListaDeMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMateriales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

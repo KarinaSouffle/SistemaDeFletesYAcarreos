@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ab300cf69ebf488aae4f168974852d61" Name="Diagram1">
+      <Diagram DiagramId="953f72ea530345738ac5643fef2dcce1" Name="Diagram1">
         <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.AUTOS" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.CHOFER" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.CHOFER" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.FACTURA" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.KILOMETRO" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.MATERIALES" Width="1.5" PointX="7" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.KILOMETRO" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SISTEMAFLETESACARREOSModel.MATERIALES" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
         <AssociationConnector Association="SISTEMAFLETESACARREOSModel.FK__FACTURA__Fact_pl__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="SISTEMAFLETESACARREOSModel.FK__FACTURA__Fact_ma__52593CB8" ManuallyRouted="false" />
         <AssociationConnector Association="SISTEMAFLETESACARREOSModel.FK__FACTURA__Fact_Ki__5441852A" ManuallyRouted="false" />

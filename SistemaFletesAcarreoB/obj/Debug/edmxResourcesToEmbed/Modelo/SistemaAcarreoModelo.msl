@@ -23,6 +23,7 @@
           <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="Correo" ColumnName="Correo" />
           <ScalarProperty Name="F_Nac" ColumnName="F_Nac" />
+          <ScalarProperty Name="Chofer_Direccion" ColumnName="Chofer_Direccion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

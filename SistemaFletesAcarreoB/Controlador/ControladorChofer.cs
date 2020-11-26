@@ -22,11 +22,12 @@ namespace SistemaFletesAcarreoB.Controlador
                     String.IsNullOrEmpty(nuevoChofer.ApellidoM_C) ||
                     String.IsNullOrEmpty(nuevoChofer.Sexo) ||
                     nuevoChofer.Edad<0 ||
-                    nuevoChofer.Telefono<0 ||
+                    String.IsNullOrEmpty(nuevoChofer.Telefono) ||
                     String.IsNullOrEmpty(nuevoChofer.Correo) ||
-                    nuevoChofer.F_Nac == DateTime.MinValue)
+                    nuevoChofer.F_Nac == DateTime.MinValue ||
+                    String.IsNullOrEmpty(nuevoChofer.Chofer_Direccion))
                 {
-                    throw new Exception("Existe parametro vacio");
+                    throw new Exception("Algo está vació, favor de llenar todos los campos");
                 }
                 ModeloChofer.crearChofer(nuevoChofer);
             }

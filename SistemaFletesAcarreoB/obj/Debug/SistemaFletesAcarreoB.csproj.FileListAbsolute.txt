@@ -16,7 +16,6 @@ C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\b
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.exe
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\SistemaFletesAcarreoB.pdb
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csprojAssemblyReference.cache
-C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Form1.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeMateriales.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Pantalla_Principal.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.PKilometro.resources
@@ -133,3 +132,17 @@ C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\b
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\EntityFramework.xml
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CopyComplete
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\EntityFramework.dll
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\EntityFramework.xml
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarAuto.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarChofer.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarMaterial.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.CambiarPrecioMaterial.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Factura.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Login.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeAutos.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VentanaDeVenta.resources
+C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CopyComplete

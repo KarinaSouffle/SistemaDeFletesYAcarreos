@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Num_Placas" />
           </Key>
-          <Property Name="Num_Placas" Type="int" Nullable="false" />
+          <Property Name="Num_Placas" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Marca" Type="varchar" MaxLength="20" />
           <Property Name="Kilometraje" Type="int" />
           <Property Name="Cap_A" Type="int" />
@@ -24,9 +24,10 @@
           <Property Name="ApellidoM_C" Type="varchar" MaxLength="30" />
           <Property Name="Sexo" Type="char" MaxLength="1" />
           <Property Name="Edad" Type="int" />
-          <Property Name="Telefono" Type="int" />
+          <Property Name="Telefono" Type="varchar" MaxLength="30" />
           <Property Name="Correo" Type="varchar" MaxLength="30" />
           <Property Name="F_Nac" Type="date" />
+          <Property Name="Chofer_Direccion" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="FACTURA">
           <Key>
@@ -45,7 +46,7 @@
           <Property Name="Total" Type="int" />
           <Property Name="Fact_material" Type="int" />
           <Property Name="Fact_licencia" Type="int" />
-          <Property Name="Fact_placas" Type="int" />
+          <Property Name="Fact_placas" Type="varchar" MaxLength="30" />
           <Property Name="Fact_Kilometro" Type="int" />
         </EntityType>
         <EntityType Name="KILOMETRO">
@@ -144,7 +145,7 @@
           <Key>
             <PropertyRef Name="Num_Placas" />
           </Key>
-          <Property Name="Num_Placas" Type="Int32" Nullable="false" />
+          <Property Name="Num_Placas" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Kilometraje" Type="Int32" />
           <Property Name="Cap_A" Type="Int32" />
@@ -160,9 +161,10 @@
           <Property Name="ApellidoM_C" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="Edad" Type="Int32" />
-          <Property Name="Telefono" Type="Int32" />
+          <Property Name="Telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="F_Nac" Type="DateTime" Precision="0" />
+          <Property Name="Chofer_Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA__Fact_ma__52593CB8" FromRole="CHOFER" ToRole="FACTURA" />
         </EntityType>
         <EntityType Name="FACTURA">
@@ -182,7 +184,7 @@
           <Property Name="Total" Type="Int32" />
           <Property Name="Fact_material" Type="Int32" />
           <Property Name="Fact_licencia" Type="Int32" />
-          <Property Name="Fact_placas" Type="Int32" />
+          <Property Name="Fact_placas" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Fact_Kilometro" Type="Int32" />
           <NavigationProperty Name="AUTOS" Relationship="Self.FK__FACTURA__Fact_pl__534D60F1" FromRole="FACTURA" ToRole="AUTOS" />
           <NavigationProperty Name="CHOFER" Relationship="Self.FK__FACTURA__Fact_ma__52593CB8" FromRole="FACTURA" ToRole="CHOFER" />
@@ -306,6 +308,7 @@
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="F_Nac" ColumnName="F_Nac" />
+                <ScalarProperty Name="Chofer_Direccion" ColumnName="Chofer_Direccion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

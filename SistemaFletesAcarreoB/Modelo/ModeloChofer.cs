@@ -54,7 +54,8 @@ namespace SistemaFletesAcarreoB.Modelo
                                      where c.N_Chofer.Contains(criterio) ||
                                      c.ApellidoP_C.Contains(criterio) ||
                                      c.ApellidoM_C.Contains(criterio) ||
-                                     c.Correo.Contains(criterio)
+                                     c.Correo.Contains(criterio) ||
+                                     c.Chofer_Direccion.Contains(criterio)
                                      select c).ToList();
                     return resultado;
                 }
@@ -85,7 +86,7 @@ namespace SistemaFletesAcarreoB.Modelo
             }
         }
 
-        static public void modificarChofer (CHOFER choferModificar)
+        public static void modificarChofer (CHOFER choferModificar)
         {
             try
             {
