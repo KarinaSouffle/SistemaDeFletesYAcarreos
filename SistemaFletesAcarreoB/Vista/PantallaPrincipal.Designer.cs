@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ChoferesAutos = new System.Windows.Forms.Button();
             this.btn_Venta = new System.Windows.Forms.Button();
@@ -35,9 +36,19 @@
             this.btn_VerFacturas = new System.Windows.Forms.Button();
             this.btn_PrecioKilometro = new System.Windows.Forms.Button();
             this.btn_CerrarSesion = new System.Windows.Forms.Button();
-            this.lbl_Bienvenida = new System.Windows.Forms.Label();
-            this.lbl_SetBienvenida = new System.Windows.Forms.Label();
+            this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
+            this.sISTEMAFLETESACARREOSDataSet14 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14();
+            this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14TableAdapters.USUARIOSTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,7 +123,7 @@
             this.btn_CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_CerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CerrarSesion.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_CerrarSesion.Location = new System.Drawing.Point(12, 32);
+            this.btn_CerrarSesion.Location = new System.Drawing.Point(12, 12);
             this.btn_CerrarSesion.Name = "btn_CerrarSesion";
             this.btn_CerrarSesion.Size = new System.Drawing.Size(119, 41);
             this.btn_CerrarSesion.TabIndex = 7;
@@ -120,27 +131,67 @@
             this.btn_CerrarSesion.UseVisualStyleBackColor = false;
             this.btn_CerrarSesion.Click += new System.EventHandler(this.btn_CerrarSesion_Click);
             // 
-            // lbl_Bienvenida
+            // dgv_Usuarios
             // 
-            this.lbl_Bienvenida.AutoSize = true;
-            this.lbl_Bienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Bienvenida.ForeColor = System.Drawing.Color.White;
-            this.lbl_Bienvenida.Location = new System.Drawing.Point(12, 9);
-            this.lbl_Bienvenida.Name = "lbl_Bienvenida";
-            this.lbl_Bienvenida.Size = new System.Drawing.Size(91, 20);
-            this.lbl_Bienvenida.TabIndex = 8;
-            this.lbl_Bienvenida.Text = "Bienvenido,";
+            this.dgv_Usuarios.AutoGenerateColumns = false;
+            this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.contraDataGridViewTextBoxColumn,
+            this.nivelDataGridViewTextBoxColumn,
+            this.enUsoDataGridViewTextBoxColumn});
+            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource;
+            this.dgv_Usuarios.Location = new System.Drawing.Point(41, 154);
+            this.dgv_Usuarios.Name = "dgv_Usuarios";
+            this.dgv_Usuarios.Size = new System.Drawing.Size(148, 105);
+            this.dgv_Usuarios.TabIndex = 10;
+            this.dgv_Usuarios.Visible = false;
             // 
-            // lbl_SetBienvenida
+            // sISTEMAFLETESACARREOSDataSet14
             // 
-            this.lbl_SetBienvenida.AutoSize = true;
-            this.lbl_SetBienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_SetBienvenida.ForeColor = System.Drawing.Color.White;
-            this.lbl_SetBienvenida.Location = new System.Drawing.Point(109, 9);
-            this.lbl_SetBienvenida.Name = "lbl_SetBienvenida";
-            this.lbl_SetBienvenida.Size = new System.Drawing.Size(154, 20);
-            this.lbl_SetBienvenida.TabIndex = 9;
-            this.lbl_SetBienvenida.Text = "NOMBREUSUARIO";
+            this.sISTEMAFLETESACARREOSDataSet14.DataSetName = "SISTEMAFLETESACARREOSDataSet14";
+            this.sISTEMAFLETESACARREOSDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uSUARIOSBindingSource
+            // 
+            this.uSUARIOSBindingSource.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet14;
+            // 
+            // uSUARIOSTableAdapter
+            // 
+            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // contraDataGridViewTextBoxColumn
+            // 
+            this.contraDataGridViewTextBoxColumn.DataPropertyName = "Contra";
+            this.contraDataGridViewTextBoxColumn.HeaderText = "Contra";
+            this.contraDataGridViewTextBoxColumn.Name = "contraDataGridViewTextBoxColumn";
+            // 
+            // nivelDataGridViewTextBoxColumn
+            // 
+            this.nivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel";
+            this.nivelDataGridViewTextBoxColumn.HeaderText = "Nivel";
+            this.nivelDataGridViewTextBoxColumn.Name = "nivelDataGridViewTextBoxColumn";
+            // 
+            // enUsoDataGridViewTextBoxColumn
+            // 
+            this.enUsoDataGridViewTextBoxColumn.DataPropertyName = "EnUso";
+            this.enUsoDataGridViewTextBoxColumn.HeaderText = "EnUso";
+            this.enUsoDataGridViewTextBoxColumn.Name = "enUsoDataGridViewTextBoxColumn";
             // 
             // Pantalla_Principal
             // 
@@ -148,16 +199,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(1154, 519);
-            this.Controls.Add(this.lbl_SetBienvenida);
-            this.Controls.Add(this.lbl_Bienvenida);
+            this.Controls.Add(this.dgv_Usuarios);
             this.Controls.Add(this.btn_CerrarSesion);
             this.Controls.Add(this.panel1);
             this.Name = "Pantalla_Principal";
             this.Text = "Pantalla_Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Pantalla_Principal_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -170,7 +223,14 @@
         private System.Windows.Forms.Button btn_ChoferesAutos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_CerrarSesion;
-        private System.Windows.Forms.Label lbl_Bienvenida;
-        private System.Windows.Forms.Label lbl_SetBienvenida;
+        private System.Windows.Forms.DataGridView dgv_Usuarios;
+        private SISTEMAFLETESACARREOSDataSet14 sISTEMAFLETESACARREOSDataSet14;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
+        private SISTEMAFLETESACARREOSDataSet14TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enUsoDataGridViewTextBoxColumn;
     }
 }

@@ -24,6 +24,7 @@ namespace SistemaFletesAcarreoB
             InitializeComponent();
 
             panel1.Location = new Point((300), (panel1.Height) / 3);
+
         }
 
         private void btn_Materiales_Click(object sender, EventArgs e)
@@ -66,6 +67,14 @@ namespace SistemaFletesAcarreoB
             PLogin = new Login();
             PLogin.Show();
             this.Hide();
+        }
+
+        private void Pantalla_Principal_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet14.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet14.USUARIOS);
+
+
         }
     }
 }

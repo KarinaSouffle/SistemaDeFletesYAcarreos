@@ -20,6 +20,7 @@ namespace SistemaFletesAcarreoB.Modelo
             this.FACTURA = new HashSet<FACTURA>();
         }
     
+        public int Id_Autos { get; set; }
         public string Num_Placas { get; set; }
         public string Marca { get; set; }
         public Nullable<int> Kilometraje { get; set; }

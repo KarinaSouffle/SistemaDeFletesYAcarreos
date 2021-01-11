@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaFletesAcarreoB.Modelo
 {
@@ -32,7 +33,7 @@ namespace SistemaFletesAcarreoB.Modelo
                 using (var contextoChofer = new SISTEMAFLETESACARREOSEntities())
                 {
                     var resultado = (from c in contextoChofer.CHOFER
-                                     where c.lICENCIA_C == idChofer
+                                     where c.Id_Chofer == idChofer
                                      select c).FirstOrDefault();
                     return resultado;
                 }
@@ -44,7 +45,7 @@ namespace SistemaFletesAcarreoB.Modelo
             }
         }
 
-        static public List<CHOFER> buscarChoferPorCriterio(String criterio)
+        public static List<CHOFER> buscarChoferPorCriterio(String criterio)
         {
             try
             {
@@ -55,7 +56,7 @@ namespace SistemaFletesAcarreoB.Modelo
                                      c.ApellidoP_C.Contains(criterio) ||
                                      c.ApellidoM_C.Contains(criterio) ||
                                      c.Correo.Contains(criterio) ||
-                                     c.Chofer_Direccion.Contains(criterio)
+                                     c.Direccion.Contains(criterio)
                                      select c).ToList();
                     return resultado;
                 }
@@ -82,7 +83,7 @@ namespace SistemaFletesAcarreoB.Modelo
             catch (Exception ex)
             {
 
-                throw new Exception("Error inesperado " + ex.Message);
+                MessageBox.Show("Error al eliminar", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -92,7 +93,7 @@ namespace SistemaFletesAcarreoB.Modelo
             {
                 using (var contextoChofer = new SISTEMAFLETESACARREOSEntities())
                 {
-                    var choferes = buscarChoferPorId(choferModificar.lICENCIA_C);
+                    var choferes = buscarChoferPorId(choferModificar.Id_Chofer);
                     contextoChofer.CHOFER.Attach(choferes);
                     choferes = choferModificar;
                     contextoChofer.SaveChanges();

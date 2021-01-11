@@ -25,20 +25,20 @@ namespace SistemaFletesAcarreoB
 
         private void btn_VolverPKPP_Click(object sender, EventArgs e)
         {
-            var nuevoChofer = new CHOFER();
-            nuevoChofer.lICENCIA_C = Convert.ToInt32(txt_Licencia.Text);
-            nuevoChofer.N_Chofer = txt_Nombre.Text;
-            nuevoChofer.ApellidoP_C = txt_APaterno.Text;
-            nuevoChofer.ApellidoM_C = txt_AMaterno.Text;
-            nuevoChofer.Sexo = txt_Sexo.Text;
-            nuevoChofer.Edad = Convert.ToInt32(txt_Edad.Text);
-            nuevoChofer.Telefono = txt_Telefono.Text;
-            nuevoChofer.Correo = txt_Correo.Text;
-            nuevoChofer.F_Nac = dt_FechaNac.Value;
-            nuevoChofer.Chofer_Direccion = txt_Domicilio.Text;
             try
             {
-                ModeloChofer.crearChofer(nuevoChofer);
+                var nuevoChofer = new CHOFER();
+                nuevoChofer.lICENCIA_C = Convert.ToInt32(txt_Licencia.Text);
+                nuevoChofer.N_Chofer = txt_Nombre.Text;
+                nuevoChofer.ApellidoP_C = txt_APaterno.Text;
+                nuevoChofer.ApellidoM_C = txt_AMaterno.Text;
+                nuevoChofer.Sexo = txt_Sexo.Text;
+                nuevoChofer.Edad = Convert.ToInt32(txt_Edad.Text);
+                nuevoChofer.Telefono = txt_Telefono.Text;
+                nuevoChofer.Correo = txt_Correo.Text;
+                nuevoChofer.F_Nac = dt_FechaNac.Value;
+                nuevoChofer.Direccion = txt_Domicilio.Text;
+                ControladorChofer.CrearChofer(nuevoChofer);
 
                 var respuesta = MessageBox.Show(
                     "Material Guardado Correctamente, ¿Desea agregar otro?",
@@ -65,8 +65,7 @@ namespace SistemaFletesAcarreoB
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message); ;
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 

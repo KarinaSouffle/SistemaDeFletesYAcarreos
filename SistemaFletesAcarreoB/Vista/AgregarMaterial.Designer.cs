@@ -31,10 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Precio = new System.Windows.Forms.TextBox();
             this.txt_NombreMat = new System.Windows.Forms.TextBox();
-            this.txt_IDMaterial = new System.Windows.Forms.TextBox();
             this.lbl_Precio = new System.Windows.Forms.Label();
             this.lbl_NombreMat = new System.Windows.Forms.Label();
-            this.lbl_IDMaterial = new System.Windows.Forms.Label();
             this.btn_Regresar = new System.Windows.Forms.Button();
             this.pb_Mat = new System.Windows.Forms.PictureBox();
             this.btn_Añadir = new System.Windows.Forms.Button();
@@ -47,10 +45,8 @@
             this.panel1.BackColor = System.Drawing.Color.DarkRed;
             this.panel1.Controls.Add(this.txt_Precio);
             this.panel1.Controls.Add(this.txt_NombreMat);
-            this.panel1.Controls.Add(this.txt_IDMaterial);
             this.panel1.Controls.Add(this.lbl_Precio);
             this.panel1.Controls.Add(this.lbl_NombreMat);
-            this.panel1.Controls.Add(this.lbl_IDMaterial);
             this.panel1.Location = new System.Drawing.Point(242, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 165);
@@ -59,7 +55,7 @@
             // txt_Precio
             // 
             this.txt_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Precio.Location = new System.Drawing.Point(103, 109);
+            this.txt_Precio.Location = new System.Drawing.Point(109, 85);
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(173, 26);
             this.txt_Precio.TabIndex = 12;
@@ -67,25 +63,17 @@
             // txt_NombreMat
             // 
             this.txt_NombreMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_NombreMat.Location = new System.Drawing.Point(175, 68);
+            this.txt_NombreMat.Location = new System.Drawing.Point(181, 44);
             this.txt_NombreMat.Name = "txt_NombreMat";
             this.txt_NombreMat.Size = new System.Drawing.Size(173, 26);
             this.txt_NombreMat.TabIndex = 11;
-            // 
-            // txt_IDMaterial
-            // 
-            this.txt_IDMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_IDMaterial.Location = new System.Drawing.Point(133, 30);
-            this.txt_IDMaterial.Name = "txt_IDMaterial";
-            this.txt_IDMaterial.Size = new System.Drawing.Size(200, 26);
-            this.txt_IDMaterial.TabIndex = 10;
             // 
             // lbl_Precio
             // 
             this.lbl_Precio.AutoSize = true;
             this.lbl_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Precio.ForeColor = System.Drawing.Color.White;
-            this.lbl_Precio.Location = new System.Drawing.Point(40, 112);
+            this.lbl_Precio.Location = new System.Drawing.Point(46, 88);
             this.lbl_Precio.Name = "lbl_Precio";
             this.lbl_Precio.Size = new System.Drawing.Size(57, 20);
             this.lbl_Precio.TabIndex = 2;
@@ -96,22 +84,11 @@
             this.lbl_NombreMat.AutoSize = true;
             this.lbl_NombreMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NombreMat.ForeColor = System.Drawing.Color.White;
-            this.lbl_NombreMat.Location = new System.Drawing.Point(40, 71);
+            this.lbl_NombreMat.Location = new System.Drawing.Point(46, 47);
             this.lbl_NombreMat.Name = "lbl_NombreMat";
             this.lbl_NombreMat.Size = new System.Drawing.Size(129, 20);
             this.lbl_NombreMat.TabIndex = 1;
             this.lbl_NombreMat.Text = "Nombre Material:";
-            // 
-            // lbl_IDMaterial
-            // 
-            this.lbl_IDMaterial.AutoSize = true;
-            this.lbl_IDMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_IDMaterial.ForeColor = System.Drawing.Color.White;
-            this.lbl_IDMaterial.Location = new System.Drawing.Point(40, 33);
-            this.lbl_IDMaterial.Name = "lbl_IDMaterial";
-            this.lbl_IDMaterial.Size = new System.Drawing.Size(87, 20);
-            this.lbl_IDMaterial.TabIndex = 0;
-            this.lbl_IDMaterial.Text = "Id Material:";
             // 
             // btn_Regresar
             // 
@@ -172,10 +149,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_Precio;
         private System.Windows.Forms.TextBox txt_NombreMat;
-        private System.Windows.Forms.TextBox txt_IDMaterial;
         private System.Windows.Forms.Label lbl_Precio;
         private System.Windows.Forms.Label lbl_NombreMat;
-        private System.Windows.Forms.Label lbl_IDMaterial;
         private System.Windows.Forms.Button btn_Regresar;
         private System.Windows.Forms.Button btn_Añadir;
     }

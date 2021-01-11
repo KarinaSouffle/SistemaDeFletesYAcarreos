@@ -35,13 +35,12 @@ namespace SistemaFletesAcarreoB
 
         private void btn_Añadir_Click(object sender, EventArgs e)
         {
-            var nuevoMaterial = new MATERIALES();
-            nuevoMaterial.Codigo = Convert.ToInt32(txt_IDMaterial.Text);
-            nuevoMaterial.Nombre_M = txt_NombreMat.Text;
-            nuevoMaterial.Precio = Convert.ToInt32(txt_Precio.Text);
             try
             {
-                ModeloMateriales.crearMaterial(nuevoMaterial);
+                var nuevoMaterial = new MATERIALES();
+                nuevoMaterial.Nombre_M = txt_NombreMat.Text;
+                nuevoMaterial.Precio = Convert.ToInt32(txt_Precio.Text);
+                ControladorMateriales.CrearMaterial(nuevoMaterial);
 
                 var respuesta = MessageBox.Show(
                     "Material Guardado Correctamente, ¿Desea agregar otro?",
@@ -50,7 +49,6 @@ namespace SistemaFletesAcarreoB
                     MessageBoxIcon.Question);
                 if (respuesta == DialogResult.Yes)
                 {
-                    txt_IDMaterial.Text = string.Empty;
                     txt_NombreMat.Text = string.Empty;
                     txt_Precio.Text = string.Empty;
                 }
@@ -61,8 +59,7 @@ namespace SistemaFletesAcarreoB
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
     }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaFletesAcarreoB.Controlador;
+using SistemaFletesAcarreoB.Modelo;
 
 namespace SistemaFletesAcarreoB
 {
@@ -16,7 +18,7 @@ namespace SistemaFletesAcarreoB
         public VerFctura()
         {
             InitializeComponent();
-            panel1.Location = new Point(((panel1.Width / 3)), (panel1.Width) / 8);
+            panel1.Location = new Point(((panel1.Width / 5)), (panel1.Width) / 8);
         }
 
         private void btn_VolverPPVF_Click(object sender, EventArgs e)
@@ -28,7 +30,21 @@ namespace SistemaFletesAcarreoB
 
         private void btn_BuscarFac_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Aun no hay facturas registradas.");
+            string  Busqueda = dtp_FechaFactura.Value.ToString("dd/MM/yyyy");
+            string xd = dtp_FechaFactura.Value.ToString("HH:mm");
+            var buscarFactura = ControladorFactura.BuscarFacturaPorCriterio(Busqueda);
+            Console.WriteLine(Busqueda);
+            Console.WriteLine(xd);
+
+            dgv_Factura.DataSource = buscarFactura;
+
+        }
+
+        private void VerFctura_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet9.FACTURA' Puede moverla o quitarla según sea necesario.
+            this.fACTURATableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet9.FACTURA);
+
         }
     }
 }

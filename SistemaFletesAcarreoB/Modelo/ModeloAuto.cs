@@ -26,13 +26,12 @@ namespace SistemaFletesAcarreoB.Modelo
 
         public static AUTOS buscarAutosPorId(int idAutos)
         {
-            String strinidauto = "" + idAutos;
             try
             {
                 using (var contextoAuto = new SISTEMAFLETESACARREOSEntities())
                 {
                     var resultado = (from c in contextoAuto.AUTOS
-                                     where c.Num_Placas.Equals(strinidauto)
+                                     where c.Id_Autos == idAutos
                                      select c).FirstOrDefault();
                     return resultado;
                 }
@@ -83,7 +82,7 @@ namespace SistemaFletesAcarreoB.Modelo
             {
                 using (var contextoAuto = new SISTEMAFLETESACARREOSEntities())
                 {
-                    var auto = buscarAutosPorId(Convert.ToInt32(autoModificar.Num_Placas));
+                    var auto = buscarAutosPorId(autoModificar.Id_Autos);
                     contextoAuto.AUTOS.Attach(auto);
                     auto = autoModificar;
                     contextoAuto.SaveChanges();

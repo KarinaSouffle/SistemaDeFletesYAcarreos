@@ -22,7 +22,6 @@ namespace SistemaFletesAcarreoB.Modelo
     
         public int Id_Kilometro { get; set; }
         public Nullable<int> Precio { get; set; }
-        public Nullable<int> Precio_nuevo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA> FACTURA { get; set; }

@@ -30,5 +30,6 @@ namespace SistemaFletesAcarreoB.Modelo
         public virtual DbSet<FACTURA> FACTURA { get; set; }
         public virtual DbSet<KILOMETRO> KILOMETRO { get; set; }
         public virtual DbSet<MATERIALES> MATERIALES { get; set; }
+        public virtual DbSet<USUARIOS> USUARIOS { get; set; }
     }
 }

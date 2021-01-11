@@ -1,9 +1,10 @@
-﻿using SistemaFletesAcarreoB.Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaFletesAcarreoB.Modelo;
+using System.Windows.Forms;
 
 namespace SistemaFletesAcarreoB.Controlador
 {
@@ -18,13 +19,13 @@ namespace SistemaFletesAcarreoB.Controlador
                    nuevoAuto.Cap_A < 0 ||
                    String.IsNullOrEmpty(nuevoAuto.Marca))
                 {
-                    throw new Exception("Algo está vació, favor de llenar todos los campos");
+                    MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
                 }
                 ModeloAuto.crearAuto(nuevoAuto);
             }
             catch(Exception ex)
             {
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
         public static List<AUTOS> BuscarAutosPorCriterio(String criterio)
@@ -36,7 +37,7 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                throw new Exception("Error" + ex.Message);
             }
         }
         public static void EliminarAutos(int idAuto)
@@ -54,15 +55,14 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                throw new Exception("Error" + ex.Message);
             }
         }
         public static void ModificarAuto(AUTOS AutosModificar)
         {
             try
             {
-                if (Convert.ToInt32(AutosModificar.Num_Placas) < 0)
+                if (Convert.ToInt32(AutosModificar.Id_Autos) < 0)
                 {
                     throw new Exception("Se esperaba un numero mayo a 0");
                 }
@@ -70,7 +70,7 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
         public static AUTOS BuscarAutoPorId(int idAutos)
@@ -89,7 +89,7 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                throw new Exception("Error" + ex.Message);
             }
         }
     }

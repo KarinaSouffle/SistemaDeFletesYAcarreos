@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using SistemaFletesAcarreoB.Controlador;
 using SistemaFletesAcarreoB.Modelo;
+using System.Windows.Forms;
 
 namespace SistemaFletesAcarreoB.Controlador
 {
@@ -25,7 +26,7 @@ namespace SistemaFletesAcarreoB.Controlador
                     String.IsNullOrEmpty(nuevoChofer.Telefono) ||
                     String.IsNullOrEmpty(nuevoChofer.Correo) ||
                     nuevoChofer.F_Nac == DateTime.MinValue ||
-                    String.IsNullOrEmpty(nuevoChofer.Chofer_Direccion))
+                    String.IsNullOrEmpty(nuevoChofer.Direccion))
                 {
                     throw new Exception("Algo está vació, favor de llenar todos los campos");
                 }
@@ -34,7 +35,7 @@ namespace SistemaFletesAcarreoB.Controlador
             catch (Exception ex)
             {
 
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -48,7 +49,7 @@ namespace SistemaFletesAcarreoB.Controlador
             catch (Exception ex)
             {
 
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                throw new Exception("Error " + ex.Message);
             }
         }
 
@@ -56,7 +57,7 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (idChofer<0)
+                if (idChofer < 0)
                 {
                     throw new Exception("Codigo no puede ser menor 0.");
                 }
@@ -67,8 +68,7 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Error al eliminar. ", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -76,16 +76,16 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (ChoferModificar.lICENCIA_C < 0)
+                if (ChoferModificar.Id_Chofer < 0)
                 {
-                    throw new Exception("Valo de Codigo nulo");
+                    throw new Exception("Valor de Codigo nulo");
                 }
                 ModeloChofer.modificarChofer(ChoferModificar);
             }
             catch (Exception ex)
             {
 
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -95,7 +95,7 @@ namespace SistemaFletesAcarreoB.Controlador
             {
                 if (idChofer < 0)
                 {
-                    throw new Exception("No existe Codigo menos que 0.");
+                    throw new Exception("No existe Codigo menor que 0.");
                 }
                 else
                 {
@@ -106,7 +106,7 @@ namespace SistemaFletesAcarreoB.Controlador
             catch (Exception ex)
             {
 
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                throw new Exception("Error " + ex.Message);
             }
         }
     }

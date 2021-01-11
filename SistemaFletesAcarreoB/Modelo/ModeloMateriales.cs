@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaFletesAcarreoB.Modelo
 {
@@ -22,7 +23,7 @@ namespace SistemaFletesAcarreoB.Modelo
             catch (Exception ex)
             {
 
-                throw new Exception("Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -41,7 +42,8 @@ namespace SistemaFletesAcarreoB.Modelo
             catch (Exception ex)
             {
 
-                throw new Exception("Error " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                return null;
             }
         }
 
@@ -60,7 +62,8 @@ namespace SistemaFletesAcarreoB.Modelo
             catch (Exception ex)
             {
 
-                throw new Exception("Error " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                return null;
             }
         }
 
@@ -80,7 +83,7 @@ namespace SistemaFletesAcarreoB.Modelo
             catch (Exception ex)
             {
 
-                throw new Exception("Error inesperado " + ex.Message);
+                MessageBox.Show("Error al eliminar. ", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -99,7 +102,7 @@ namespace SistemaFletesAcarreoB.Modelo
             catch (Exception ex)
             {
 
-                throw new Exception("Error inesperado "+ ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
     }

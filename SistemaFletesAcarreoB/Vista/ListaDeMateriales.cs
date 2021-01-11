@@ -43,31 +43,48 @@ namespace SistemaFletesAcarreoB
             int IdParametro = Int32.Parse(dgv_ListaMateriales.Rows[indice].Cells[0].Value.ToString());
 
 
-            ModeloMateriales.eliminarMaterial(IdParametro);
+            ControladorMateriales.EliminarMaterial(IdParametro);
             var nuevoMaterial = new MATERIALES();
             nuevoMaterial.Codigo = IdParametro;
             nuevoMaterial.Nombre_M = dgv_ListaMateriales.Rows[indice].Cells[1].Value.ToString();
             nuevoMaterial.Precio = Convert.ToInt32(dgv_ListaMateriales.Rows[indice].Cells[2].Value.ToString());
-            ModeloMateriales.crearMaterial(nuevoMaterial);
-
+            ControladorMateriales.CrearMaterial(nuevoMaterial);
+            this.mATERIALESTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet7.MATERIALES);
         }
 
         private void ListaDeMateriales_Load(object sender, EventArgs e)
         {
-            this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet7.MATERIALES' Puede moverla o quitarla según sea necesario.
+            this.mATERIALESTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet7.MATERIALES);
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
             int resultado = Int32.Parse(dgv_ListaMateriales.Rows[Int32.Parse(dgv_ListaMateriales.CurrentRow.Index.ToString())].Cells[0].Value.ToString());
-            ModeloMateriales.eliminarMaterial(resultado);
+            ControladorMateriales.EliminarMaterial(resultado);
             MessageBox.Show("El Material " + resultado + " ha sido eliminado");
-            this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
+            this.mATERIALESTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet7.MATERIALES);
+            lbl_SetIdMaterial.Text = "";
+            lbl_SetNombre.Text = "";
+            lbl_SetPrecio.Text = "";
         }
 
         private void ListaDeMateriales_Activated(object sender, EventArgs e)
         {
-            this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
+            this.mATERIALESTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet7.MATERIALES);
+        }
+
+        private void dgv_ListaMateriales_MouseEnter(object sender, EventArgs e)
+        {
+            int xd = Int32.Parse(dgv_ListaMateriales.Rows.Count.ToString());
+            if (xd != 0)
+            {
+                int indice = Int32.Parse(dgv_ListaMateriales.CurrentRow.Index.ToString());
+                int IdParametro = Int32.Parse(dgv_ListaMateriales.Rows[indice].Cells[0].Value.ToString());
+                lbl_SetIdMaterial.Text = IdParametro.ToString();
+                lbl_SetNombre.Text = dgv_ListaMateriales.Rows[indice].Cells[1].Value.ToString();
+                lbl_SetPrecio.Text = dgv_ListaMateriales.Rows[indice].Cells[2].Value.ToString();
+            }
         }
     }
 }

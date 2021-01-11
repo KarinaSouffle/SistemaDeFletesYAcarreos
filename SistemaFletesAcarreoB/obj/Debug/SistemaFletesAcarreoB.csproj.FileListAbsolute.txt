@@ -109,7 +109,6 @@ C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\o
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarChofer.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarMaterial.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.CambiarPrecioMaterial.resources
-C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Factura.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Login.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeAutos.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
@@ -146,3 +145,4 @@ C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\o
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VentanaDeVenta.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CopyComplete
+C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Vista.RegistroUsuario.resources

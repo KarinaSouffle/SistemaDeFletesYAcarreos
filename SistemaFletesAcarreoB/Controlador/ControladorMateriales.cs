@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using SistemaFletesAcarreoB.Controlador;
 using SistemaFletesAcarreoB.Modelo;
+using System.Windows.Forms;
 
 namespace SistemaFletesAcarreoB.Controlador
 {
@@ -17,8 +18,7 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (nuevoMaterial.Codigo<0 || 
-                    String.IsNullOrEmpty(nuevoMaterial.Nombre_M) ||
+                if (String.IsNullOrEmpty(nuevoMaterial.Nombre_M) ||
                     nuevoMaterial.Precio<0)
                 {
                     throw new Exception("Existe parametro vacio");
@@ -27,8 +27,7 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -41,8 +40,8 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado "+ ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                return null;
             }
         }
 
@@ -61,8 +60,7 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Error al eliminar", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -79,7 +77,7 @@ namespace SistemaFletesAcarreoB.Controlador
             catch (Exception ex)
             {
 
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 
@@ -99,8 +97,8 @@ namespace SistemaFletesAcarreoB.Controlador
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                return null;
             }
         }
     }

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaFletesAcarreoB.Controlador;
+using SistemaFletesAcarreoB.Modelo;
 
 namespace SistemaFletesAcarreoB
 {
@@ -21,15 +23,14 @@ namespace SistemaFletesAcarreoB
 
         private void btn_VolverPKPP_Click(object sender, EventArgs e)
         {
-            var nuevoAuto = new AUTOS();
-            nuevoAuto.Num_Placas = txt_NumPlaca.Text;
-            nuevoAuto.Marca = txt_Marca.Text;
-            nuevoAuto.Kilometraje = Convert.ToInt32(txt_Kilometraje.Text);
-            nuevoAuto.Cap_A = Convert.ToInt32(txt_Capacidad.Text);
-
             try
             {
-                ModeloAuto.crearAuto(nuevoAuto);
+                var nuevoAuto = new AUTOS();
+                nuevoAuto.Num_Placas = txt_NumPlaca.Text;
+                nuevoAuto.Marca = txt_Marca.Text;
+                nuevoAuto.Kilometraje = Convert.ToInt32(txt_Kilometraje.Text);
+                nuevoAuto.Cap_A = Convert.ToInt32(txt_Capacidad.Text);
+                ControladorAuto.CrearAuto(nuevoAuto);
 
                 var respuesta = MessageBox.Show(
                     "Auto guardado correctamente, ¿Desea agregar otro?",
@@ -50,8 +51,7 @@ namespace SistemaFletesAcarreoB
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
             }
         }
 

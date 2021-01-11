@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaFletesAcarreoB.Vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaFletesAcarreoB.Controlador;
+using SistemaFletesAcarreoB.Modelo;
 
 namespace SistemaFletesAcarreoB
 {
     public partial class Login : Form
     {
         Pantalla_Principal principal;
+        RegistroUsuario Registro;
         public Login()
         {
             InitializeComponent();
@@ -25,17 +29,50 @@ namespace SistemaFletesAcarreoB
 
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
-            
-               if((txt_Usuario.Text == "Admi") && (txt_Contraeña.Text == "1234"))
+            int xd = (Convert.ToInt32(this.dgv_Usuarios.Rows.Count.ToString()));
+            Console.WriteLine(xd);
+            int control = 0;
+            for (int i = 0; i < xd-1; i++)
+            {
+                if (dgv_Usuarios.Rows[i].Cells[1].Value.ToString() == txt_Usuario.Text)
                 {
-                    principal = new Pantalla_Principal();
-                    principal.Show();
-                    this.Hide();
+                    if ((dgv_Usuarios.Rows[i].Cells[2].Value.ToString() == txt_Contraeña.Text))
+                    {
+                        control = 1;
+                        principal = new Pantalla_Principal();
+                        principal.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña Incorrecta", "Error", MessageBoxButtons.OK);
+                        control = 1;
+                    }
                 }
-               else 
-                {
-                    MessageBox.Show("Sus datos no son correctos...");
-                }
+            }
+            if (control == 0)
+            {
+                MessageBox.Show("Usuario no encontrado. ", "Error", MessageBoxButtons.OK);
+            }
+            control = 0;
+        }
+
+        private void btn_registro_Click(object sender, EventArgs e)
+        {
+            Registro = new RegistroUsuario();
+            Registro.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet14.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter1.Fill(this.sISTEMAFLETESACARREOSDataSet14.USUARIOS);
+
+        }
+
+        private void Login_Activated(object sender, EventArgs e)
+        {
+            this.uSUARIOSTableAdapter1.Fill(this.sISTEMAFLETESACARREOSDataSet14.USUARIOS);
         }
     }
 }

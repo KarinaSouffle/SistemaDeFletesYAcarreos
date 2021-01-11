@@ -28,20 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_SetPrecio = new System.Windows.Forms.Label();
             this.btn_GuardarNPK = new System.Windows.Forms.Button();
             this.btn_VolverPKPP = new System.Windows.Forms.Button();
             this.txt_NuevoPrecio = new System.Windows.Forms.TextBox();
             this.lbl_Nprecio = new System.Windows.Forms.Label();
             this.lbl_PrecioK = new System.Windows.Forms.Label();
+            this.dgv_PrecioKilometro = new System.Windows.Forms.DataGridView();
+            this.sISTEMAFLETESACARREOSDataSet7 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7();
+            this.kILOMETROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kILOMETROTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7TableAdapters.KILOMETROTableAdapter();
+            this.idKilometroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PrecioKilometro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbl_SetPrecio);
             this.panel1.Controls.Add(this.btn_GuardarNPK);
             this.panel1.Controls.Add(this.btn_VolverPKPP);
             this.panel1.Controls.Add(this.txt_NuevoPrecio);
@@ -51,16 +61,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(713, 458);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
-            // label1
+            // lbl_SetPrecio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(422, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 28);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "-------";
+            this.lbl_SetPrecio.AutoSize = true;
+            this.lbl_SetPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SetPrecio.Location = new System.Drawing.Point(422, 96);
+            this.lbl_SetPrecio.Name = "lbl_SetPrecio";
+            this.lbl_SetPrecio.Size = new System.Drawing.Size(75, 28);
+            this.lbl_SetPrecio.TabIndex = 5;
+            this.lbl_SetPrecio.Text = "-------";
             // 
             // btn_GuardarNPK
             // 
@@ -115,7 +126,48 @@
             this.lbl_PrecioK.Size = new System.Drawing.Size(196, 28);
             this.lbl_PrecioK.TabIndex = 0;
             this.lbl_PrecioK.Text = "Precio Kilometro:";
-            this.lbl_PrecioK.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // dgv_PrecioKilometro
+            // 
+            this.dgv_PrecioKilometro.AutoGenerateColumns = false;
+            this.dgv_PrecioKilometro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_PrecioKilometro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idKilometroDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgv_PrecioKilometro.DataSource = this.kILOMETROBindingSource;
+            this.dgv_PrecioKilometro.Location = new System.Drawing.Point(122, 105);
+            this.dgv_PrecioKilometro.Name = "dgv_PrecioKilometro";
+            this.dgv_PrecioKilometro.Size = new System.Drawing.Size(240, 150);
+            this.dgv_PrecioKilometro.TabIndex = 6;
+            this.dgv_PrecioKilometro.Visible = false;
+            // 
+            // sISTEMAFLETESACARREOSDataSet7
+            // 
+            this.sISTEMAFLETESACARREOSDataSet7.DataSetName = "SISTEMAFLETESACARREOSDataSet7";
+            this.sISTEMAFLETESACARREOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kILOMETROBindingSource
+            // 
+            this.kILOMETROBindingSource.DataMember = "KILOMETRO";
+            this.kILOMETROBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet7;
+            // 
+            // kILOMETROTableAdapter
+            // 
+            this.kILOMETROTableAdapter.ClearBeforeFill = true;
+            // 
+            // idKilometroDataGridViewTextBoxColumn
+            // 
+            this.idKilometroDataGridViewTextBoxColumn.DataPropertyName = "Id_Kilometro";
+            this.idKilometroDataGridViewTextBoxColumn.HeaderText = "Id_Kilometro";
+            this.idKilometroDataGridViewTextBoxColumn.Name = "idKilometroDataGridViewTextBoxColumn";
+            this.idKilometroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // PKilometro
             // 
@@ -124,11 +176,16 @@
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(947, 530);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgv_PrecioKilometro);
             this.Name = "PKilometro";
             this.Text = "PKilometro";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.PKilometro_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PrecioKilometro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,6 +198,12 @@
         private System.Windows.Forms.Button btn_VolverPKPP;
         private System.Windows.Forms.TextBox txt_NuevoPrecio;
         private System.Windows.Forms.Label lbl_Nprecio;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_SetPrecio;
+        private System.Windows.Forms.DataGridView dgv_PrecioKilometro;
+        private SISTEMAFLETESACARREOSDataSet7 sISTEMAFLETESACARREOSDataSet7;
+        private System.Windows.Forms.BindingSource kILOMETROBindingSource;
+        private SISTEMAFLETESACARREOSDataSet7TableAdapters.KILOMETROTableAdapter kILOMETROTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idKilometroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }
