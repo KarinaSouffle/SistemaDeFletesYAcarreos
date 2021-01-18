@@ -14,25 +14,17 @@ namespace SistemaFletesAcarreoB.Modelo
     
     public partial class CHOFER
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CHOFER()
-        {
-            this.FACTURA = new HashSet<FACTURA>();
-        }
-    
         public int Id_Chofer { get; set; }
-        public Nullable<int> lICENCIA_C { get; set; }
+        public string lICENCIA_C { get; set; }
         public string N_Chofer { get; set; }
         public string ApellidoP_C { get; set; }
         public string ApellidoM_C { get; set; }
         public string Sexo { get; set; }
-        public Nullable<int> Edad { get; set; }
+        public string Edad { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
-        public Nullable<System.DateTime> F_Nac { get; set; }
+        public System.DateTime F_Nac { get; set; }
         public string Direccion { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FACTURA> FACTURA { get; set; }
+        public string Disponible { get; set; }
     }
 }

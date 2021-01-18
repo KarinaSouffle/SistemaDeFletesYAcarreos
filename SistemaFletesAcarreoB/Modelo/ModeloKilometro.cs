@@ -42,24 +42,6 @@ namespace SistemaFletesAcarreoB.Modelo
             }
         }
 
-        //static public List<KILOMETRO> UltimoRegistro(int idkm)
-        //{
-        //    try
-        //    {
-        //        using (var contextoKilometro = new SISTEMAFLETESACARREOSEntities())
-        //        {
-        //            var resultado = (from c in contextoKilometro.KILOMETRO
-        //                             where c.Id_Kilometro == sis
-        //                             select c).ToList();
-        //            return resultado;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception("Error " + ex.Message);
-        //    }
-        //}
-
         public static void eliminarKilometo(int idKilometro)
         {
             try

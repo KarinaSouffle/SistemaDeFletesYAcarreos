@@ -14,17 +14,8 @@ namespace SistemaFletesAcarreoB.Modelo
     
     public partial class MATERIALES
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MATERIALES()
-        {
-            this.FACTURA = new HashSet<FACTURA>();
-        }
-    
         public int Codigo { get; set; }
         public string Nombre_M { get; set; }
-        public Nullable<int> Precio { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FACTURA> FACTURA { get; set; }
+        public string Precio { get; set; }
     }
 }

@@ -52,11 +52,7 @@ namespace SistemaFletesAcarreoB.Modelo
                 using (var contextoChofer = new SISTEMAFLETESACARREOSEntities())
                 {
                     var resultado = (from c in contextoChofer.CHOFER
-                                     where c.N_Chofer.Contains(criterio) ||
-                                     c.ApellidoP_C.Contains(criterio) ||
-                                     c.ApellidoM_C.Contains(criterio) ||
-                                     c.Correo.Contains(criterio) ||
-                                     c.Direccion.Contains(criterio)
+                                     where c.lICENCIA_C.Contains(criterio) 
                                      select c).ToList();
                     return resultado;
                 }
@@ -105,5 +101,7 @@ namespace SistemaFletesAcarreoB.Modelo
                 throw new Exception("Error inesperado " + ex.Message);
             }
         }
+
+
     }
 }

@@ -33,7 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_Factura = new System.Windows.Forms.DataGridView();
-            this.maquinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boletanoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numFacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,24 +47,47 @@
             this.factlicenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factplacasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factKilometroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet9 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet9();
-            this.btn_VolverPPVF = new System.Windows.Forms.Button();
+            this.fACTURABindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet19 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet19();
             this.btn_BuscarFac = new System.Windows.Forms.Button();
             this.dtp_FechaFactura = new System.Windows.Forms.DateTimePicker();
             this.lbl_fechafactura = new System.Windows.Forms.Label();
+            this.fACTURABindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet18 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18();
+            this.fACTURABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
+            this.fACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet9 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet9();
             this.fACTURATableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet9TableAdapters.FACTURATableAdapter();
+            this.fACTURATableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.FACTURATableAdapter();
+            this.sISTEMAFLETESACARREOSDataSet17 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet17();
+            this.fACTURABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.fACTURATableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet17TableAdapters.FACTURATableAdapter();
+            this.fACTURATableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.FACTURATableAdapter();
+            this.fACTURATableAdapter4 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet19TableAdapters.FACTURATableAdapter();
+            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
+            this.fACTURABindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.fACTURATableAdapter5 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.FACTURATableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Factura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkRed;
             this.panel1.Controls.Add(this.dgv_Factura);
-            this.panel1.Controls.Add(this.btn_VolverPPVF);
             this.panel1.Controls.Add(this.btn_BuscarFac);
             this.panel1.Controls.Add(this.dtp_FechaFactura);
             this.panel1.Controls.Add(this.lbl_fechafactura);
@@ -86,7 +110,8 @@
             this.dgv_Factura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Factura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maquinaDataGridViewTextBoxColumn,
+            this.boletanoDataGridViewTextBoxColumn,
+            this.numFacturaDataGridViewTextBoxColumn,
             this.fechaDataGridViewTextBoxColumn,
             this.horaDataGridViewTextBoxColumn,
             this.materialesDataGridViewTextBoxColumn,
@@ -99,7 +124,7 @@
             this.factlicenciaDataGridViewTextBoxColumn,
             this.factplacasDataGridViewTextBoxColumn,
             this.factKilometroDataGridViewTextBoxColumn});
-            this.dgv_Factura.DataSource = this.fACTURABindingSource;
+            this.dgv_Factura.DataSource = this.fACTURABindingSource5;
             this.dgv_Factura.Location = new System.Drawing.Point(18, 89);
             this.dgv_Factura.Name = "dgv_Factura";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -112,12 +137,20 @@
             this.dgv_Factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Factura.Size = new System.Drawing.Size(930, 341);
             this.dgv_Factura.TabIndex = 9;
+            this.dgv_Factura.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Factura_CellMouseClick);
             // 
-            // maquinaDataGridViewTextBoxColumn
+            // boletanoDataGridViewTextBoxColumn
             // 
-            this.maquinaDataGridViewTextBoxColumn.DataPropertyName = "Maquina";
-            this.maquinaDataGridViewTextBoxColumn.HeaderText = "Id Factura";
-            this.maquinaDataGridViewTextBoxColumn.Name = "maquinaDataGridViewTextBoxColumn";
+            this.boletanoDataGridViewTextBoxColumn.DataPropertyName = "Boleta_no";
+            this.boletanoDataGridViewTextBoxColumn.HeaderText = "Boleta_no";
+            this.boletanoDataGridViewTextBoxColumn.Name = "boletanoDataGridViewTextBoxColumn";
+            this.boletanoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numFacturaDataGridViewTextBoxColumn
+            // 
+            this.numFacturaDataGridViewTextBoxColumn.DataPropertyName = "Num_Factura";
+            this.numFacturaDataGridViewTextBoxColumn.HeaderText = "Num_Factura";
+            this.numFacturaDataGridViewTextBoxColumn.Name = "numFacturaDataGridViewTextBoxColumn";
             // 
             // fechaDataGridViewTextBoxColumn
             // 
@@ -191,28 +224,15 @@
             this.factKilometroDataGridViewTextBoxColumn.HeaderText = "Fact_Kilometro";
             this.factKilometroDataGridViewTextBoxColumn.Name = "factKilometroDataGridViewTextBoxColumn";
             // 
-            // fACTURABindingSource
+            // fACTURABindingSource4
             // 
-            this.fACTURABindingSource.DataMember = "FACTURA";
-            this.fACTURABindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet9;
+            this.fACTURABindingSource4.DataMember = "FACTURA";
+            this.fACTURABindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet19;
             // 
-            // sISTEMAFLETESACARREOSDataSet9
+            // sISTEMAFLETESACARREOSDataSet19
             // 
-            this.sISTEMAFLETESACARREOSDataSet9.DataSetName = "SISTEMAFLETESACARREOSDataSet9";
-            this.sISTEMAFLETESACARREOSDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btn_VolverPPVF
-            // 
-            this.btn_VolverPPVF.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_VolverPPVF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_VolverPPVF.ForeColor = System.Drawing.Color.White;
-            this.btn_VolverPPVF.Location = new System.Drawing.Point(24, 451);
-            this.btn_VolverPPVF.Name = "btn_VolverPPVF";
-            this.btn_VolverPPVF.Size = new System.Drawing.Size(75, 31);
-            this.btn_VolverPPVF.TabIndex = 3;
-            this.btn_VolverPPVF.Text = "Volver";
-            this.btn_VolverPPVF.UseVisualStyleBackColor = false;
-            this.btn_VolverPPVF.Click += new System.EventHandler(this.btn_VolverPPVF_Click);
+            this.sISTEMAFLETESACARREOSDataSet19.DataSetName = "SISTEMAFLETESACARREOSDataSet19";
+            this.sISTEMAFLETESACARREOSDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_BuscarFac
             // 
@@ -246,9 +266,79 @@
             this.lbl_fechafactura.TabIndex = 0;
             this.lbl_fechafactura.Text = "Introduzca fecha de factura:";
             // 
+            // fACTURABindingSource3
+            // 
+            this.fACTURABindingSource3.DataMember = "FACTURA";
+            this.fACTURABindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
+            // 
+            // sISTEMAFLETESACARREOSDataSet18
+            // 
+            this.sISTEMAFLETESACARREOSDataSet18.DataSetName = "SISTEMAFLETESACARREOSDataSet18";
+            this.sISTEMAFLETESACARREOSDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fACTURABindingSource1
+            // 
+            this.fACTURABindingSource1.DataMember = "FACTURA";
+            this.fACTURABindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            // 
+            // sISTEMAFLETESACARREOSDataSet16
+            // 
+            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
+            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fACTURABindingSource
+            // 
+            this.fACTURABindingSource.DataMember = "FACTURA";
+            this.fACTURABindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet9;
+            // 
+            // sISTEMAFLETESACARREOSDataSet9
+            // 
+            this.sISTEMAFLETESACARREOSDataSet9.DataSetName = "SISTEMAFLETESACARREOSDataSet9";
+            this.sISTEMAFLETESACARREOSDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // fACTURATableAdapter
             // 
             this.fACTURATableAdapter.ClearBeforeFill = true;
+            // 
+            // fACTURATableAdapter1
+            // 
+            this.fACTURATableAdapter1.ClearBeforeFill = true;
+            // 
+            // sISTEMAFLETESACARREOSDataSet17
+            // 
+            this.sISTEMAFLETESACARREOSDataSet17.DataSetName = "SISTEMAFLETESACARREOSDataSet17";
+            this.sISTEMAFLETESACARREOSDataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fACTURABindingSource2
+            // 
+            this.fACTURABindingSource2.DataMember = "FACTURA";
+            this.fACTURABindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet17;
+            // 
+            // fACTURATableAdapter2
+            // 
+            this.fACTURATableAdapter2.ClearBeforeFill = true;
+            // 
+            // fACTURATableAdapter3
+            // 
+            this.fACTURATableAdapter3.ClearBeforeFill = true;
+            // 
+            // fACTURATableAdapter4
+            // 
+            this.fACTURATableAdapter4.ClearBeforeFill = true;
+            // 
+            // sISTEMAFLETESACARREOSDataSet20
+            // 
+            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
+            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fACTURABindingSource5
+            // 
+            this.fACTURABindingSource5.DataMember = "FACTURA";
+            this.fACTURABindingSource5.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // fACTURATableAdapter5
+            // 
+            this.fACTURATableAdapter5.ClearBeforeFill = true;
             // 
             // VerFctura
             // 
@@ -257,6 +347,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1049, 583);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VerFctura";
             this.Text = "VerFctura";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -264,8 +355,18 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Factura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,7 +374,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_VolverPPVF;
         private System.Windows.Forms.Button btn_BuscarFac;
         private System.Windows.Forms.DateTimePicker dtp_FechaFactura;
         private System.Windows.Forms.Label lbl_fechafactura;
@@ -281,7 +381,14 @@
         private SISTEMAFLETESACARREOSDataSet9 sISTEMAFLETESACARREOSDataSet9;
         private System.Windows.Forms.BindingSource fACTURABindingSource;
         private SISTEMAFLETESACARREOSDataSet9TableAdapters.FACTURATableAdapter fACTURATableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maquinaDataGridViewTextBoxColumn;
+        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
+        private System.Windows.Forms.BindingSource fACTURABindingSource1;
+        private SISTEMAFLETESACARREOSDataSet16TableAdapters.FACTURATableAdapter fACTURATableAdapter1;
+        private SISTEMAFLETESACARREOSDataSet17 sISTEMAFLETESACARREOSDataSet17;
+        private System.Windows.Forms.BindingSource fACTURABindingSource2;
+        private SISTEMAFLETESACARREOSDataSet17TableAdapters.FACTURATableAdapter fACTURATableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn boletanoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numFacturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn materialesDataGridViewTextBoxColumn;
@@ -294,5 +401,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn factlicenciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn factplacasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn factKilometroDataGridViewTextBoxColumn;
+        private SISTEMAFLETESACARREOSDataSet18 sISTEMAFLETESACARREOSDataSet18;
+        private System.Windows.Forms.BindingSource fACTURABindingSource3;
+        private SISTEMAFLETESACARREOSDataSet18TableAdapters.FACTURATableAdapter fACTURATableAdapter3;
+        private SISTEMAFLETESACARREOSDataSet19 sISTEMAFLETESACARREOSDataSet19;
+        private System.Windows.Forms.BindingSource fACTURABindingSource4;
+        private SISTEMAFLETESACARREOSDataSet19TableAdapters.FACTURATableAdapter fACTURATableAdapter4;
+        private SISTEMAFLETESACARREOSDataSet20 sISTEMAFLETESACARREOSDataSet20;
+        private System.Windows.Forms.BindingSource fACTURABindingSource5;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.FACTURATableAdapter fACTURATableAdapter5;
     }
 }

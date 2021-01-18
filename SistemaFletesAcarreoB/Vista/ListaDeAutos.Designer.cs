@@ -32,9 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_AñadirPKPP = new System.Windows.Forms.Button();
             this.dgv_ListadoAutos = new System.Windows.Forms.DataGridView();
+            this.aUTOSBindingSource12 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet18 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18();
+            this.aUTOSBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTOSBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
+            this.aUTOSBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet15 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15();
+            this.aUTOSBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet14 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14();
             this.aUTOSBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.sISTEMAFLETESACARREOSDataSet9 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet9();
             this.aUTOSBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
@@ -44,7 +52,7 @@
             this.aUTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sISTEMAFLETESACARREOSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Editar = new System.Windows.Forms.Button();
             this.lbl_NumPlaca = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_SetIdAuto = new System.Windows.Forms.TextBox();
@@ -65,15 +73,35 @@
             this.aUTOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.aUTOSTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7TableAdapters.AUTOSTableAdapter();
             this.aUTOSTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet9TableAdapters.AUTOSTableAdapter();
-            this.sISTEMAFLETESACARREOSDataSet14 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14();
-            this.aUTOSBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.aUTOSTableAdapter4 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14TableAdapters.AUTOSTableAdapter();
+            this.aUTOSTableAdapter5 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.AUTOSTableAdapter();
+            this.aUTOSTableAdapter6 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.AUTOSTableAdapter();
+            this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.USUARIOSTableAdapter();
+            this.aUTOSTableAdapter7 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.AUTOSTableAdapter();
+            this.aUTOSBindingSource11 = new System.Windows.Forms.BindingSource(this.components);
             this.idAutosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numPlacasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kilometrajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.disponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListadoAutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource5)).BeginInit();
@@ -87,34 +115,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource11)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(846, 460);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Volver";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_AñadirPKPP
             // 
             this.btn_AñadirPKPP.BackColor = System.Drawing.Color.DarkRed;
             this.btn_AñadirPKPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_AñadirPKPP.ForeColor = System.Drawing.Color.White;
-            this.btn_AñadirPKPP.Location = new System.Drawing.Point(684, 460);
+            this.btn_AñadirPKPP.Location = new System.Drawing.Point(684, 325);
             this.btn_AñadirPKPP.Name = "btn_AñadirPKPP";
             this.btn_AñadirPKPP.Size = new System.Drawing.Size(75, 35);
             this.btn_AñadirPKPP.TabIndex = 7;
             this.btn_AñadirPKPP.Text = "Añadir";
             this.btn_AñadirPKPP.UseVisualStyleBackColor = false;
+            this.btn_AñadirPKPP.Visible = false;
             this.btn_AñadirPKPP.Click += new System.EventHandler(this.btn_VolverPKPP_Click);
             // 
             // dgv_ListadoAutos
@@ -136,8 +153,9 @@
             this.numPlacasDataGridViewTextBoxColumn,
             this.marcaDataGridViewTextBoxColumn,
             this.kilometrajeDataGridViewTextBoxColumn,
-            this.capADataGridViewTextBoxColumn});
-            this.dgv_ListadoAutos.DataSource = this.aUTOSBindingSource7;
+            this.capADataGridViewTextBoxColumn,
+            this.disponibleDataGridViewTextBoxColumn});
+            this.dgv_ListadoAutos.DataSource = this.aUTOSBindingSource12;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,7 +164,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_ListadoAutos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_ListadoAutos.Location = new System.Drawing.Point(40, 72);
+            this.dgv_ListadoAutos.Location = new System.Drawing.Point(40, 58);
             this.dgv_ListadoAutos.Name = "dgv_ListadoAutos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -156,9 +174,56 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_ListadoAutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_ListadoAutos.Size = new System.Drawing.Size(544, 498);
+            this.dgv_ListadoAutos.Size = new System.Drawing.Size(544, 473);
             this.dgv_ListadoAutos.TabIndex = 27;
+            this.dgv_ListadoAutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ListadoAutos_CellClick);
+            this.dgv_ListadoAutos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ListadoAutos_CellMouseClick);
             this.dgv_ListadoAutos.MouseEnter += new System.EventHandler(this.dgv_ListadoAutos_MouseEnter);
+            // 
+            // aUTOSBindingSource12
+            // 
+            this.aUTOSBindingSource12.DataMember = "AUTOS";
+            this.aUTOSBindingSource12.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
+            // 
+            // sISTEMAFLETESACARREOSDataSet18
+            // 
+            this.sISTEMAFLETESACARREOSDataSet18.DataSetName = "SISTEMAFLETESACARREOSDataSet18";
+            this.sISTEMAFLETESACARREOSDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aUTOSBindingSource10
+            // 
+            this.aUTOSBindingSource10.DataMember = "AUTOS";
+            this.aUTOSBindingSource10.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
+            // 
+            // aUTOSBindingSource9
+            // 
+            this.aUTOSBindingSource9.DataMember = "AUTOS";
+            this.aUTOSBindingSource9.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            // 
+            // sISTEMAFLETESACARREOSDataSet16
+            // 
+            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
+            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aUTOSBindingSource8
+            // 
+            this.aUTOSBindingSource8.DataMember = "AUTOS";
+            this.aUTOSBindingSource8.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
+            // 
+            // sISTEMAFLETESACARREOSDataSet15
+            // 
+            this.sISTEMAFLETESACARREOSDataSet15.DataSetName = "SISTEMAFLETESACARREOSDataSet15";
+            this.sISTEMAFLETESACARREOSDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aUTOSBindingSource7
+            // 
+            this.aUTOSBindingSource7.DataMember = "AUTOS";
+            this.aUTOSBindingSource7.DataSource = this.sISTEMAFLETESACARREOSDataSet14;
+            // 
+            // sISTEMAFLETESACARREOSDataSet14
+            // 
+            this.sISTEMAFLETESACARREOSDataSet14.DataSetName = "SISTEMAFLETESACARREOSDataSet14";
+            this.sISTEMAFLETESACARREOSDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aUTOSBindingSource6
             // 
@@ -205,25 +270,26 @@
             this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
             this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button2
+            // btn_Editar
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(603, 460);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 35);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Editar.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Editar.ForeColor = System.Drawing.Color.White;
+            this.btn_Editar.Location = new System.Drawing.Point(603, 325);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(75, 35);
+            this.btn_Editar.TabIndex = 28;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Visible = false;
+            this.btn_Editar.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbl_NumPlaca
             // 
             this.lbl_NumPlaca.AutoSize = true;
             this.lbl_NumPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NumPlaca.ForeColor = System.Drawing.Color.Black;
-            this.lbl_NumPlaca.Location = new System.Drawing.Point(89, 35);
+            this.lbl_NumPlaca.Location = new System.Drawing.Point(89, 21);
             this.lbl_NumPlaca.Name = "lbl_NumPlaca";
             this.lbl_NumPlaca.Size = new System.Drawing.Size(129, 20);
             this.lbl_NumPlaca.TabIndex = 29;
@@ -242,7 +308,7 @@
             this.panel1.Controls.Add(this.lbl_Kilometraje);
             this.panel1.Controls.Add(this.lbl_Marca);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(603, 72);
+            this.panel1.Location = new System.Drawing.Point(603, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(445, 223);
             this.panel1.TabIndex = 30;
@@ -362,12 +428,13 @@
             this.btn_Eliminar.BackColor = System.Drawing.Color.DarkRed;
             this.btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_Eliminar.Location = new System.Drawing.Point(765, 460);
+            this.btn_Eliminar.Location = new System.Drawing.Point(765, 325);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(75, 35);
             this.btn_Eliminar.TabIndex = 31;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Visible = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // aUTOSBindingSource
@@ -401,19 +468,83 @@
             // 
             this.aUTOSTableAdapter3.ClearBeforeFill = true;
             // 
-            // sISTEMAFLETESACARREOSDataSet14
-            // 
-            this.sISTEMAFLETESACARREOSDataSet14.DataSetName = "SISTEMAFLETESACARREOSDataSet14";
-            this.sISTEMAFLETESACARREOSDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // aUTOSBindingSource7
-            // 
-            this.aUTOSBindingSource7.DataMember = "AUTOS";
-            this.aUTOSBindingSource7.DataSource = this.sISTEMAFLETESACARREOSDataSet14;
-            // 
             // aUTOSTableAdapter4
             // 
             this.aUTOSTableAdapter4.ClearBeforeFill = true;
+            // 
+            // aUTOSTableAdapter5
+            // 
+            this.aUTOSTableAdapter5.ClearBeforeFill = true;
+            // 
+            // aUTOSTableAdapter6
+            // 
+            this.aUTOSTableAdapter6.ClearBeforeFill = true;
+            // 
+            // dgv_Usuarios
+            // 
+            this.dgv_Usuarios.AutoGenerateColumns = false;
+            this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.contraDataGridViewTextBoxColumn,
+            this.nivelDataGridViewTextBoxColumn,
+            this.enUsoDataGridViewTextBoxColumn});
+            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource;
+            this.dgv_Usuarios.Location = new System.Drawing.Point(684, 395);
+            this.dgv_Usuarios.Name = "dgv_Usuarios";
+            this.dgv_Usuarios.Size = new System.Drawing.Size(240, 150);
+            this.dgv_Usuarios.TabIndex = 32;
+            this.dgv_Usuarios.Visible = false;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // contraDataGridViewTextBoxColumn
+            // 
+            this.contraDataGridViewTextBoxColumn.DataPropertyName = "Contra";
+            this.contraDataGridViewTextBoxColumn.HeaderText = "Contra";
+            this.contraDataGridViewTextBoxColumn.Name = "contraDataGridViewTextBoxColumn";
+            // 
+            // nivelDataGridViewTextBoxColumn
+            // 
+            this.nivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel";
+            this.nivelDataGridViewTextBoxColumn.HeaderText = "Nivel";
+            this.nivelDataGridViewTextBoxColumn.Name = "nivelDataGridViewTextBoxColumn";
+            // 
+            // enUsoDataGridViewTextBoxColumn
+            // 
+            this.enUsoDataGridViewTextBoxColumn.DataPropertyName = "EnUso";
+            this.enUsoDataGridViewTextBoxColumn.HeaderText = "EnUso";
+            this.enUsoDataGridViewTextBoxColumn.Name = "enUsoDataGridViewTextBoxColumn";
+            // 
+            // uSUARIOSBindingSource
+            // 
+            this.uSUARIOSBindingSource.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
+            // 
+            // uSUARIOSTableAdapter
+            // 
+            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // aUTOSTableAdapter7
+            // 
+            this.aUTOSTableAdapter7.ClearBeforeFill = true;
+            // 
+            // aUTOSBindingSource11
+            // 
+            this.aUTOSBindingSource11.DataMember = "AUTOS";
+            this.aUTOSBindingSource11.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
             // 
             // idAutosDataGridViewTextBoxColumn
             // 
@@ -426,44 +557,66 @@
             // 
             this.numPlacasDataGridViewTextBoxColumn.DataPropertyName = "Num_Placas";
             this.numPlacasDataGridViewTextBoxColumn.HeaderText = "Num_Placas";
+            this.numPlacasDataGridViewTextBoxColumn.MaxInputLength = 6;
             this.numPlacasDataGridViewTextBoxColumn.Name = "numPlacasDataGridViewTextBoxColumn";
             // 
             // marcaDataGridViewTextBoxColumn
             // 
             this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
             this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.MaxInputLength = 20;
             this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
             // 
             // kilometrajeDataGridViewTextBoxColumn
             // 
             this.kilometrajeDataGridViewTextBoxColumn.DataPropertyName = "Kilometraje";
             this.kilometrajeDataGridViewTextBoxColumn.HeaderText = "Kilometraje";
+            this.kilometrajeDataGridViewTextBoxColumn.MaxInputLength = 6;
             this.kilometrajeDataGridViewTextBoxColumn.Name = "kilometrajeDataGridViewTextBoxColumn";
             // 
             // capADataGridViewTextBoxColumn
             // 
             this.capADataGridViewTextBoxColumn.DataPropertyName = "Cap_A";
             this.capADataGridViewTextBoxColumn.HeaderText = "Cap_A";
+            this.capADataGridViewTextBoxColumn.MaxInputLength = 6;
             this.capADataGridViewTextBoxColumn.Name = "capADataGridViewTextBoxColumn";
+            // 
+            // disponibleDataGridViewTextBoxColumn
+            // 
+            this.disponibleDataGridViewTextBoxColumn.DataPropertyName = "Disponible";
+            this.disponibleDataGridViewTextBoxColumn.HeaderText = "Disponible";
+            this.disponibleDataGridViewTextBoxColumn.MaxInputLength = 1;
+            this.disponibleDataGridViewTextBoxColumn.Name = "disponibleDataGridViewTextBoxColumn";
             // 
             // ListaDeAutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1127, 603);
+            this.ClientSize = new System.Drawing.Size(1101, 557);
+            this.Controls.Add(this.dgv_Usuarios);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_NumPlaca);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.dgv_ListadoAutos);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_AñadirPKPP);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaDeAutos";
             this.Text = "ListaDeAutos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.ListaDeAutos_Activated);
             this.Load += new System.EventHandler(this.ListaDeAutos_Load);
+            this.Enter += new System.EventHandler(this.ListaDeAutos_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListadoAutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource5)).EndInit();
@@ -478,19 +631,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_AñadirPKPP;
         private System.Windows.Forms.DataGridView dgv_ListadoAutos;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.Label lbl_NumPlaca;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Capacidad;
@@ -523,10 +675,30 @@
         private SISTEMAFLETESACARREOSDataSet14 sISTEMAFLETESACARREOSDataSet14;
         private System.Windows.Forms.BindingSource aUTOSBindingSource7;
         private SISTEMAFLETESACARREOSDataSet14TableAdapters.AUTOSTableAdapter aUTOSTableAdapter4;
+        private SISTEMAFLETESACARREOSDataSet15 sISTEMAFLETESACARREOSDataSet15;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource8;
+        private SISTEMAFLETESACARREOSDataSet15TableAdapters.AUTOSTableAdapter aUTOSTableAdapter5;
+        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource9;
+        private SISTEMAFLETESACARREOSDataSet16TableAdapters.AUTOSTableAdapter aUTOSTableAdapter6;
+        private System.Windows.Forms.DataGridView dgv_Usuarios;
+        private SISTEMAFLETESACARREOSDataSet18 sISTEMAFLETESACARREOSDataSet18;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
+        private SISTEMAFLETESACARREOSDataSet18TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enUsoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource10;
+        private SISTEMAFLETESACARREOSDataSet18TableAdapters.AUTOSTableAdapter aUTOSTableAdapter7;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource12;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource11;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAutosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numPlacasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kilometrajeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn capADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn disponibleDataGridViewTextBoxColumn;
     }
 }

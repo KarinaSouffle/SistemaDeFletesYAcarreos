@@ -18,16 +18,40 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (String.IsNullOrEmpty(nuevoMaterial.Nombre_M) ||
-                    nuevoMaterial.Precio<0)
+                int control = 0;
+                if (nuevoMaterial.Nombre_M == string.Empty ||
+                    nuevoMaterial.Precio == null)
                 {
-                    throw new Exception("Existe parametro vacio");
+                    MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
                 }
-                ModeloMateriales.crearMaterial(nuevoMaterial);
+                else
+                {
+                    try
+                    {
+                        float precio = float.Parse(nuevoMaterial.Precio.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        if (nuevoMaterial.Precio == null || nuevoMaterial.Precio == "")
+                        {
+                            MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hay datos con el formato incorrecto.", "Error", MessageBoxButtons.OK);
+                        } 
+                        control = 1;
+                    }
+                    if (control != 1)
+                    {
+                        nuevoMaterial.Precio = (Math.Round(float.Parse(nuevoMaterial.Precio.ToString()), 2)).ToString();
+                        ModeloMateriales.crearMaterial(nuevoMaterial);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Hubo un error al almacenar los datos", "Error", MessageBoxButtons.OK);
             }
         }
 

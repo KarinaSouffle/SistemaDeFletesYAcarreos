@@ -9,6 +9,7 @@
           <ScalarProperty Name="Marca" ColumnName="Marca" />
           <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
           <ScalarProperty Name="Cap_A" ColumnName="Cap_A" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -26,6 +27,7 @@
           <ScalarProperty Name="Correo" ColumnName="Correo" />
           <ScalarProperty Name="F_Nac" ColumnName="F_Nac" />
           <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -33,12 +35,13 @@
       <EntityTypeMapping TypeName="SISTEMAFLETESACARREOSModel.FACTURA">
         <MappingFragment StoreEntitySet="FACTURA">
           <ScalarProperty Name="Boleta_no" ColumnName="Boleta_no" />
-          <ScalarProperty Name="Maquina" ColumnName="Maquina" />
+          <ScalarProperty Name="Num_Factura" ColumnName="Num_Factura" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="Hora" ColumnName="Hora" />
           <ScalarProperty Name="Materiales" ColumnName="Materiales" />
           <ScalarProperty Name="Total_metros" ColumnName="Total_metros" />
           <ScalarProperty Name="Total_viajes" ColumnName="Total_viajes" />
+          <ScalarProperty Name="Total_Kilometros" ColumnName="Total_Kilometros" />
           <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
           <ScalarProperty Name="IVA" ColumnName="IVA" />
           <ScalarProperty Name="Total" ColumnName="Total" />

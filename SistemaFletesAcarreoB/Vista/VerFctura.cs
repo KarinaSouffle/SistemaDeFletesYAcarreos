@@ -18,7 +18,7 @@ namespace SistemaFletesAcarreoB
         public VerFctura()
         {
             InitializeComponent();
-            panel1.Location = new Point(((panel1.Width / 5)), (panel1.Width) / 8);
+            
         }
 
         private void btn_VolverPPVF_Click(object sender, EventArgs e)
@@ -42,9 +42,18 @@ namespace SistemaFletesAcarreoB
 
         private void VerFctura_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet9.FACTURA' Puede moverla o quitarla según sea necesario.
-            this.fACTURATableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet9.FACTURA);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet20.FACTURA' Puede moverla o quitarla según sea necesario.
+            this.fACTURATableAdapter5.Fill(this.sISTEMAFLETESACARREOSDataSet20.FACTURA);
 
+        }
+
+        private void dgv_Factura_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int FilaIndice = Int32.Parse(dgv_Factura.CurrentRow.Index.ToString());
+            if (dgv_Factura.Rows[FilaIndice].Cells[0].Selected == true)
+            {
+                dgv_Factura.Rows[FilaIndice].Cells[0].ReadOnly = true;
+            }
         }
     }
 }

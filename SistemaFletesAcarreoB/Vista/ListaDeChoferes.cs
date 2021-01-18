@@ -11,12 +11,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using SistemaFletesAcarreoB.Controlador;
 using SistemaFletesAcarreoB.Modelo;
+using SistemaFletesAcarreoB.GOF;
 
 namespace SistemaFletesAcarreoB
 {
     public partial class ListaDeChoferes : Form
     {
-        VerChoferesYAutos VCYA;
         AgregarChofer PAC;
 
         public ListaDeChoferes()
@@ -32,40 +32,123 @@ namespace SistemaFletesAcarreoB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            VCYA = new VerChoferesYAutos();
-            VCYA.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var material = new MATERIALES();
+            int xd = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
+            int control = 0;
+            string seleccionada = "";
+            Validar validarChofer = new Validar();
             int indice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
             int IdParametro = Int32.Parse(dgv_Choferes.Rows[indice].Cells[0].Value.ToString());
+            for (int i = 0; i <= xd - 1; i++)
+            {
+                string compara = dgv_Choferes.Rows[i].Cells[1].Value.ToString();
+                if (compara == dgv_Choferes.CurrentRow.Cells[1].Value.ToString())
+                {
+                    control = control + 1;
+                    if (control >= 2)
+                    {
+                        seleccionada = compara;
+                    }
+                }
+            }
+            if (seleccionada == string.Empty)
+            {
+                string apellidos = dgv_Choferes.Rows[indice].Cells[3].Value.ToString() + dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
+                if (validarChofer.ValidarLicencia(dgv_Choferes.Rows[indice].Cells[1].Value.ToString()) == true && 
+                    validarChofer.ValidarNombre(dgv_Choferes.Rows[indice].Cells[2].Value.ToString()) == true
+                        && validarChofer.ValidarNombre(apellidos) == true && validarChofer.ValidarNumeroTel(dgv_Choferes.Rows[indice].Cells[7].Value.ToString()) == true
+                        && validarChofer.ValidarCorreo(dgv_Choferes.Rows[indice].Cells[8].Value.ToString()) == true)
+                {
+                    try
+                    {
 
-            Console.WriteLine("indice " + indice);
-            Console.WriteLine("idparametro " + IdParametro);
-            //ControladorChofer.EliminarChofer(IdParametro);
-            //var nuevoChofer = new CHOFER();
-            //nuevoChofer.lICENCIA_C = Convert.ToInt32(dgv_Choferes.Rows[indice].Cells[1].Value.ToString());
-            //nuevoChofer.N_Chofer = dgv_Choferes.Rows[indice].Cells[2].Value.ToString();
-            //nuevoChofer.ApellidoP_C = dgv_Choferes.Rows[indice].Cells[3].Value.ToString();
-            //nuevoChofer.ApellidoM_C = dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
-            //nuevoChofer.Sexo = dgv_Choferes.Rows[indice].Cells[5].Value.ToString();
-            //nuevoChofer.Edad = Convert.ToInt32(dgv_Choferes.Rows[indice].Cells[6].Value.ToString());
-            //nuevoChofer.Telefono = dgv_Choferes.Rows[indice].Cells[7].Value.ToString();
-            //nuevoChofer.Correo = dgv_Choferes.Rows[indice].Cells[8].Value.ToString();
-            //nuevoChofer.F_Nac = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[9].Value.ToString());
-            //nuevoChofer.Direccion = dgv_Choferes.Rows[indice].Cells[10].Value.ToString();
+                        var nuevoChofer = new CHOFER();
+                        nuevoChofer.lICENCIA_C = dgv_Choferes.Rows[indice].Cells[1].Value.ToString();
+                        nuevoChofer.N_Chofer = dgv_Choferes.Rows[indice].Cells[2].Value.ToString();
+                        nuevoChofer.ApellidoP_C = dgv_Choferes.Rows[indice].Cells[3].Value.ToString();
+                        nuevoChofer.ApellidoM_C = dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
+                        nuevoChofer.Sexo = dgv_Choferes.Rows[indice].Cells[5].Value.ToString();
+                        nuevoChofer.Edad = dgv_Choferes.Rows[indice].Cells[6].Value.ToString();
+                        nuevoChofer.Telefono = dgv_Choferes.Rows[indice].Cells[7].Value.ToString();
+                        nuevoChofer.Correo = dgv_Choferes.Rows[indice].Cells[8].Value.ToString();
+                        nuevoChofer.F_Nac = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[9].Value.ToString());
+                        nuevoChofer.Direccion = dgv_Choferes.Rows[indice].Cells[10].Value.ToString();
+                        nuevoChofer.Disponible = dgv_Choferes.Rows[indice].Cells[11].Value.ToString();
+                        ControladorChofer.CrearChofer(nuevoChofer);
 
-            //ControladorChofer.CrearChofer(nuevoChofer);
-            this.cHOFERTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet7.CHOFER);
+                        int cantidaddatos = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
+                        this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
+                        int cantidadnuevosautos = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
+                        if (cantidadnuevosautos == (cantidaddatos + 1))
+                        {
+                            ModeloChofer.eliminarChofer(IdParametro);
+                            MessageBox.Show("Chofer Actualizado", "Error", MessageBoxButtons.OK);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                    }
+                }
+                    
+            }
+            else
+            {
+                MessageBox.Show("Ya existe un chofer registrado con el mismo numero de licencia.", "Error", MessageBoxButtons.OK);
+            }
+            
         }
 
         private void ListaDeChoferes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet7.CHOFER' Puede moverla o quitarla según sea necesario.
-            this.cHOFERTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet7.CHOFER);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.CHOFER' Puede moverla o quitarla según sea necesario.
+            this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet18.USUARIOS);
+            
+
+            int xd = (Convert.ToInt32(this.dgv_Usuarios.Rows.Count.ToString()));
+            int us = 0;
+            if (xd == 1)
+            {
+                for (int i = 0; i < xd - 1; i++)
+                {
+                    int usuarioset = Int32.Parse(dgv_Usuarios.Rows[i].Cells[4].Value.ToString());
+                    us = usuarioset;
+                    if (us == 1)
+                    {
+                        int usuarioadmin = Int32.Parse(dgv_Usuarios.Rows[i].Cells[3].Value.ToString());
+                        if (usuarioadmin == 1)
+                        {
+                            btn_Editar.Visible = true;
+                            btn_AñadirC.Visible= true;
+                            btn_Eliminar.Visible = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < xd - 1; i++)
+                {
+                    int usuarioset = Int32.Parse(dgv_Usuarios.Rows[i].Cells[4].Value.ToString());
+                    us = usuarioset;
+                    if (us == 1)
+                    {
+                        int usuarioadmin = Int32.Parse(dgv_Usuarios.Rows[i].Cells[3].Value.ToString());
+                        if (usuarioadmin == 1)
+                        {
+                            btn_Editar.Visible = true;
+                            btn_AñadirC.Visible = true;
+                            btn_Eliminar.Visible = true;
+                        }
+                    }
+                }
+            }
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
@@ -73,7 +156,7 @@ namespace SistemaFletesAcarreoB
             int resultado = Int32.Parse(dgv_Choferes.Rows[Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString())].Cells[0].Value.ToString());
             ModeloChofer.eliminarChofer(resultado);
             MessageBox.Show("El Chofer " + resultado + " ha sido eliminado");
-            this.cHOFERTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet7.CHOFER);
+            this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
             lbl_SetIdChofer.Text = "";
             lbl_SetLicencia.Text = "";
             lbl_SetNombre.Text = "";
@@ -89,7 +172,7 @@ namespace SistemaFletesAcarreoB
 
         private void ListaDeChoferes_Activated(object sender, EventArgs e)
         {
-            this.cHOFERTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet7.CHOFER);
+            this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
         }
 
         private void dgv_Choferes_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -98,6 +181,79 @@ namespace SistemaFletesAcarreoB
         }
 
         private void dgv_Choferes_MouseEnter(object sender, EventArgs e)
+        {
+            int xd = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
+            if (xd != 0)
+            {
+                int indice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
+                int IdParametro = Int32.Parse(dgv_Choferes.Rows[indice].Cells[0].Value.ToString());
+
+                lbl_SetIdChofer.Text = IdParametro.ToString();
+                lbl_SetLicencia.Text = dgv_Choferes.Rows[indice].Cells[1].Value.ToString();
+                lbl_SetNombre.Text = dgv_Choferes.Rows[indice].Cells[2].Value.ToString();
+                lbl_SetAPaterno.Text = dgv_Choferes.Rows[indice].Cells[3].Value.ToString();
+                lbl_SetAMaterno.Text = dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
+                lbl_SetSexo.Text = dgv_Choferes.Rows[indice].Cells[5].Value.ToString();
+                lbl_SetEdad.Text = dgv_Choferes.Rows[indice].Cells[6].Value.ToString();
+                lbl_SetTelefono.Text = dgv_Choferes.Rows[indice].Cells[7].Value.ToString();
+                lbl_SetCorreo.Text = dgv_Choferes.Rows[indice].Cells[8].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[9].Value.ToString());
+                lbl_SetDomicilio.Text = dgv_Choferes.Rows[indice].Cells[10].Value.ToString();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Context c = new Context(new Disponible());
+            c.Request();
+
+            int indice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
+            int IdParametro = Int32.Parse(dgv_Choferes.Rows[indice].Cells[0].Value.ToString());
+
+            string xd = dgv_Choferes.Rows[indice].Cells[11].Value.ToString();
+            if (xd == "1")
+            {
+                MessageBox.Show("El Chofer " + IdParametro + " esta disponible.");
+            }
+            else
+            {
+                MessageBox.Show("El Chofer " + IdParametro + " no esta disponible.");
+            }
+            
+        }
+
+        private void dgv_Choferes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int FilaIndice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
+            if (dgv_Choferes.Rows[FilaIndice].Cells[0].Selected == true)
+            {
+                dgv_Choferes.Rows[FilaIndice].Cells[0].ReadOnly = true;
+            }
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            int xd = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
+            if (xd != 0)
+            {
+                int indice = Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString());
+                int IdParametro = Int32.Parse(dgv_Choferes.Rows[indice].Cells[0].Value.ToString());
+
+                lbl_SetIdChofer.Text = IdParametro.ToString();
+                lbl_SetLicencia.Text = dgv_Choferes.Rows[indice].Cells[1].Value.ToString();
+                lbl_SetNombre.Text = dgv_Choferes.Rows[indice].Cells[2].Value.ToString();
+                lbl_SetAPaterno.Text = dgv_Choferes.Rows[indice].Cells[3].Value.ToString();
+                lbl_SetAMaterno.Text = dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
+                lbl_SetSexo.Text = dgv_Choferes.Rows[indice].Cells[5].Value.ToString();
+                lbl_SetEdad.Text = dgv_Choferes.Rows[indice].Cells[6].Value.ToString();
+                lbl_SetTelefono.Text = dgv_Choferes.Rows[indice].Cells[7].Value.ToString();
+                lbl_SetCorreo.Text = dgv_Choferes.Rows[indice].Cells[8].Value.ToString();
+                dateTimePicker1.Value = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[9].Value.ToString());
+                lbl_SetDomicilio.Text = dgv_Choferes.Rows[indice].Cells[10].Value.ToString();
+            }
+        }
+
+        private void dgv_Choferes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int xd = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
             if (xd != 0)

@@ -10,22 +10,44 @@ namespace SistemaFletesAcarreoB.Controlador
 {
     public class ControladorAuto
     {
+        //Command Es utilizado en esta situacion con la estructura del modelo la cual gestiona la informacion de las requests.
         public static void CrearAuto(AUTOS nuevoAuto)
         {
             try
             {
-                if (String.IsNullOrEmpty(nuevoAuto.Num_Placas) ||
-                   nuevoAuto.Kilometraje < 0 ||
-                   nuevoAuto.Cap_A < 0 ||
-                   String.IsNullOrEmpty(nuevoAuto.Marca))
+                int control = 0;
+                string placas = nuevoAuto.Num_Placas.ToString();
+                if (nuevoAuto.Num_Placas == string.Empty ||
+                   nuevoAuto.Kilometraje == string.Empty ||
+                   nuevoAuto.Cap_A == string.Empty ||
+                   nuevoAuto.Marca == string.Empty ||
+                   nuevoAuto.Disponible == string.Empty)
                 {
-                    MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                    MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
                 }
-                ModeloAuto.crearAuto(nuevoAuto);
+                else
+                {
+                    try
+                    {
+                        float kilometraje = float.Parse(nuevoAuto.Kilometraje.ToString());
+                        float capacidad = float.Parse(nuevoAuto.Cap_A.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Hay datos con el formato incorrecto.", "Error", MessageBoxButtons.OK);
+                        control = 1;
+                    }
+                    if (control != 1)
+                    {
+                        nuevoAuto.Kilometraje = (Math.Round(float.Parse(nuevoAuto.Kilometraje), 2)).ToString(); ;
+                        nuevoAuto.Cap_A = (Math.Round(float.Parse(nuevoAuto.Kilometraje), 2)).ToString(); ;
+                        ModeloAuto.crearAuto(nuevoAuto);
+                    }
+                }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Hubo un error al almacenar los datos", "Error", MessageBoxButtons.OK);
             }
         }
         public static List<AUTOS> BuscarAutosPorCriterio(String criterio)

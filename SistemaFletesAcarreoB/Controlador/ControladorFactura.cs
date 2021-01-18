@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SistemaFletesAcarreoB.Modelo;
+using System.Windows.Forms;
+using System.Globalization;
 
 namespace SistemaFletesAcarreoB.Controlador
 {
@@ -11,32 +13,55 @@ namespace SistemaFletesAcarreoB.Controlador
     {
         public static void CrearFactura(FACTURA nuevaFactura)
         {
+            string numfac = nuevaFactura.Num_Factura.ToString();
+            string subtotal = nuevaFactura.Subtotal.ToString();
+            string iva = nuevaFactura.IVA.ToString();
+            string total = nuevaFactura.Total.ToString();
+            string facmaterial = nuevaFactura.Fact_material.ToString();
+            string totalviajes = nuevaFactura.Total_viajes.ToString();
+            string totalkilo = nuevaFactura.Total_Kilometros.ToString();
             try
             {
-                if (nuevaFactura.Boleta_no < 0 ||
-                    nuevaFactura.Maquina < 0 ||
-                    String.IsNullOrEmpty(nuevaFactura.Fecha)||
-                    String.IsNullOrEmpty(nuevaFactura.Hora) ||
-                    string.IsNullOrEmpty(nuevaFactura.Materiales) ||
-                    nuevaFactura.Total_metros < 0 ||
-                    nuevaFactura.Total_viajes < 0 ||
-                    nuevaFactura.Subtotal < 0 ||
-                    nuevaFactura.IVA < 0 ||
-                    nuevaFactura.Total < 0 ||
-                    nuevaFactura.Fact_material < 0 ||
-                    nuevaFactura.Fact_licencia < 0 ||
-                    nuevaFactura.Fact_placas < 0 ||
-                    nuevaFactura.Fact_Kilometro < 0 )
-
+                int control = 0;
+                if (numfac == string.Empty ||
+                    nuevaFactura.Fecha == string.Empty ||
+                    nuevaFactura.Hora == string.Empty ||
+                    nuevaFactura.Materiales == string.Empty ||
+                    nuevaFactura.Total_metros == string.Empty ||
+                    totalviajes == string.Empty ||
+                    totalkilo == string.Empty ||
+                    subtotal == string.Empty ||
+                    iva == string.Empty ||
+                    total == string.Empty ||
+                    facmaterial == string.Empty ||
+                    nuevaFactura.Fact_licencia == string.Empty ||
+                    nuevaFactura.Fact_placas == string.Empty ||
+                    nuevaFactura.Fact_Kilometro == string.Empty)
                 {
-                    throw new Exception("Algo está vacio, favor de llenar todos los campos");
+                    MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
                 }
-                ModeloFactura.crearFactura(nuevaFactura);
+                else
+                {
+                    try
+                    {
+                        float.Parse((nuevaFactura.Total_metros.ToString()), CultureInfo.InvariantCulture.NumberFormat);
+                        float.Parse((nuevaFactura.Total_viajes.ToString()), CultureInfo.InvariantCulture.NumberFormat);
+                        float.Parse((nuevaFactura.Total_Kilometros.ToString()), CultureInfo.InvariantCulture.NumberFormat);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Hay datos con el formato incorrecto.", "Error", MessageBoxButtons.OK);
+                        control = 1;
+                    }
+                    if (control != 1)
+                    {
+                        ModeloFactura.crearFactura(nuevaFactura);
+                    }
+                }
             }
             catch (Exception ex)
             {
-
-                throw new Exception("Controlador: Error inesperado " + ex.Message);
+                MessageBox.Show("Hubo un error al almacenar los datos", "Error", MessageBoxButtons.OK);
             }
         }
         public static List<FACTURA> BuscarFacturaPorCriterio(String criterio)

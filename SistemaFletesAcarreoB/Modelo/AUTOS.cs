@@ -14,19 +14,11 @@ namespace SistemaFletesAcarreoB.Modelo
     
     public partial class AUTOS
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AUTOS()
-        {
-            this.FACTURA = new HashSet<FACTURA>();
-        }
-    
         public int Id_Autos { get; set; }
         public string Num_Placas { get; set; }
         public string Marca { get; set; }
-        public Nullable<int> Kilometraje { get; set; }
-        public Nullable<int> Cap_A { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FACTURA> FACTURA { get; set; }
+        public string Kilometraje { get; set; }
+        public string Cap_A { get; set; }
+        public string Disponible { get; set; }
     }
 }

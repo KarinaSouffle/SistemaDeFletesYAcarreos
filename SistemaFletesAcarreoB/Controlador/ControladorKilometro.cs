@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
+using System.Data;
 using System.Threading.Tasks;
 using SistemaFletesAcarreoB.Modelo;
 using System.Windows.Forms;
@@ -14,17 +16,13 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (nuevoKilometro.Id_Kilometro<0 ||
-                    nuevoKilometro.Precio<0)
-                {
-                    throw new Exception("Algo está vació, favor de llenar todos los campos");
-                }
                 ModeloKilometro.crearKilometro(nuevoKilometro);
+                    
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Hubo un error al almacenar los datos", "Error", MessageBoxButtons.OK);
             }
         }
 

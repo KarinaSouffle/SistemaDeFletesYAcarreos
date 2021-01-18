@@ -108,7 +108,6 @@ C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\o
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarAuto.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarChofer.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.AgregarMaterial.resources
-C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.CambiarPrecioMaterial.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Login.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeAutos.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
@@ -117,7 +116,6 @@ C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\o
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.PKilometro.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Properties.Resources.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VentanaDeVenta.resources
-C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerChoferesYAutos.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VerFctura.resources
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.GenerateResource.cache
 C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CoreCompileInputs.cache
@@ -145,4 +143,5 @@ C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\o
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.ListaDeChoferes.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.VentanaDeVenta.resources
 C:\Users\Karina Soufflé\Downloads\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.csproj.CopyComplete
-C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Vista.RegistroUsuario.resources
+C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Vista.RegistroUsuarioAdmi.resources
+C:\Users\Karina Soufflé\Documents\SistemaFletesAcarreoB\SistemaFletesAcarreoB\obj\Debug\SistemaFletesAcarreoB.Vista.RegistroUsuarioLogin.resources

@@ -15,23 +15,19 @@ namespace SistemaFletesAcarreoB.Modelo
     public partial class FACTURA
     {
         public int Boleta_no { get; set; }
-        public Nullable<int> Maquina { get; set; }
+        public int Num_Factura { get; set; }
         public string Fecha { get; set; }
         public string Hora { get; set; }
         public string Materiales { get; set; }
-        public Nullable<int> Total_metros { get; set; }
-        public Nullable<int> Total_viajes { get; set; }
-        public Nullable<int> Subtotal { get; set; }
-        public Nullable<int> IVA { get; set; }
-        public Nullable<int> Total { get; set; }
-        public Nullable<int> Fact_material { get; set; }
-        public Nullable<int> Fact_licencia { get; set; }
-        public Nullable<int> Fact_placas { get; set; }
-        public Nullable<int> Fact_Kilometro { get; set; }
-    
-        public virtual AUTOS AUTOS { get; set; }
-        public virtual CHOFER CHOFER { get; set; }
-        public virtual KILOMETRO KILOMETRO { get; set; }
-        public virtual MATERIALES MATERIALES1 { get; set; }
+        public string Total_metros { get; set; }
+        public double Total_viajes { get; set; }
+        public double Total_Kilometros { get; set; }
+        public double Subtotal { get; set; }
+        public double IVA { get; set; }
+        public double Total { get; set; }
+        public int Fact_material { get; set; }
+        public string Fact_licencia { get; set; }
+        public string Fact_placas { get; set; }
+        public string Fact_Kilometro { get; set; }
     }
 }

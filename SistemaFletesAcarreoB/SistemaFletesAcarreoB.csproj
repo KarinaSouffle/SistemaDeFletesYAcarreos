@@ -58,6 +58,11 @@
     <Compile Include="Controlador\ControladorFactura.cs" />
     <Compile Include="Controlador\ControladorKilometro.cs" />
     <Compile Include="Controlador\ControladorUsuario.cs" />
+    <Compile Include="GOF\ClonUsuario.cs" />
+    <Compile Include="GOF\Iterator.cs" />
+    <Compile Include="GOF\Observer.cs" />
+    <Compile Include="GOF\State.cs" />
+    <Compile Include="GOF\Strategy.cs" />
     <Compile Include="Modelo\AUTOS.cs">
       <DependentUpon>SistemaAcarreoModelo.tt</DependentUpon>
     </Compile>
@@ -129,10 +134,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SISTEMAFLETESACARREOSDataSet14.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SISTEMAFLETESACARREOSDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SISTEMAFLETESACARREOSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SISTEMAFLETESACARREOSDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet20.xsd</DependentUpon>
     </Compile>
     <Compile Include="SISTEMAFLETESACARREOSDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -187,12 +222,6 @@
     <Compile Include="Vista\AgregarMaterial.Designer.cs">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\CambiarPrecioMaterial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\CambiarPrecioMaterial.Designer.cs">
-      <DependentUpon>CambiarPrecioMaterial.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controlador\ControladorAuto.cs" />
     <Compile Include="Controlador\ControladorChofer.cs" />
     <Compile Include="Controlador\ControladorMateriales.cs" />
@@ -237,23 +266,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\RegistroUsuario.cs">
+    <Compile Include="Vista\RegistroUsuarioAdmi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\RegistroUsuario.Designer.cs">
-      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    <Compile Include="Vista\RegistroUsuarioAdmi.Designer.cs">
+      <DependentUpon>RegistroUsuarioAdmi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\RegistroUsuarioLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistroUsuarioLogin.Designer.cs">
+      <DependentUpon>RegistroUsuarioLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Validar.cs" />
     <Compile Include="Vista\VentanaDeVenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\VentanaDeVenta.Designer.cs">
       <DependentUpon>VentanaDeVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\VerChoferesYAutos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\VerChoferesYAutos.Designer.cs">
-      <DependentUpon>VerChoferesYAutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\VerFctura.cs">
       <SubType>Form</SubType>
@@ -269,9 +299,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\AgregarMaterial.resx">
       <DependentUpon>AgregarMaterial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\CambiarPrecioMaterial.resx">
-      <DependentUpon>CambiarPrecioMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -301,14 +328,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\RegistroUsuario.resx">
-      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\RegistroUsuarioAdmi.resx">
+      <DependentUpon>RegistroUsuarioAdmi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistroUsuarioLogin.resx">
+      <DependentUpon>RegistroUsuarioLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\VentanaDeVenta.resx">
       <DependentUpon>VentanaDeVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\VerChoferesYAutos.resx">
-      <DependentUpon>VerChoferesYAutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\VerFctura.resx">
       <DependentUpon>VerFctura.cs</DependentUpon>
@@ -407,6 +434,61 @@
     <None Include="SISTEMAFLETESACARREOSDataSet14.xss">
       <DependentUpon>SISTEMAFLETESACARREOSDataSet14.xsd</DependentUpon>
     </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet15.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet15.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet16.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet16.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet17.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet17.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet18.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet18.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet19.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet19.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet19.xsd</DependentUpon>
+    </None>
     <None Include="SISTEMAFLETESACARREOSDataSet2.xsc">
       <DependentUpon>SISTEMAFLETESACARREOSDataSet2.xsd</DependentUpon>
     </None>
@@ -417,6 +499,17 @@
     </None>
     <None Include="SISTEMAFLETESACARREOSDataSet2.xss">
       <DependentUpon>SISTEMAFLETESACARREOSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet20.xsc">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMAFLETESACARREOSDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMAFLETESACARREOSDataSet20.xss">
+      <DependentUpon>SISTEMAFLETESACARREOSDataSet20.xsd</DependentUpon>
     </None>
     <None Include="SISTEMAFLETESACARREOSDataSet3.xsc">
       <DependentUpon>SISTEMAFLETESACARREOSDataSet3.xsd</DependentUpon>
@@ -558,6 +651,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auto.png" />
+    <None Include="Resources\chofer.png" />
+    <None Include="Resources\poder.png" />
+    <None Include="Resources\PP1.png" />
+    <None Include="Resources\PP5.png" />
+    <None Include="Resources\PP4.png" />
+    <None Include="Resources\PP3.png" />
+    <None Include="Resources\PP2.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Modelo\SistemaAcarreoModelo.Context.tt">

@@ -10,13 +10,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaFletesAcarreoB.Controlador;
 using SistemaFletesAcarreoB.Modelo;
+using SistemaFletesAcarreoB.GOF;
 
 namespace SistemaFletesAcarreoB
 {
     public partial class Login : Form
     {
         Pantalla_Principal principal;
-        RegistroUsuario Registro;
+        RegistroUsuarioLogin Registro;
+        UsuarioManager usuario = new UsuarioManager();
+        string UsuarioLogin = "Admi";
         public Login()
         {
             InitializeComponent();
@@ -24,6 +27,9 @@ namespace SistemaFletesAcarreoB
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            usuario[UsuarioLogin] = new Usuario("Admi");
+
+            Usuario usuario1 = usuario[UsuarioLogin].Clone() as Usuario;
         }
 
 
@@ -32,13 +38,23 @@ namespace SistemaFletesAcarreoB
             int xd = (Convert.ToInt32(this.dgv_Usuarios.Rows.Count.ToString()));
             Console.WriteLine(xd);
             int control = 0;
-            for (int i = 0; i < xd-1; i++)
+            for (int i = 0; i < xd; i++)
             {
                 if (dgv_Usuarios.Rows[i].Cells[1].Value.ToString() == txt_Usuario.Text)
                 {
                     if ((dgv_Usuarios.Rows[i].Cells[2].Value.ToString() == txt_Contraeña.Text))
                     {
                         control = 1;
+
+                        var nuevoUsuario = new USUARIOS();
+                        nuevoUsuario.Nombre = dgv_Usuarios.Rows[i].Cells[1].Value.ToString();
+                        nuevoUsuario.Contra = dgv_Usuarios.Rows[i].Cells[2].Value.ToString();
+                        nuevoUsuario.Nivel = dgv_Usuarios.Rows[i].Cells[3].Value.ToString();
+                        nuevoUsuario.EnUso = "1";
+                        ControladorUsuario.crearUsuario(nuevoUsuario);
+                        int eliminar = Int32.Parse(dgv_Usuarios.Rows[i].Cells[0].Value.ToString());
+                        ControladorUsuario.EliminarUsuario(eliminar);
+
                         principal = new Pantalla_Principal();
                         principal.Show();
                         this.Hide();
@@ -57,22 +73,22 @@ namespace SistemaFletesAcarreoB
             control = 0;
         }
 
-        private void btn_registro_Click(object sender, EventArgs e)
-        {
-            Registro = new RegistroUsuario();
-            Registro.Show();
-        }
-
         private void Login_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet14.USUARIOS' Puede moverla o quitarla según sea necesario.
-            this.uSUARIOSTableAdapter1.Fill(this.sISTEMAFLETESACARREOSDataSet14.USUARIOS);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet16.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.USUARIOS);
 
         }
 
         private void Login_Activated(object sender, EventArgs e)
         {
-            this.uSUARIOSTableAdapter1.Fill(this.sISTEMAFLETESACARREOSDataSet14.USUARIOS);
+            this.uSUARIOSTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.USUARIOS);
+        }
+
+        private void btn_Registrar_Click(object sender, EventArgs e)
+        {
+            Registro = new RegistroUsuarioLogin();
+            Registro.Show();
         }
     }
 }

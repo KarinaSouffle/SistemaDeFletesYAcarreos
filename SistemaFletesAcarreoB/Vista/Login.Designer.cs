@@ -35,27 +35,32 @@
             this.label_NusuarioLogIn = new System.Windows.Forms.Label();
             this.label_ContraseñaLogIn = new System.Windows.Forms.Label();
             this.gB_Datos = new System.Windows.Forms.GroupBox();
-            this.btn_registro = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Registrar = new System.Windows.Forms.Button();
             this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
             this.uSUARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sISTEMAFLETESACARREOSDataSet14 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14();
             this.sISTEMAFLETESACARREOSDataSet12 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet12();
             this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet12TableAdapters.USUARIOSTableAdapter();
             this.uSUARIOSTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14TableAdapters.USUARIOSTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uSUARIOSTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.USUARIOSTableAdapter();
             this.gB_Datos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Iniciar
@@ -111,7 +116,7 @@
             // gB_Datos
             // 
             this.gB_Datos.BackColor = System.Drawing.Color.DarkRed;
-            this.gB_Datos.Controls.Add(this.btn_registro);
+            this.gB_Datos.Controls.Add(this.btn_Registrar);
             this.gB_Datos.Controls.Add(this.txt_Contraeña);
             this.gB_Datos.Controls.Add(this.btn_Iniciar);
             this.gB_Datos.Controls.Add(this.label_NusuarioLogIn);
@@ -125,31 +130,22 @@
             this.gB_Datos.TabStop = false;
             this.gB_Datos.Text = "LOG-IN";
             // 
-            // btn_registro
+            // btn_Registrar
             // 
-            this.btn_registro.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_registro.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registro.ForeColor = System.Drawing.Color.White;
-            this.btn_registro.Location = new System.Drawing.Point(642, 176);
-            this.btn_registro.Name = "btn_registro";
-            this.btn_registro.Size = new System.Drawing.Size(75, 23);
-            this.btn_registro.TabIndex = 4;
-            this.btn_registro.Text = "REGISTRO";
-            this.btn_registro.UseVisualStyleBackColor = false;
-            this.btn_registro.Click += new System.EventHandler(this.btn_registro_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SistemaFletesAcarreoB.Properties.Resources.P1;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1110, 162);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.btn_Registrar.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_Registrar.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Registrar.ForeColor = System.Drawing.Color.White;
+            this.btn_Registrar.Location = new System.Drawing.Point(642, 176);
+            this.btn_Registrar.Name = "btn_Registrar";
+            this.btn_Registrar.Size = new System.Drawing.Size(87, 23);
+            this.btn_Registrar.TabIndex = 5;
+            this.btn_Registrar.Text = "REGISTRAR";
+            this.btn_Registrar.UseVisualStyleBackColor = false;
+            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
             // 
             // dgv_Usuarios
             // 
+            this.dgv_Usuarios.AllowUserToAddRows = false;
             this.dgv_Usuarios.AutoGenerateColumns = false;
             this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -158,7 +154,7 @@
             this.contraDataGridViewTextBoxColumn,
             this.nivelDataGridViewTextBoxColumn,
             this.enUsoDataGridViewTextBoxColumn});
-            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource1;
+            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource2;
             this.dgv_Usuarios.Location = new System.Drawing.Point(3, 313);
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.Size = new System.Drawing.Size(251, 99);
@@ -197,6 +193,16 @@
             this.enUsoDataGridViewTextBoxColumn.HeaderText = "EnUso";
             this.enUsoDataGridViewTextBoxColumn.Name = "enUsoDataGridViewTextBoxColumn";
             // 
+            // uSUARIOSBindingSource2
+            // 
+            this.uSUARIOSBindingSource2.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            // 
+            // sISTEMAFLETESACARREOSDataSet16
+            // 
+            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
+            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // uSUARIOSBindingSource1
             // 
             this.uSUARIOSBindingSource1.DataMember = "USUARIOS";
@@ -225,6 +231,20 @@
             // 
             this.uSUARIOSTableAdapter1.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaFletesAcarreoB.Properties.Resources.P1;
+            this.pictureBox1.Location = new System.Drawing.Point(120, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1110, 162);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // uSUARIOSTableAdapter2
+            // 
+            this.uSUARIOSTableAdapter2.ClearBeforeFill = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,12 +263,14 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.gB_Datos.ResumeLayout(false);
             this.gB_Datos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,7 +285,6 @@
         private System.Windows.Forms.Label label_ContraseñaLogIn;
         private System.Windows.Forms.GroupBox gB_Datos;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_registro;
         private System.Windows.Forms.DataGridView dgv_Usuarios;
         private SISTEMAFLETESACARREOSDataSet12 sISTEMAFLETESACARREOSDataSet12;
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
@@ -276,6 +297,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enUsoDataGridViewTextBoxColumn;
+        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource2;
+        private SISTEMAFLETESACARREOSDataSet16TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter2;
+        private System.Windows.Forms.Button btn_Registrar;
     }
 }
 

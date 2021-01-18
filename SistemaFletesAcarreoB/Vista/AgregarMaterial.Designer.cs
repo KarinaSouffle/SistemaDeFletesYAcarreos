@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Precio = new System.Windows.Forms.TextBox();
             this.txt_NombreMat = new System.Windows.Forms.TextBox();
@@ -36,8 +37,18 @@
             this.btn_Regresar = new System.Windows.Forms.Button();
             this.pb_Mat = new System.Windows.Forms.PictureBox();
             this.btn_Añadir = new System.Windows.Forms.Button();
+            this.dgv_Materiales = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
+            this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.MATERIALESTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Mat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Materiales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,6 +67,7 @@
             // 
             this.txt_Precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_Precio.Location = new System.Drawing.Point(109, 85);
+            this.txt_Precio.MaxLength = 6;
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(173, 26);
             this.txt_Precio.TabIndex = 12;
@@ -64,6 +76,7 @@
             // 
             this.txt_NombreMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txt_NombreMat.Location = new System.Drawing.Point(181, 44);
+            this.txt_NombreMat.MaxLength = 30;
             this.txt_NombreMat.Name = "txt_NombreMat";
             this.txt_NombreMat.Size = new System.Drawing.Size(173, 26);
             this.txt_NombreMat.TabIndex = 11;
@@ -125,20 +138,74 @@
             this.btn_Añadir.UseVisualStyleBackColor = false;
             this.btn_Añadir.Click += new System.EventHandler(this.btn_Añadir_Click);
             // 
+            // dgv_Materiales
+            // 
+            this.dgv_Materiales.AllowUserToAddRows = false;
+            this.dgv_Materiales.AutoGenerateColumns = false;
+            this.dgv_Materiales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Materiales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.nombreMDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgv_Materiales.DataSource = this.mATERIALESBindingSource;
+            this.dgv_Materiales.Location = new System.Drawing.Point(271, 262);
+            this.dgv_Materiales.Name = "dgv_Materiales";
+            this.dgv_Materiales.Size = new System.Drawing.Size(240, 150);
+            this.dgv_Materiales.TabIndex = 19;
+            this.dgv_Materiales.Visible = false;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreMDataGridViewTextBoxColumn
+            // 
+            this.nombreMDataGridViewTextBoxColumn.DataPropertyName = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.HeaderText = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.Name = "nombreMDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // mATERIALESBindingSource
+            // 
+            this.mATERIALESBindingSource.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            // 
+            // sISTEMAFLETESACARREOSDataSet16
+            // 
+            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
+            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mATERIALESTableAdapter
+            // 
+            this.mATERIALESTableAdapter.ClearBeforeFill = true;
+            // 
             // AgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 292);
+            this.Controls.Add(this.dgv_Materiales);
             this.Controls.Add(this.btn_Añadir);
             this.Controls.Add(this.pb_Mat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Regresar);
             this.Name = "AgregarMaterial";
             this.Text = "AgregarMaterial";
+            this.Load += new System.EventHandler(this.AgregarMaterial_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Mat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Materiales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +220,12 @@
         private System.Windows.Forms.Label lbl_NombreMat;
         private System.Windows.Forms.Button btn_Regresar;
         private System.Windows.Forms.Button btn_Añadir;
+        private System.Windows.Forms.DataGridView dgv_Materiales;
+        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
+        private System.Windows.Forms.BindingSource mATERIALESBindingSource;
+        private SISTEMAFLETESACARREOSDataSet16TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }

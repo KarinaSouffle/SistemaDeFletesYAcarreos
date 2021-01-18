@@ -48,7 +48,7 @@ namespace SistemaFletesAcarreoB.Modelo
                 using (var contextoAuto = new SISTEMAFLETESACARREOSEntities())
                 {
                     var resultado = (from c in contextoAuto.AUTOS
-                                     where c.Marca.Contains(criterio)
+                                     where c.Num_Placas.Contains(criterio)
                                      select c).ToList();
                     return resultado;
                 }

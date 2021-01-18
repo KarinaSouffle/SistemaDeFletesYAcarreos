@@ -93,6 +93,16 @@ namespace SistemaFletesAcarreoB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap auto {
+            get {
+                object obj = ResourceManager.GetObject("auto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap autodefault {
             get {
                 object obj = ResourceManager.GetObject("autodefault", resourceCulture);
@@ -126,6 +136,16 @@ namespace SistemaFletesAcarreoB.Properties {
         internal static System.Drawing.Bitmap banner2 {
             get {
                 object obj = ResourceManager.GetObject("banner2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chofer {
+            get {
+                object obj = ResourceManager.GetObject("chofer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +256,66 @@ namespace SistemaFletesAcarreoB.Properties {
         internal static System.Drawing.Bitmap p8 {
             get {
                 object obj = ResourceManager.GetObject("p8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poder {
+            get {
+                object obj = ResourceManager.GetObject("poder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PP1 {
+            get {
+                object obj = ResourceManager.GetObject("PP1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PP2 {
+            get {
+                object obj = ResourceManager.GetObject("PP2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PP3 {
+            get {
+                object obj = ResourceManager.GetObject("PP3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PP4 {
+            get {
+                object obj = ResourceManager.GetObject("PP4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PP5 {
+            get {
+                object obj = ResourceManager.GetObject("PP5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

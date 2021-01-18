@@ -18,7 +18,6 @@ namespace SistemaFletesAcarreoB
         public PKilometro()
         {
             InitializeComponent();
-            panel1.Location = new Point(((panel1.Width / 2)), (panel1.Width) / 8);
         }
 
         private void btn_VolverPKPP_Click(object sender, EventArgs e)
@@ -30,43 +29,71 @@ namespace SistemaFletesAcarreoB
 
         private void btn_GuardarNPK_Click(object sender, EventArgs e)
         {
-            try
+            int control = 0;
+            if (txt_NuevoPrecio.Text.ToString() == String.Empty)
             {
-                var nuevoKilometro = new KILOMETRO();
-                nuevoKilometro.Precio = Convert.ToInt32(txt_NuevoPrecio.Text);
-                ControladorKilometro.CrearKilometro(nuevoKilometro);
-                lbl_SetPrecio.Text = txt_NuevoPrecio.Text;
+                MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+                try
+                {
+                    float.Parse(txt_NuevoPrecio.Text.ToString());
+                }
+                catch (Exception)
+                {
+                    if (txt_NuevoPrecio.Text.ToString() == String.Empty )
+                    {
+                        MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hay datos con el formato incorrecto.", "Error", MessageBoxButtons.OK);
+                    }
+                    control = 1;
+                }
+                if (control != 1)
+                {
+                    try
+                    {
+                        var nuevoKilometro = new KILOMETRO();
+                        nuevoKilometro.Precio = (Math.Round(float.Parse(txt_NuevoPrecio.Text), 2)).ToString();
+                        ControladorKilometro.CrearKilometro(nuevoKilometro);
+                        lbl_SetPrecio.Text = txt_NuevoPrecio.Text;
 
-                txt_NuevoPrecio.Text = " ";
-                MessageBox.Show("Actualizado");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
-            }
-                                                                                                         
+                        int cantidaddatos = Int32.Parse(dgv_PrecioKilometro.Rows.Count.ToString());
+                        this.kILOMETROTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet18.KILOMETRO);
+                        int cantidadnuevoskilometros = Int32.Parse(dgv_PrecioKilometro.Rows.Count.ToString());
+                        if (cantidadnuevoskilometros == (cantidaddatos + 1))
+                        {
+                            txt_NuevoPrecio.Text = " ";
+                            MessageBox.Show("Actualizado");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                    }
+                }
+            }                                                                          
         }
 
         private void PKilometro_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet7.KILOMETRO' Puede moverla o quitarla según sea necesario.
-            this.kILOMETROTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet7.KILOMETRO);
-
-        }
-
-        private void panel1_MouseHover(object sender, EventArgs e)
-        {
-            this.kILOMETROTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet7.KILOMETRO);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.KILOMETRO' Puede moverla o quitarla según sea necesario.
+            this.kILOMETROTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet18.KILOMETRO);
             int xd = Convert.ToInt32(this.dgv_PrecioKilometro.Rows.Count.ToString());
-            if (xd > 1)
+            if (xd >= 1)
             {
-                lbl_SetPrecio.Text = dgv_PrecioKilometro.Rows[xd - 2].Cells[1].Value.ToString();
+                lbl_SetPrecio.Text = dgv_PrecioKilometro.Rows[xd - 1].Cells[1].Value.ToString();
                 Console.WriteLine(xd);
             }
             else
             {
                 lbl_SetPrecio.Text = "----";
             }
+
         }
+
     }
 }

@@ -17,28 +17,69 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (nuevoChofer.lICENCIA_C<0 ||
-                    String.IsNullOrEmpty(nuevoChofer.N_Chofer) ||
-                    String.IsNullOrEmpty(nuevoChofer.ApellidoP_C) ||
-                    String.IsNullOrEmpty(nuevoChofer.ApellidoM_C) ||
-                    String.IsNullOrEmpty(nuevoChofer.Sexo) ||
-                    nuevoChofer.Edad<0 ||
-                    String.IsNullOrEmpty(nuevoChofer.Telefono) ||
-                    String.IsNullOrEmpty(nuevoChofer.Correo) ||
+                int control = 0;
+                if (nuevoChofer.lICENCIA_C == string.Empty ||
+                    nuevoChofer.N_Chofer == string.Empty ||
+                    nuevoChofer.ApellidoP_C == string.Empty ||
+                    nuevoChofer.ApellidoM_C == string.Empty ||
+                    nuevoChofer.Sexo == string.Empty ||
+                    nuevoChofer.Edad == string.Empty ||
+                    nuevoChofer.Telefono == string.Empty ||
+                    nuevoChofer.Correo == string.Empty ||
                     nuevoChofer.F_Nac == DateTime.MinValue ||
-                    String.IsNullOrEmpty(nuevoChofer.Direccion))
+                    nuevoChofer.Direccion == string.Empty ||
+                    nuevoChofer.Disponible == string.Empty)
                 {
-                    throw new Exception("Algo está vació, favor de llenar todos los campos");
+                    MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
                 }
-                ModeloChofer.crearChofer(nuevoChofer);
+                else
+                {
+                    try
+                    {
+                        int edad = Int32.Parse(nuevoChofer.Edad.ToString());
+                        //int telefono = Int32.Parse(nuevoChofer.Telefono.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Hay datos con el formato incorrecto.", "Error", MessageBoxButtons.OK);
+                        control = 1;
+                    }
+                    if (control != 1)
+                    {
+                        ModeloChofer.crearChofer(nuevoChofer);
+                    }
+                }
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Hubo un error al almacenar los datos", "Error", MessageBoxButtons.OK);
             }
         }
-
+        //Singleton.
+        public sealed class Singleton
+        {
+            Singleton()
+            {
+                CHOFER nuevoChofer;
+            }
+            private static readonly object padlock = new object();
+            private static Singleton nuevoChofer = null;
+            public static Singleton proove
+            {
+                get
+                {
+                    lock (padlock)
+                    {
+                        if (nuevoChofer == null)
+                        {
+                            nuevoChofer = new Singleton();
+                        }
+                        return nuevoChofer;
+                    }
+                }
+            }
+        }
         public static List<CHOFER> BuscarChoferesPorCriterio(String criterio)
         {
             try

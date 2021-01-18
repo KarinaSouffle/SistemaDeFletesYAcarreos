@@ -14,17 +14,21 @@ namespace SistemaFletesAcarreoB.Controlador
         {
             try
             {
-                if (String.IsNullOrEmpty(nuevoUsuario.Nombre) ||
-                    String.IsNullOrEmpty(nuevoUsuario.Contra) ||
-                    string.IsNullOrEmpty(nuevoUsuario.Nivel)) 
+                if (nuevoUsuario.Nombre == string.Empty ||
+                    nuevoUsuario.Contra == string.Empty ||
+                    nuevoUsuario.Nivel == string.Empty ||
+                    nuevoUsuario.EnUso == string.Empty) 
                 {
-                    throw new Exception("Existe parametro vacio");
+                    MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
                 }
-                ModeloUsuario.crearUsuario(nuevoUsuario);
+                else
+                {
+                    ModeloUsuario.crearUsuario(nuevoUsuario);
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Hubo un error al almacenar los datos", "Error", MessageBoxButtons.OK);
             }
         }
         public static USUARIOS BuscarUsuariosPorId(int idUsuarios)
@@ -64,6 +68,18 @@ namespace SistemaFletesAcarreoB.Controlador
             {
 
                 MessageBox.Show("Error al eliminar", "Error", MessageBoxButtons.OK);
+            }
+        }
+        public static List<USUARIOS> BuscarUsuariosPorCriterios(String criterios)
+        {
+            try
+            {
+                var resultado = ModeloUsuario.buscarUsuariosPorCriterios(criterios);
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error" + ex.Message);
             }
         }
     }

@@ -35,32 +35,67 @@ namespace SistemaFletesAcarreoB
 
         private void btn_Añadir_Click(object sender, EventArgs e)
         {
-            try
+            int xd = Int32.Parse(dgv_Materiales.Rows.Count.ToString());
+            string seleccionada = "";
+            for (int i = 0; i <= xd-1; i++)
             {
-                var nuevoMaterial = new MATERIALES();
-                nuevoMaterial.Nombre_M = txt_NombreMat.Text;
-                nuevoMaterial.Precio = Convert.ToInt32(txt_Precio.Text);
-                ControladorMateriales.CrearMaterial(nuevoMaterial);
+                string compara = dgv_Materiales.Rows[i].Cells[1].Value.ToString();
+                if (compara == txt_NombreMat.Text.ToString())
+                {
+                    seleccionada = compara;
+                }
+            }
+            if (seleccionada == string.Empty)
+            {
+                Validar validar = new Validar();
+                if (validar.ValidarNombre(txt_NombreMat.Text) == true && validar.ValidarNum(txt_Precio.Text))
+                {
+                    try
+                    {
+                        var nuevoMaterial = new MATERIALES();
+                        nuevoMaterial.Nombre_M = txt_NombreMat.Text;
+                        nuevoMaterial.Precio = txt_Precio.Text;
+                        ControladorMateriales.CrearMaterial(nuevoMaterial);
+                        int cantidaddatos = Int32.Parse(dgv_Materiales.Rows.Count.ToString());
+                        this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet16.MATERIALES);
+                        int cantidadnuevosmateriales = Int32.Parse(dgv_Materiales.Rows.Count.ToString());
+                        if (cantidadnuevosmateriales == (cantidaddatos + 1))
+                        {
+                            var respuesta = MessageBox.Show(
+                            "Material Guardado Correctamente, ¿Desea agregar otro?",
+                            "Mensaje del sistema",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+                            if (respuesta == DialogResult.Yes)
+                            {
+                                txt_NombreMat.Text = string.Empty;
+                                txt_Precio.Text = string.Empty;
+                                this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet16.MATERIALES);
+                            }
+                            else
+                            {
+                                Dispose();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                    }
+                }
 
-                var respuesta = MessageBox.Show(
-                    "Material Guardado Correctamente, ¿Desea agregar otro?",
-                    "Mensaje del sistema",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-                if (respuesta == DialogResult.Yes)
-                {
-                    txt_NombreMat.Text = string.Empty;
-                    txt_Precio.Text = string.Empty;
-                }
-                else
-                {
-                    Dispose();
-                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Revisa los datos introducidos", "Error", MessageBoxButtons.OK);
+                MessageBox.Show("Ya existe un material registrado con el mismo nombre.", "Error", MessageBoxButtons.OK);
             }
+        }
+
+        private void AgregarMaterial_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet16.MATERIALES' Puede moverla o quitarla según sea necesario.
+            this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet16.MATERIALES);
+
         }
     }
 }

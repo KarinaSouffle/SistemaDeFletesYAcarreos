@@ -61,6 +61,23 @@ namespace SistemaFletesAcarreoB.Modelo
                 MessageBox.Show("Error al eliminar. ", "Error", MessageBoxButtons.OK);
             }
         }
+        public static List<USUARIOS> buscarUsuariosPorCriterios(String criterios)
+        {
+            try
+            {
+                using (var contextoUsuario = new SISTEMAFLETESACARREOSEntities())
+                {
+                    var resultado = (from c in contextoUsuario.USUARIOS
+                                     where c.Nombre.Contains(criterios)
+                                     select c).ToList();
+                    return resultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error " + ex.Message);
+            }
+        }
 
     }
 }
