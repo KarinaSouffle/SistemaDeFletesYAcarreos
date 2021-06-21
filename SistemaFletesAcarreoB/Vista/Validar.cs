@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SistemaFletesAcarreoB
 {
-    class Validar
+    public class Validar
     {
         public Boolean ValidatePassword(string password)
         {
@@ -56,18 +56,18 @@ namespace SistemaFletesAcarreoB
                 return true;
             }
         }
-        public Boolean ValidarNum(string pri)
+        public Boolean ValidarNum(string pri, string nombre)
         {
             var input = pri;
-            var ValorVal = new Regex(@"^[0-9]+(\.[0-9]+)?$");
+            var ValorVal = new Regex(@"^[0-9]+(\.[0-9]{2})?$");
             if (string.IsNullOrWhiteSpace(input))
             {
-                MessageBox.Show("Favor de llenar el campo " + pri);
+                MessageBox.Show("Favor de llenar el campo "+nombre+". ");
                 return false;
             }
             else if (!ValorVal.IsMatch(input))
             {
-                MessageBox.Show("Favor de introducir solo numeros positivos.");
+                MessageBox.Show("Favor de introducir solo numeros positivos en el campo "+nombre+".");
                 return false;
             }
             else
@@ -79,8 +79,8 @@ namespace SistemaFletesAcarreoB
 
         public Boolean ValidarCorreo(string correo)
         {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            String expresion; //^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*\\w+([-.]\\w+)*";
             if (Regex.IsMatch(correo, expresion))
             {
                 if (Regex.Replace(correo, expresion, String.Empty).Length == 0)
@@ -117,15 +117,18 @@ namespace SistemaFletesAcarreoB
         public Boolean ValidarLicencia(string licencia)
         {
             var Uinput = licencia;
+            int control = 0;
             if (string.IsNullOrWhiteSpace(Uinput))
             {
                 MessageBox.Show("El campo de licencia se encuentra vacio, favor de intentar de nuevo.");
+                control = 1;
+                return false;
             }
             var tieneNumero = new Regex(@"[A-Z]+([0-9]+[A-Z])+");
-            //Numero maximo de numeros para licencia 11
-            if (!tieneNumero.IsMatch(Uinput))
+            //Numero maximo de numeros para licencia
+            if (!tieneNumero.IsMatch(Uinput) && control != 1)
             {
-                MessageBox.Show("El formato de licencia debera ser A111111111111, favor de intentar de nuevo.");
+                MessageBox.Show("El formato de licencia debera ser L+[N]*+L[N]*, favor de intentar de nuevo.");
                 return false;
             }
             else
@@ -134,18 +137,21 @@ namespace SistemaFletesAcarreoB
             }
         }
 
-        public Boolean ValidarNombre(string caso)
+        public Boolean ValidarNombre(string caso, string nombre)
         {
             var Uinput = caso;
+            int control = 0;
             if (string.IsNullOrWhiteSpace(Uinput))
             {
-                MessageBox.Show("El campo de " + caso + " no puede quedar vacio, favor de intentar de nuevo.");
+                MessageBox.Show("El campo de " + nombre + " no puede quedar vacio, favor de intentar de nuevo.");
+                control = 1;
+                return false;
             }
-            var formatoNombre = new Regex(@"[A-Z][a-z]");
+            var formatoNombre = new Regex(@"[A-Z][a-z][a-z]");
             //El Nombre tiene que comenzar con una Mayuscula.
-            if (!formatoNombre.IsMatch(Uinput))
+            if (!formatoNombre.IsMatch(Uinput) && control != 1)
             {
-                MessageBox.Show("El nombre introducido debe de iniciar con mayusucula, favor de intentar de nuevo.");
+                MessageBox.Show("El nombre introducido debe de iniciar con mayusucula y tener minimo 3 caracteres, favor de intentar de nuevo.");
                 return false;
             }
             else

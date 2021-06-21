@@ -56,9 +56,9 @@ namespace SistemaFletesAcarreoB
                 Validar validar = new Validar();
 
                 if ((validar.FormatoPlaca(dgv_ListadoAutos.Rows[indice].Cells[1].Value.ToString()) == true &&
-                    validar.ValidarNombre(dgv_ListadoAutos.Rows[indice].Cells[2].Value.ToString()) == true && 
-                    validar.ValidarNum(dgv_ListadoAutos.Rows[indice].Cells[3].Value.ToString()) == true && 
-                    validar.ValidarNum(dgv_ListadoAutos.Rows[indice].Cells[4].Value.ToString()) == true))
+                    validar.ValidarNombre(dgv_ListadoAutos.Rows[indice].Cells[2].Value.ToString(), "marca") == true && 
+                    validar.ValidarNum(dgv_ListadoAutos.Rows[indice].Cells[3].Value.ToString(), "kilometraje") == true && 
+                    validar.ValidarNum(dgv_ListadoAutos.Rows[indice].Cells[4].Value.ToString(), "capacidad del auto") == true))
                 {
                     try
                     {
@@ -71,12 +71,13 @@ namespace SistemaFletesAcarreoB
 
                         ControladorAuto.CrearAuto(nuevoAuto);
                         int cantidaddatos = Int32.Parse(dgv_ListadoAutos.Rows.Count.ToString());
-                        this.aUTOSTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.AUTOS);
+                        this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
                         int cantidadnuevosautos = Int32.Parse(dgv_ListadoAutos.Rows.Count.ToString());
 
                         if (cantidadnuevosautos == (cantidaddatos + 1))
                         {
                             ModeloAuto.eliminarAutos(IdParametro);
+                            this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
                             MessageBox.Show("Auto Actualizado", "Listo", MessageBoxButtons.OK);
                         }
                     }
@@ -95,48 +96,13 @@ namespace SistemaFletesAcarreoB
 
         private void ListaDeAutos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.AUTOS' Puede moverla o quitarla según sea necesario.
-            this.aUTOSTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.AUTOS);
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.USUARIOS' Puede moverla o quitarla según sea necesario.
-            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet18.USUARIOS);
-
-            int xd = (Convert.ToInt32(this.dgv_Usuarios.Rows.Count.ToString()));
-            int us = 0;
-            if (xd == 1)
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet.AUTOS' Puede moverla o quitarla según sea necesario.
+            this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
+            
+            if (Login.nivel == "1")
             {
-                for (int i = 0; i < xd - 1; i++)
-                {
-                    int usuarioset = Int32.Parse(dgv_Usuarios.Rows[i].Cells[4].Value.ToString());
-                    us = usuarioset;
-                    if (us == 1)
-                    {
-                        int usuarioadmin = Int32.Parse(dgv_Usuarios.Rows[i].Cells[3].Value.ToString());
-                        if (usuarioadmin == 1)
-                        {
-                            btn_Editar.Visible = true;
-                            btn_AñadirPKPP.Visible = true;
-                            btn_Eliminar.Visible = true;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < xd - 1; i++)
-                {
-                    int usuarioset = Int32.Parse(dgv_Usuarios.Rows[i].Cells[4].Value.ToString());
-                    us = usuarioset;
-                    if (us == 1)
-                    {
-                        int usuarioadmin = Int32.Parse(dgv_Usuarios.Rows[i].Cells[3].Value.ToString());
-                        if (usuarioadmin == 1)
-                        {
-                            btn_Editar.Visible = true;
-                            btn_AñadirPKPP.Visible = true;
-                            btn_Eliminar.Visible = true;
-                        }
-                    }
-                }
+                btn_Editar.Visible = true;
+                btn_Eliminar.Visible = true;
             }
         }
 
@@ -145,7 +111,7 @@ namespace SistemaFletesAcarreoB
             int resultado = Int32.Parse(dgv_ListadoAutos.Rows[Int32.Parse(dgv_ListadoAutos.CurrentRow.Index.ToString())].Cells[0].Value.ToString());
             ModeloAuto.eliminarAutos(resultado);
             MessageBox.Show("El auto " + resultado + " ha sido eliminado");
-            this.aUTOSTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.AUTOS);
+            this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
             lbl_SetIdAuto.Text = "";
             lbl_SetPlaca.Text = "";
             lbl_SetMarca.Text = "";
@@ -155,7 +121,7 @@ namespace SistemaFletesAcarreoB
 
         private void ListaDeAutos_Activated(object sender, EventArgs e)
         {
-            this.aUTOSTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.AUTOS);
+            this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
         }
 
         private void dgv_ListadoAutos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -169,7 +135,7 @@ namespace SistemaFletesAcarreoB
 
         private void ListaDeAutos_Enter(object sender, EventArgs e)
         {
-            this.aUTOSTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.AUTOS);
+            this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
         }
 
         private void dgv_ListadoAutos_CellClick(object sender, DataGridViewCellEventArgs e)

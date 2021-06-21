@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Venta = new System.Windows.Forms.DataGridView();
             this.Id_Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Auto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,13 +79,13 @@
             this.factlicenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factplacasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factKilometroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fACTURABindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
+            this.fACTURABindingSource8 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
             this.dgv_Kilometro = new System.Windows.Forms.DataGridView();
             this.idKilometroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kILOMETROBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
+            this.kILOMETROBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
             this.dgv_Auto = new System.Windows.Forms.DataGridView();
             this.idAutosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numPlacasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,7 +93,7 @@
             this.kilometrajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponibleDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aUTOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dgv_Chofer = new System.Windows.Forms.DataGridView();
             this.idChoferDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lICENCIACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,101 +107,100 @@
             this.fNacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cHOFERBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.dgv_Material = new System.Windows.Forms.DataGridView();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIALESBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.fACTURABindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.fACTURABindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.kILOMETROBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIALESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fACTURABindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet18 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18();
             this.fACTURABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fACTURABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet15 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15();
             this.kILOMETROBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aUTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cHOFERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIALESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fACTURABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet8 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet8();
             this.kILOMETROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cHOFERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet8TableAdapters.MATERIALESTableAdapter();
-            this.cHOFERTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet8TableAdapters.CHOFERTableAdapter();
-            this.aUTOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet8TableAdapters.AUTOSTableAdapter();
-            this.kILOMETROTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet8TableAdapters.KILOMETROTableAdapter();
-            this.fACTURATableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet8TableAdapters.FACTURATableAdapter();
-            this.mATERIALESTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.MATERIALESTableAdapter();
-            this.cHOFERTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.CHOFERTableAdapter();
-            this.aUTOSTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.AUTOSTableAdapter();
-            this.kILOMETROTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.KILOMETROTableAdapter();
-            this.fACTURATableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.FACTURATableAdapter();
-            this.mATERIALESTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.MATERIALESTableAdapter();
-            this.cHOFERTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.CHOFERTableAdapter();
-            this.aUTOSTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.AUTOSTableAdapter();
-            this.kILOMETROTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.KILOMETROTableAdapter();
-            this.sISTEMAFLETESACARREOSDataSet2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet2();
             this.sISTEMAFLETESACARREOSDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fACTURATableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.FACTURATableAdapter();
-            this.sISTEMAFLETESACARREOSDataSet17 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet17();
             this.fACTURABindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.fACTURATableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet17TableAdapters.FACTURATableAdapter();
-            this.fACTURATableAdapter4 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.FACTURATableAdapter();
-            this.sISTEMAFLETESACARREOSDataSet19 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet19();
             this.fACTURABindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.fACTURATableAdapter5 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet19TableAdapters.FACTURATableAdapter();
             this.fACTURATableAdapter6 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.FACTURATableAdapter();
+            this.kILOMETROTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.KILOMETROTableAdapter();
+            this.mATERIALESTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.MATERIALESTableAdapter();
+            this.cHOFERTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.CHOFERTableAdapter();
+            this.aUTOSTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.AUTOSTableAdapter();
+            this.fACTURATableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.FACTURATableAdapter();
+            this.mATERIALESBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter();
+            this.kILOMETROBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.kILOMETROTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.KILOMETROTableAdapter();
+            this.aUTOSBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.AUTOSTableAdapter();
+            this.cHOFERBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Venta)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FacturacionConsulta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Kilometro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Auto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chofer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Material)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Venta
             // 
             this.dgv_Venta.AllowUserToDeleteRows = false;
             this.dgv_Venta.BackgroundColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Venta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Venta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_Venta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Venta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Factura,
@@ -215,14 +214,14 @@
             this.Precio_Kilometro,
             this.placa,
             this.Cap_Auto});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Venta.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Venta.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_Venta.Location = new System.Drawing.Point(13, 70);
             this.dgv_Venta.Name = "dgv_Venta";
             this.dgv_Venta.Size = new System.Drawing.Size(913, 277);
@@ -334,7 +333,7 @@
             // 
             this.lbl_IVA.AutoSize = true;
             this.lbl_IVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_IVA.Location = new System.Drawing.Point(709, 414);
+            this.lbl_IVA.Location = new System.Drawing.Point(713, 456);
             this.lbl_IVA.Name = "lbl_IVA";
             this.lbl_IVA.Size = new System.Drawing.Size(48, 20);
             this.lbl_IVA.TabIndex = 5;
@@ -344,7 +343,7 @@
             // 
             this.lbl_Total.AutoSize = true;
             this.lbl_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Total.Location = new System.Drawing.Point(709, 442);
+            this.lbl_Total.Location = new System.Drawing.Point(713, 484);
             this.lbl_Total.Name = "lbl_Total";
             this.lbl_Total.Size = new System.Drawing.Size(48, 20);
             this.lbl_Total.TabIndex = 6;
@@ -354,7 +353,7 @@
             // 
             this.lbl_SetIVA.AutoSize = true;
             this.lbl_SetIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_SetIVA.Location = new System.Drawing.Point(763, 414);
+            this.lbl_SetIVA.Location = new System.Drawing.Point(767, 456);
             this.lbl_SetIVA.Name = "lbl_SetIVA";
             this.lbl_SetIVA.Size = new System.Drawing.Size(39, 20);
             this.lbl_SetIVA.TabIndex = 7;
@@ -364,7 +363,7 @@
             // 
             this.lbl_SetTotal.AutoSize = true;
             this.lbl_SetTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_SetTotal.Location = new System.Drawing.Point(763, 442);
+            this.lbl_SetTotal.Location = new System.Drawing.Point(767, 484);
             this.lbl_SetTotal.Name = "lbl_SetTotal";
             this.lbl_SetTotal.Size = new System.Drawing.Size(39, 20);
             this.lbl_SetTotal.TabIndex = 8;
@@ -374,7 +373,7 @@
             // 
             this.lbl_Chofer.AutoSize = true;
             this.lbl_Chofer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_Chofer.Location = new System.Drawing.Point(540, 399);
+            this.lbl_Chofer.Location = new System.Drawing.Point(650, 407);
             this.lbl_Chofer.Name = "lbl_Chofer";
             this.lbl_Chofer.Size = new System.Drawing.Size(65, 20);
             this.lbl_Chofer.TabIndex = 10;
@@ -411,7 +410,7 @@
             // 
             this.lbl_SetChofer.AutoSize = true;
             this.lbl_SetChofer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_SetChofer.Location = new System.Drawing.Point(611, 399);
+            this.lbl_SetChofer.Location = new System.Drawing.Point(721, 407);
             this.lbl_SetChofer.Name = "lbl_SetChofer";
             this.lbl_SetChofer.Size = new System.Drawing.Size(39, 20);
             this.lbl_SetChofer.TabIndex = 16;
@@ -504,7 +503,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(670, 414);
+            this.label2.Location = new System.Drawing.Point(674, 456);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 20);
             this.label2.TabIndex = 30;
@@ -514,7 +513,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(688, 385);
+            this.label1.Location = new System.Drawing.Point(692, 427);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 28;
@@ -524,7 +523,7 @@
             // 
             this.lbl_SetSubtotal.AutoSize = true;
             this.lbl_SetSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbl_SetSubtotal.Location = new System.Drawing.Point(763, 385);
+            this.lbl_SetSubtotal.Location = new System.Drawing.Point(767, 427);
             this.lbl_SetSubtotal.Name = "lbl_SetSubtotal";
             this.lbl_SetSubtotal.Size = new System.Drawing.Size(39, 20);
             this.lbl_SetSubtotal.TabIndex = 29;
@@ -535,7 +534,7 @@
             this.btn_Calcular.BackColor = System.Drawing.Color.DarkRed;
             this.btn_Calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_Calcular.Location = new System.Drawing.Point(704, 465);
+            this.btn_Calcular.Location = new System.Drawing.Point(708, 507);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(110, 37);
             this.btn_Calcular.TabIndex = 27;
@@ -562,7 +561,7 @@
             this.factlicenciaDataGridViewTextBoxColumn,
             this.factplacasDataGridViewTextBoxColumn,
             this.factKilometroDataGridViewTextBoxColumn});
-            this.dgv_FacturacionConsulta.DataSource = this.fACTURABindingSource6;
+            this.dgv_FacturacionConsulta.DataSource = this.fACTURABindingSource8;
             this.dgv_FacturacionConsulta.Location = new System.Drawing.Point(46, 470);
             this.dgv_FacturacionConsulta.Name = "dgv_FacturacionConsulta";
             this.dgv_FacturacionConsulta.Size = new System.Drawing.Size(240, 150);
@@ -654,15 +653,15 @@
             this.factKilometroDataGridViewTextBoxColumn.HeaderText = "Fact_Kilometro";
             this.factKilometroDataGridViewTextBoxColumn.Name = "factKilometroDataGridViewTextBoxColumn";
             // 
-            // fACTURABindingSource6
+            // fACTURABindingSource8
             // 
-            this.fACTURABindingSource6.DataMember = "FACTURA";
-            this.fACTURABindingSource6.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            this.fACTURABindingSource8.DataMember = "FACTURA";
+            this.fACTURABindingSource8.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
-            // sISTEMAFLETESACARREOSDataSet20
+            // sISTEMAFLETESACARREOSDataSet
             // 
-            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
-            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
+            this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgv_Kilometro
             // 
@@ -672,12 +671,11 @@
             this.dgv_Kilometro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idKilometroDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn1});
-            this.dgv_Kilometro.DataSource = this.kILOMETROBindingSource2;
+            this.dgv_Kilometro.DataSource = this.kILOMETROBindingSource4;
             this.dgv_Kilometro.Location = new System.Drawing.Point(292, 470);
             this.dgv_Kilometro.Name = "dgv_Kilometro";
             this.dgv_Kilometro.Size = new System.Drawing.Size(240, 150);
             this.dgv_Kilometro.TabIndex = 25;
-            this.dgv_Kilometro.Visible = false;
             // 
             // idKilometroDataGridViewTextBoxColumn
             // 
@@ -692,15 +690,15 @@
             this.precioDataGridViewTextBoxColumn1.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn1.Name = "precioDataGridViewTextBoxColumn1";
             // 
-            // kILOMETROBindingSource2
+            // kILOMETROBindingSource3
             // 
-            this.kILOMETROBindingSource2.DataMember = "KILOMETRO";
-            this.kILOMETROBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            this.kILOMETROBindingSource3.DataMember = "KILOMETRO";
+            this.kILOMETROBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
             // 
-            // sISTEMAFLETESACARREOSDataSet16
+            // sISTEMAFLETESACARREOSDataSet20
             // 
-            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
-            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
+            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgv_Auto
             // 
@@ -714,7 +712,7 @@
             this.kilometrajeDataGridViewTextBoxColumn,
             this.capADataGridViewTextBoxColumn,
             this.disponibleDataGridViewTextBoxColumn1});
-            this.dgv_Auto.DataSource = this.aUTOSBindingSource2;
+            this.dgv_Auto.DataSource = this.aUTOSBindingSource4;
             this.dgv_Auto.Location = new System.Drawing.Point(847, 391);
             this.dgv_Auto.Name = "dgv_Auto";
             this.dgv_Auto.Size = new System.Drawing.Size(240, 150);
@@ -759,10 +757,10 @@
             this.disponibleDataGridViewTextBoxColumn1.HeaderText = "Disponible";
             this.disponibleDataGridViewTextBoxColumn1.Name = "disponibleDataGridViewTextBoxColumn1";
             // 
-            // aUTOSBindingSource2
+            // aUTOSBindingSource3
             // 
-            this.aUTOSBindingSource2.DataMember = "AUTOS";
-            this.aUTOSBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            this.aUTOSBindingSource3.DataMember = "AUTOS";
+            this.aUTOSBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
             // 
             // dgv_Chofer
             // 
@@ -782,7 +780,7 @@
             this.fNacDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.disponibleDataGridViewTextBoxColumn});
-            this.dgv_Chofer.DataSource = this.cHOFERBindingSource2;
+            this.dgv_Chofer.DataSource = this.cHOFERBindingSource4;
             this.dgv_Chofer.Location = new System.Drawing.Point(847, 378);
             this.dgv_Chofer.Name = "dgv_Chofer";
             this.dgv_Chofer.Size = new System.Drawing.Size(240, 150);
@@ -863,10 +861,10 @@
             this.disponibleDataGridViewTextBoxColumn.HeaderText = "Disponible";
             this.disponibleDataGridViewTextBoxColumn.Name = "disponibleDataGridViewTextBoxColumn";
             // 
-            // cHOFERBindingSource2
+            // cHOFERBindingSource3
             // 
-            this.cHOFERBindingSource2.DataMember = "CHOFER";
-            this.cHOFERBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            this.cHOFERBindingSource3.DataMember = "CHOFER";
+            this.cHOFERBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
             // 
             // dgv_Material
             // 
@@ -877,7 +875,7 @@
             this.codigoDataGridViewTextBoxColumn,
             this.nombreMDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn});
-            this.dgv_Material.DataSource = this.mATERIALESBindingSource2;
+            this.dgv_Material.DataSource = this.mATERIALESBindingSource4;
             this.dgv_Material.Location = new System.Drawing.Point(847, 367);
             this.dgv_Material.Name = "dgv_Material";
             this.dgv_Material.Size = new System.Drawing.Size(240, 150);
@@ -904,191 +902,152 @@
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
+            // mATERIALESBindingSource3
+            // 
+            this.mATERIALESBindingSource3.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // fACTURABindingSource7
+            // 
+            this.fACTURABindingSource7.DataMember = "FACTURA";
+            this.fACTURABindingSource7.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // fACTURABindingSource6
+            // 
+            this.fACTURABindingSource6.DataMember = "FACTURA";
+            this.fACTURABindingSource6.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // kILOMETROBindingSource2
+            // 
+            this.kILOMETROBindingSource2.DataMember = "KILOMETRO";
+            // 
+            // aUTOSBindingSource2
+            // 
+            this.aUTOSBindingSource2.DataMember = "AUTOS";
+            // 
+            // cHOFERBindingSource2
+            // 
+            this.cHOFERBindingSource2.DataMember = "CHOFER";
+            // 
             // mATERIALESBindingSource2
             // 
             this.mATERIALESBindingSource2.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
             // 
             // fACTURABindingSource4
             // 
             this.fACTURABindingSource4.DataMember = "FACTURA";
-            this.fACTURABindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
-            // 
-            // sISTEMAFLETESACARREOSDataSet18
-            // 
-            this.sISTEMAFLETESACARREOSDataSet18.DataSetName = "SISTEMAFLETESACARREOSDataSet18";
-            this.sISTEMAFLETESACARREOSDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fACTURABindingSource2
             // 
             this.fACTURABindingSource2.DataMember = "FACTURA";
-            this.fACTURABindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
             // 
             // fACTURABindingSource1
             // 
             this.fACTURABindingSource1.DataMember = "FACTURA";
-            this.fACTURABindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
-            // 
-            // sISTEMAFLETESACARREOSDataSet15
-            // 
-            this.sISTEMAFLETESACARREOSDataSet15.DataSetName = "SISTEMAFLETESACARREOSDataSet15";
-            this.sISTEMAFLETESACARREOSDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // kILOMETROBindingSource1
             // 
             this.kILOMETROBindingSource1.DataMember = "KILOMETRO";
-            this.kILOMETROBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
             // 
             // aUTOSBindingSource1
             // 
             this.aUTOSBindingSource1.DataMember = "AUTOS";
-            this.aUTOSBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
             // 
             // cHOFERBindingSource1
             // 
             this.cHOFERBindingSource1.DataMember = "CHOFER";
-            this.cHOFERBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
             // 
             // mATERIALESBindingSource1
             // 
             this.mATERIALESBindingSource1.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
             // 
             // fACTURABindingSource
             // 
             this.fACTURABindingSource.DataMember = "FACTURA";
-            this.fACTURABindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet8;
-            // 
-            // sISTEMAFLETESACARREOSDataSet8
-            // 
-            this.sISTEMAFLETESACARREOSDataSet8.DataSetName = "SISTEMAFLETESACARREOSDataSet8";
-            this.sISTEMAFLETESACARREOSDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // kILOMETROBindingSource
             // 
             this.kILOMETROBindingSource.DataMember = "KILOMETRO";
-            this.kILOMETROBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet8;
             // 
             // aUTOSBindingSource
             // 
             this.aUTOSBindingSource.DataMember = "AUTOS";
-            this.aUTOSBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet8;
             // 
             // cHOFERBindingSource
             // 
             this.cHOFERBindingSource.DataMember = "CHOFER";
-            this.cHOFERBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet8;
             // 
             // mATERIALESBindingSource
             // 
             this.mATERIALESBindingSource.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet8;
             // 
-            // mATERIALESTableAdapter
+            // fACTURABindingSource3
             // 
-            this.mATERIALESTableAdapter.ClearBeforeFill = true;
+            this.fACTURABindingSource3.DataMember = "FACTURA";
             // 
-            // cHOFERTableAdapter
+            // fACTURABindingSource5
             // 
-            this.cHOFERTableAdapter.ClearBeforeFill = true;
+            this.fACTURABindingSource5.DataMember = "FACTURA";
             // 
-            // aUTOSTableAdapter
+            // fACTURATableAdapter6
             // 
-            this.aUTOSTableAdapter.ClearBeforeFill = true;
+            this.fACTURATableAdapter6.ClearBeforeFill = true;
             // 
-            // kILOMETROTableAdapter
+            // kILOMETROTableAdapter3
             // 
-            this.kILOMETROTableAdapter.ClearBeforeFill = true;
+            this.kILOMETROTableAdapter3.ClearBeforeFill = true;
+            // 
+            // mATERIALESTableAdapter3
+            // 
+            this.mATERIALESTableAdapter3.ClearBeforeFill = true;
+            // 
+            // cHOFERTableAdapter3
+            // 
+            this.cHOFERTableAdapter3.ClearBeforeFill = true;
+            // 
+            // aUTOSTableAdapter3
+            // 
+            this.aUTOSTableAdapter3.ClearBeforeFill = true;
             // 
             // fACTURATableAdapter
             // 
             this.fACTURATableAdapter.ClearBeforeFill = true;
             // 
-            // mATERIALESTableAdapter1
+            // mATERIALESBindingSource4
             // 
-            this.mATERIALESTableAdapter1.ClearBeforeFill = true;
+            this.mATERIALESBindingSource4.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
-            // cHOFERTableAdapter1
+            // mATERIALESTableAdapter
             // 
-            this.cHOFERTableAdapter1.ClearBeforeFill = true;
+            this.mATERIALESTableAdapter.ClearBeforeFill = true;
             // 
-            // aUTOSTableAdapter1
+            // kILOMETROBindingSource4
             // 
-            this.aUTOSTableAdapter1.ClearBeforeFill = true;
+            this.kILOMETROBindingSource4.DataMember = "KILOMETRO";
+            this.kILOMETROBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
-            // kILOMETROTableAdapter1
+            // kILOMETROTableAdapter
             // 
-            this.kILOMETROTableAdapter1.ClearBeforeFill = true;
+            this.kILOMETROTableAdapter.ClearBeforeFill = true;
             // 
-            // fACTURATableAdapter1
+            // aUTOSBindingSource4
             // 
-            this.fACTURATableAdapter1.ClearBeforeFill = true;
+            this.aUTOSBindingSource4.DataMember = "AUTOS";
+            this.aUTOSBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
-            // mATERIALESTableAdapter2
+            // aUTOSTableAdapter
             // 
-            this.mATERIALESTableAdapter2.ClearBeforeFill = true;
+            this.aUTOSTableAdapter.ClearBeforeFill = true;
             // 
-            // cHOFERTableAdapter2
+            // cHOFERBindingSource4
             // 
-            this.cHOFERTableAdapter2.ClearBeforeFill = true;
+            this.cHOFERBindingSource4.DataMember = "CHOFER";
+            this.cHOFERBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
-            // aUTOSTableAdapter2
+            // cHOFERTableAdapter
             // 
-            this.aUTOSTableAdapter2.ClearBeforeFill = true;
-            // 
-            // kILOMETROTableAdapter2
-            // 
-            this.kILOMETROTableAdapter2.ClearBeforeFill = true;
-            // 
-            // sISTEMAFLETESACARREOSDataSet2
-            // 
-            this.sISTEMAFLETESACARREOSDataSet2.DataSetName = "SISTEMAFLETESACARREOSDataSet2";
-            this.sISTEMAFLETESACARREOSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sISTEMAFLETESACARREOSDataSet2BindingSource
-            // 
-            this.sISTEMAFLETESACARREOSDataSet2BindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet2;
-            this.sISTEMAFLETESACARREOSDataSet2BindingSource.Position = 0;
-            // 
-            // fACTURATableAdapter2
-            // 
-            this.fACTURATableAdapter2.ClearBeforeFill = true;
-            // 
-            // sISTEMAFLETESACARREOSDataSet17
-            // 
-            this.sISTEMAFLETESACARREOSDataSet17.DataSetName = "SISTEMAFLETESACARREOSDataSet17";
-            this.sISTEMAFLETESACARREOSDataSet17.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fACTURABindingSource3
-            // 
-            this.fACTURABindingSource3.DataMember = "FACTURA";
-            this.fACTURABindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet17;
-            // 
-            // fACTURATableAdapter3
-            // 
-            this.fACTURATableAdapter3.ClearBeforeFill = true;
-            // 
-            // fACTURATableAdapter4
-            // 
-            this.fACTURATableAdapter4.ClearBeforeFill = true;
-            // 
-            // sISTEMAFLETESACARREOSDataSet19
-            // 
-            this.sISTEMAFLETESACARREOSDataSet19.DataSetName = "SISTEMAFLETESACARREOSDataSet19";
-            this.sISTEMAFLETESACARREOSDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fACTURABindingSource5
-            // 
-            this.fACTURABindingSource5.DataMember = "FACTURA";
-            this.fACTURABindingSource5.DataSource = this.sISTEMAFLETESACARREOSDataSet19;
-            // 
-            // fACTURATableAdapter5
-            // 
-            this.fACTURATableAdapter5.ClearBeforeFill = true;
-            // 
-            // fACTURATableAdapter6
-            // 
-            this.fACTURATableAdapter6.ClearBeforeFill = true;
+            this.cHOFERTableAdapter.ClearBeforeFill = true;
             // 
             // VentanaDeVenta
             // 
@@ -1105,38 +1064,42 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_FacturacionConsulta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Kilometro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Auto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chofer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Material)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fACTURABindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kILOMETROBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTOSBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1162,43 +1125,28 @@
         private System.Windows.Forms.Button btn_AMaterial;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_Material;
-        private SISTEMAFLETESACARREOSDataSet8 sISTEMAFLETESACARREOSDataSet8;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource;
-        private SISTEMAFLETESACARREOSDataSet8TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter;
         private System.Windows.Forms.DataGridView dgv_Auto;
         private System.Windows.Forms.DataGridView dgv_Chofer;
         private System.Windows.Forms.BindingSource cHOFERBindingSource;
-        private SISTEMAFLETESACARREOSDataSet8TableAdapters.CHOFERTableAdapter cHOFERTableAdapter;
         private System.Windows.Forms.BindingSource aUTOSBindingSource;
-        private SISTEMAFLETESACARREOSDataSet8TableAdapters.AUTOSTableAdapter aUTOSTableAdapter;
         private System.Windows.Forms.DataGridView dgv_Kilometro;
         private System.Windows.Forms.BindingSource kILOMETROBindingSource;
-        private SISTEMAFLETESACARREOSDataSet8TableAdapters.KILOMETROTableAdapter kILOMETROTableAdapter;
         private System.Windows.Forms.DataGridView dgv_FacturacionConsulta;
         private System.Windows.Forms.BindingSource fACTURABindingSource;
-        private SISTEMAFLETESACARREOSDataSet8TableAdapters.FACTURATableAdapter fACTURATableAdapter;
         private System.Windows.Forms.Button btn_Calcular;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_SetSubtotal;
-        private SISTEMAFLETESACARREOSDataSet15 sISTEMAFLETESACARREOSDataSet15;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource1;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cHOFERBindingSource1;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.CHOFERTableAdapter cHOFERTableAdapter1;
         private System.Windows.Forms.BindingSource aUTOSBindingSource1;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.AUTOSTableAdapter aUTOSTableAdapter1;
         private System.Windows.Forms.BindingSource kILOMETROBindingSource1;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.KILOMETROTableAdapter kILOMETROTableAdapter1;
         private System.Windows.Forms.BindingSource fACTURABindingSource1;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.FACTURATableAdapter fACTURATableAdapter1;
-        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource2;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter2;
         private System.Windows.Forms.BindingSource cHOFERBindingSource2;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.CHOFERTableAdapter cHOFERTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idChoferDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lICENCIACDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nChoferDataGridViewTextBoxColumn;
@@ -1212,7 +1160,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn disponibleDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource aUTOSBindingSource2;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.AUTOSTableAdapter aUTOSTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAutosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numPlacasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
@@ -1220,16 +1167,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn capADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn disponibleDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource kILOMETROBindingSource2;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.KILOMETROTableAdapter kILOMETROTableAdapter2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idKilometroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn1;
-        private SISTEMAFLETESACARREOSDataSet2 sISTEMAFLETESACARREOSDataSet2;
         private System.Windows.Forms.BindingSource sISTEMAFLETESACARREOSDataSet2BindingSource;
         private System.Windows.Forms.BindingSource fACTURABindingSource2;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.FACTURATableAdapter fACTURATableAdapter2;
-        private SISTEMAFLETESACARREOSDataSet17 sISTEMAFLETESACARREOSDataSet17;
         private System.Windows.Forms.BindingSource fACTURABindingSource3;
-        private SISTEMAFLETESACARREOSDataSet17TableAdapters.FACTURATableAdapter fACTURATableAdapter3;
         private System.Windows.Forms.DataGridViewTextBoxColumn boletanoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numFacturaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
@@ -1244,13 +1186,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn factlicenciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn factplacasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn factKilometroDataGridViewTextBoxColumn;
-        private SISTEMAFLETESACARREOSDataSet18 sISTEMAFLETESACARREOSDataSet18;
         private System.Windows.Forms.BindingSource fACTURABindingSource4;
-        private SISTEMAFLETESACARREOSDataSet18TableAdapters.FACTURATableAdapter fACTURATableAdapter4;
         private System.Windows.Forms.Label label2;
-        private SISTEMAFLETESACARREOSDataSet19 sISTEMAFLETESACARREOSDataSet19;
         private System.Windows.Forms.BindingSource fACTURABindingSource5;
-        private SISTEMAFLETESACARREOSDataSet19TableAdapters.FACTURATableAdapter fACTURATableAdapter5;
         private SISTEMAFLETESACARREOSDataSet20 sISTEMAFLETESACARREOSDataSet20;
         private System.Windows.Forms.BindingSource fACTURABindingSource6;
         private SISTEMAFLETESACARREOSDataSet20TableAdapters.FACTURATableAdapter fACTURATableAdapter6;
@@ -1265,5 +1203,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio_Kilometro;
         private System.Windows.Forms.DataGridViewTextBoxColumn placa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cap_Auto;
+        private System.Windows.Forms.BindingSource fACTURABindingSource7;
+        private System.Windows.Forms.BindingSource kILOMETROBindingSource3;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.KILOMETROTableAdapter kILOMETROTableAdapter3;
+        private System.Windows.Forms.BindingSource mATERIALESBindingSource3;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter3;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource3;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.CHOFERTableAdapter cHOFERTableAdapter3;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource3;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.AUTOSTableAdapter aUTOSTableAdapter3;
+        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
+        private System.Windows.Forms.BindingSource fACTURABindingSource8;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.FACTURATableAdapter fACTURATableAdapter;
+        private System.Windows.Forms.BindingSource mATERIALESBindingSource4;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter;
+        private System.Windows.Forms.BindingSource kILOMETROBindingSource4;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.KILOMETROTableAdapter kILOMETROTableAdapter;
+        private System.Windows.Forms.BindingSource aUTOSBindingSource4;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.AUTOSTableAdapter aUTOSTableAdapter;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource4;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter cHOFERTableAdapter;
     }
 }

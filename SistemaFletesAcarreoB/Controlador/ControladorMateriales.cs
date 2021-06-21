@@ -44,7 +44,7 @@ namespace SistemaFletesAcarreoB.Controlador
                     }
                     if (control != 1)
                     {
-                        nuevoMaterial.Precio = (Math.Round(float.Parse(nuevoMaterial.Precio.ToString()), 2)).ToString();
+                        nuevoMaterial.Precio = (float.Parse(nuevoMaterial.Precio)).ToString();
                         ModeloMateriales.crearMaterial(nuevoMaterial);
                     }
                 }

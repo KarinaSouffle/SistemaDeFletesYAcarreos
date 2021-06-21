@@ -62,6 +62,24 @@ namespace SistemaFletesAcarreoB.Modelo
                 throw new Exception ("Error " + ex.Message);
             }
         }
+        public static List<FACTURA> buscarFacturaPorIDLista(int criterio)
+        {
+            try
+            {
+                using (var contextoFactura = new SISTEMAFLETESACARREOSEntities())
+                {
+                    var resultado = (from c in contextoFactura.FACTURA
+                                     where c.Num_Factura == criterio
+                                     select c).ToList();
+                    return resultado;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error " + ex.Message);
+            }
+        }
         //Memento
 
         class Originator

@@ -30,6 +30,7 @@ namespace SistemaFletesAcarreoB
         private void btn_GuardarNPK_Click(object sender, EventArgs e)
         {
             int control = 0;
+            Validar validar = new Validar();
             if (txt_NuevoPrecio.Text.ToString() == String.Empty)
             {
                 MessageBox.Show("Hay campos vacios.", "Error", MessageBoxButtons.OK);
@@ -54,34 +55,38 @@ namespace SistemaFletesAcarreoB
                 }
                 if (control != 1)
                 {
-                    try
+                    if (validar.ValidarNum(txt_NuevoPrecio.Text, "precio del kilometro") == true)
                     {
-                        var nuevoKilometro = new KILOMETRO();
-                        nuevoKilometro.Precio = (Math.Round(float.Parse(txt_NuevoPrecio.Text), 2)).ToString();
-                        ControladorKilometro.CrearKilometro(nuevoKilometro);
-                        lbl_SetPrecio.Text = txt_NuevoPrecio.Text;
-
-                        int cantidaddatos = Int32.Parse(dgv_PrecioKilometro.Rows.Count.ToString());
-                        this.kILOMETROTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet18.KILOMETRO);
-                        int cantidadnuevoskilometros = Int32.Parse(dgv_PrecioKilometro.Rows.Count.ToString());
-                        if (cantidadnuevoskilometros == (cantidaddatos + 1))
+                        try
                         {
-                            txt_NuevoPrecio.Text = " ";
-                            MessageBox.Show("Actualizado");
+                            var nuevoKilometro = new KILOMETRO();
+                            nuevoKilometro.Precio = (Math.Round(float.Parse(txt_NuevoPrecio.Text), 2)).ToString();
+                            ControladorKilometro.CrearKilometro(nuevoKilometro);
+                            lbl_SetPrecio.Text = txt_NuevoPrecio.Text;
+
+                            int cantidaddatos = Int32.Parse(dgv_PrecioKilometro.Rows.Count.ToString());
+                            this.kILOMETROTableAdapter5.Fill(this.sISTEMAFLETESACARREOSDataSet20.KILOMETRO);
+                            int cantidadnuevoskilometros = Int32.Parse(dgv_PrecioKilometro.Rows.Count.ToString());
+                            if (cantidadnuevoskilometros == (cantidaddatos + 1))
+                            {
+                                txt_NuevoPrecio.Text = " ";
+                                MessageBox.Show("Actualizado");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
                         }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
-                    }
+                    
                 }
             }                                                                          
         }
 
         private void PKilometro_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.KILOMETRO' Puede moverla o quitarla según sea necesario.
-            this.kILOMETROTableAdapter4.Fill(this.sISTEMAFLETESACARREOSDataSet18.KILOMETRO);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet20.KILOMETRO' Puede moverla o quitarla según sea necesario.
+            this.kILOMETROTableAdapter5.Fill(this.sISTEMAFLETESACARREOSDataSet20.KILOMETRO);
             int xd = Convert.ToInt32(this.dgv_PrecioKilometro.Rows.Count.ToString());
             if (xd >= 1)
             {

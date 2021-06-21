@@ -42,23 +42,24 @@
             this.contraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOSBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
+            this.uSUARIOSBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
             this.uSUARIOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
             this.uSUARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet14 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14();
-            this.sISTEMAFLETESACARREOSDataSet12 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet12();
             this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet12TableAdapters.USUARIOSTableAdapter();
-            this.uSUARIOSTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet14TableAdapters.USUARIOSTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.uSUARIOSTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.USUARIOSTableAdapter();
+            this.uSUARIOSTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.USUARIOSTableAdapter();
+            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.USUARIOSTableAdapter();
             this.gB_Datos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -154,7 +155,7 @@
             this.contraDataGridViewTextBoxColumn,
             this.nivelDataGridViewTextBoxColumn,
             this.enUsoDataGridViewTextBoxColumn});
-            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource2;
+            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource4;
             this.dgv_Usuarios.Location = new System.Drawing.Point(3, 313);
             this.dgv_Usuarios.Name = "dgv_Usuarios";
             this.dgv_Usuarios.Size = new System.Drawing.Size(251, 99);
@@ -193,57 +194,55 @@
             this.enUsoDataGridViewTextBoxColumn.HeaderText = "EnUso";
             this.enUsoDataGridViewTextBoxColumn.Name = "enUsoDataGridViewTextBoxColumn";
             // 
+            // uSUARIOSBindingSource4
+            // 
+            this.uSUARIOSBindingSource4.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            // 
+            // sISTEMAFLETESACARREOSDataSet
+            // 
+            this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
+            this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // uSUARIOSBindingSource3
+            // 
+            this.uSUARIOSBindingSource3.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // sISTEMAFLETESACARREOSDataSet20
+            // 
+            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
+            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // uSUARIOSBindingSource2
             // 
             this.uSUARIOSBindingSource2.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
-            // 
-            // sISTEMAFLETESACARREOSDataSet16
-            // 
-            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
-            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uSUARIOSBindingSource1
             // 
             this.uSUARIOSBindingSource1.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet14;
-            // 
-            // sISTEMAFLETESACARREOSDataSet14
-            // 
-            this.sISTEMAFLETESACARREOSDataSet14.DataSetName = "SISTEMAFLETESACARREOSDataSet14";
-            this.sISTEMAFLETESACARREOSDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sISTEMAFLETESACARREOSDataSet12
-            // 
-            this.sISTEMAFLETESACARREOSDataSet12.DataSetName = "SISTEMAFLETESACARREOSDataSet12";
-            this.sISTEMAFLETESACARREOSDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uSUARIOSBindingSource
             // 
             this.uSUARIOSBindingSource.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet12;
-            // 
-            // uSUARIOSTableAdapter
-            // 
-            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // uSUARIOSTableAdapter1
-            // 
-            this.uSUARIOSTableAdapter1.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SistemaFletesAcarreoB.Properties.Resources.P1;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 107);
+            this.pictureBox1.Image = global::SistemaFletesAcarreoB.Properties.Resources.PPP1;
+            this.pictureBox1.Location = new System.Drawing.Point(209, 99);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1110, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(933, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // uSUARIOSTableAdapter2
+            // uSUARIOSTableAdapter3
             // 
-            this.uSUARIOSTableAdapter2.ClearBeforeFill = true;
+            this.uSUARIOSTableAdapter3.ClearBeforeFill = true;
+            // 
+            // uSUARIOSTableAdapter
+            // 
+            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
             // 
             // Login
             // 
@@ -264,11 +263,12 @@
             this.gB_Datos.ResumeLayout(false);
             this.gB_Datos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -286,21 +286,21 @@
         private System.Windows.Forms.GroupBox gB_Datos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_Usuarios;
-        private SISTEMAFLETESACARREOSDataSet12 sISTEMAFLETESACARREOSDataSet12;
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
-        private SISTEMAFLETESACARREOSDataSet12TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
-        private SISTEMAFLETESACARREOSDataSet14 sISTEMAFLETESACARREOSDataSet14;
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource1;
-        private SISTEMAFLETESACARREOSDataSet14TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enUsoDataGridViewTextBoxColumn;
-        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource2;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter2;
         private System.Windows.Forms.Button btn_Registrar;
+        private SISTEMAFLETESACARREOSDataSet20 sISTEMAFLETESACARREOSDataSet20;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource3;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter3;
+        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource4;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
     }
 }
 

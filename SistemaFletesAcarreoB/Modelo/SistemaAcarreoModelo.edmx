@@ -10,9 +10,9 @@
             <PropertyRef Name="Id_Autos" />
           </Key>
           <Property Name="Id_Autos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Num_Placas" Type="varchar" MaxLength="6" Nullable="false" />
-          <Property Name="Marca" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Kilometraje" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Num_Placas" Type="varchar" MaxLength="6" />
+          <Property Name="Marca" Type="varchar" MaxLength="20" />
+          <Property Name="Kilometraje" Type="varchar" MaxLength="9" />
           <Property Name="Cap_A" Type="varchar" MaxLength="9" Nullable="false" />
           <Property Name="Disponible" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -28,7 +28,7 @@
           <Property Name="Sexo" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="Edad" Type="varchar" MaxLength="2" Nullable="false" />
           <Property Name="Telefono" Type="varchar" MaxLength="30" Nullable="false" />
-          <Property Name="Correo" Type="varchar" MaxLength="30" />
+          <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="F_Nac" Type="date" Nullable="false" />
           <Property Name="Direccion" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Disponible" Type="char" MaxLength="1" Nullable="false" />
@@ -48,7 +48,7 @@
           <Property Name="Subtotal" Type="float" Nullable="false" />
           <Property Name="IVA" Type="float" Nullable="false" />
           <Property Name="Total" Type="float" Nullable="false" />
-          <Property Name="Fact_material" Type="int" Nullable="false" />
+          <Property Name="Fact_material" Type="varchar" MaxLength="13" Nullable="false" />
           <Property Name="Fact_licencia" Type="varchar" MaxLength="13" Nullable="false" />
           <Property Name="Fact_placas" Type="varchar" MaxLength="6" Nullable="false" />
           <Property Name="Fact_Kilometro" Type="varchar" MaxLength="9" Nullable="false" />
@@ -76,7 +76,7 @@
           <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Contra" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Nivel" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="EnUso" Type="char" MaxLength="1" />
+          <Property Name="EnUso" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
         <EntityContainer Name="SISTEMAFLETESACARREOSModelStoreContainer">
           <EntitySet Name="AUTOS" EntityType="Self.AUTOS" Schema="dbo" store:Type="Tables" />
@@ -96,9 +96,9 @@
             <PropertyRef Name="Id_Autos" />
           </Key>
           <Property Name="Id_Autos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Num_Placas" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Kilometraje" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Num_Placas" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Kilometraje" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
           <Property Name="Cap_A" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Disponible" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
         </EntityType>
@@ -114,7 +114,7 @@
           <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Edad" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="F_Nac" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Disponible" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
@@ -134,7 +134,7 @@
           <Property Name="Subtotal" Type="Double" Nullable="false" />
           <Property Name="IVA" Type="Double" Nullable="false" />
           <Property Name="Total" Type="Double" Nullable="false" />
-          <Property Name="Fact_material" Type="Int32" Nullable="false" />
+          <Property Name="Fact_material" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Fact_licencia" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Fact_placas" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Fact_Kilometro" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
@@ -162,7 +162,7 @@
           <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Contra" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nivel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="EnUso" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="EnUso" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityContainer Name="SISTEMAFLETESACARREOSEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AUTOS" EntityType="Self.AUTOS" />

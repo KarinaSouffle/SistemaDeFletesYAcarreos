@@ -32,28 +32,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_AñadirC = new System.Windows.Forms.Button();
-            this.dgv_Choferes = new System.Windows.Forms.DataGridView();
+            this.cHOFERBindingSource11 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
             this.cHOFERBindingSource10 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet18 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18();
             this.cHOFERBindingSource9 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
             this.cHOFERBindingSource8 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet15 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15();
             this.cHOFERBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet7 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7();
             this.cHOFERBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet6 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet6();
             this.cHOFERBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet5 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet5();
             this.cHOFERBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet1();
             this.cHOFERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
             this.cHOFERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_Editar = new System.Windows.Forms.Button();
-            this.lbl_Nombre = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.sISTEMAFLETESACARREOSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet7BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSUARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERTableAdapter8 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.CHOFERTableAdapter();
+            this.uSUARIOSTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.USUARIOSTableAdapter();
+            this.uSUARIOSBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_SetIdChofer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_SetLicencia = new System.Windows.Forms.TextBox();
@@ -76,28 +77,9 @@
             this.lbl_AMaterno = new System.Windows.Forms.Label();
             this.lbl_APaterno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.cHOFERTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter();
-            this.sISTEMAFLETESACARREOSDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cHOFERBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cHOFERTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet1TableAdapters.CHOFERTableAdapter();
-            this.cHOFERBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.cHOFERTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet5TableAdapters.CHOFERTableAdapter();
-            this.cHOFERTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet6TableAdapters.CHOFERTableAdapter();
-            this.sISTEMAFLETESACARREOSDataSet7BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cHOFERTableAdapter4 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7TableAdapters.CHOFERTableAdapter();
-            this.cHOFERTableAdapter5 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.CHOFERTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cHOFERTableAdapter6 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.CHOFERTableAdapter();
-            this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.USUARIOSTableAdapter();
-            this.cHOFERTableAdapter7 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.CHOFERTableAdapter();
+            this.lbl_Nombre = new System.Windows.Forms.Label();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.dgv_Choferes = new System.Windows.Forms.DataGridView();
             this.idChoferDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lICENCIACDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nChoferDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,242 +92,157 @@
             this.fNacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Choferes)).BeginInit();
+            this.cHOFERBindingSource12 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHOFERTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter();
+            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.USUARIOSTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Choferes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource12)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_AñadirC
+            // cHOFERBindingSource11
             // 
-            this.btn_AñadirC.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_AñadirC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_AñadirC.ForeColor = System.Drawing.Color.White;
-            this.btn_AñadirC.Location = new System.Drawing.Point(135, 521);
-            this.btn_AñadirC.Name = "btn_AñadirC";
-            this.btn_AñadirC.Size = new System.Drawing.Size(75, 35);
-            this.btn_AñadirC.TabIndex = 7;
-            this.btn_AñadirC.Text = "Añadir";
-            this.btn_AñadirC.UseVisualStyleBackColor = false;
-            this.btn_AñadirC.Visible = false;
-            this.btn_AñadirC.Click += new System.EventHandler(this.btn_VolverPKPP_Click);
+            this.cHOFERBindingSource11.DataMember = "CHOFER";
+            this.cHOFERBindingSource11.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
             // 
-            // dgv_Choferes
+            // sISTEMAFLETESACARREOSDataSet20
             // 
-            this.dgv_Choferes.AllowUserToAddRows = false;
-            this.dgv_Choferes.AllowUserToDeleteRows = false;
-            this.dgv_Choferes.AutoGenerateColumns = false;
-            this.dgv_Choferes.BackgroundColor = System.Drawing.Color.DarkRed;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Choferes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Choferes.ColumnHeadersHeight = 29;
-            this.dgv_Choferes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idChoferDataGridViewTextBoxColumn,
-            this.lICENCIACDataGridViewTextBoxColumn,
-            this.nChoferDataGridViewTextBoxColumn,
-            this.apellidoPCDataGridViewTextBoxColumn,
-            this.apellidoMCDataGridViewTextBoxColumn,
-            this.sexoDataGridViewTextBoxColumn,
-            this.edadDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.correoDataGridViewTextBoxColumn,
-            this.fNacDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.disponibleDataGridViewTextBoxColumn});
-            this.dgv_Choferes.DataSource = this.cHOFERBindingSource10;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Choferes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Choferes.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dgv_Choferes.Location = new System.Drawing.Point(54, 49);
-            this.dgv_Choferes.Name = "dgv_Choferes";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Choferes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Choferes.Size = new System.Drawing.Size(578, 443);
-            this.dgv_Choferes.TabIndex = 9;
-            this.dgv_Choferes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Choferes_CellClick);
-            this.dgv_Choferes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Choferes_CellMouseClick);
-            this.dgv_Choferes.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Choferes_CellMouseEnter);
-            this.dgv_Choferes.MouseEnter += new System.EventHandler(this.dgv_Choferes_MouseEnter);
+            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
+            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource10
             // 
             this.cHOFERBindingSource10.DataMember = "CHOFER";
-            this.cHOFERBindingSource10.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
-            // 
-            // sISTEMAFLETESACARREOSDataSet18
-            // 
-            this.sISTEMAFLETESACARREOSDataSet18.DataSetName = "SISTEMAFLETESACARREOSDataSet18";
-            this.sISTEMAFLETESACARREOSDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource9
             // 
             this.cHOFERBindingSource9.DataMember = "CHOFER";
-            this.cHOFERBindingSource9.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
-            // 
-            // sISTEMAFLETESACARREOSDataSet16
-            // 
-            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
-            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource8
             // 
             this.cHOFERBindingSource8.DataMember = "CHOFER";
-            this.cHOFERBindingSource8.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
-            // 
-            // sISTEMAFLETESACARREOSDataSet15
-            // 
-            this.sISTEMAFLETESACARREOSDataSet15.DataSetName = "SISTEMAFLETESACARREOSDataSet15";
-            this.sISTEMAFLETESACARREOSDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource7
             // 
             this.cHOFERBindingSource7.DataMember = "CHOFER";
-            this.cHOFERBindingSource7.DataSource = this.sISTEMAFLETESACARREOSDataSet7;
-            // 
-            // sISTEMAFLETESACARREOSDataSet7
-            // 
-            this.sISTEMAFLETESACARREOSDataSet7.DataSetName = "SISTEMAFLETESACARREOSDataSet7";
-            this.sISTEMAFLETESACARREOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource6
             // 
             this.cHOFERBindingSource6.DataMember = "CHOFER";
-            this.cHOFERBindingSource6.DataSource = this.sISTEMAFLETESACARREOSDataSet6;
-            // 
-            // sISTEMAFLETESACARREOSDataSet6
-            // 
-            this.sISTEMAFLETESACARREOSDataSet6.DataSetName = "SISTEMAFLETESACARREOSDataSet6";
-            this.sISTEMAFLETESACARREOSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource5
             // 
             this.cHOFERBindingSource5.DataMember = "CHOFER";
-            this.cHOFERBindingSource5.DataSource = this.sISTEMAFLETESACARREOSDataSet5;
-            // 
-            // sISTEMAFLETESACARREOSDataSet5
-            // 
-            this.sISTEMAFLETESACARREOSDataSet5.DataSetName = "SISTEMAFLETESACARREOSDataSet5";
-            this.sISTEMAFLETESACARREOSDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource3
             // 
             this.cHOFERBindingSource3.DataMember = "CHOFER";
-            this.cHOFERBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet1;
-            // 
-            // sISTEMAFLETESACARREOSDataSet1
-            // 
-            this.sISTEMAFLETESACARREOSDataSet1.DataSetName = "SISTEMAFLETESACARREOSDataSet1";
-            this.sISTEMAFLETESACARREOSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cHOFERBindingSource1
             // 
             this.cHOFERBindingSource1.DataMember = "CHOFER";
-            this.cHOFERBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            // 
+            // cHOFERBindingSource
+            // 
+            this.cHOFERBindingSource.DataMember = "CHOFER";
+            // 
+            // cHOFERBindingSource2
+            // 
+            this.cHOFERBindingSource2.DataMember = "CHOFER";
+            // 
+            // cHOFERBindingSource4
+            // 
+            this.cHOFERBindingSource4.DataMember = "CHOFER";
+            // 
+            // uSUARIOSBindingSource1
+            // 
+            this.uSUARIOSBindingSource1.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // uSUARIOSBindingSource
+            // 
+            this.uSUARIOSBindingSource.DataMember = "USUARIOS";
+            // 
+            // cHOFERTableAdapter8
+            // 
+            this.cHOFERTableAdapter8.ClearBeforeFill = true;
+            // 
+            // uSUARIOSTableAdapter1
+            // 
+            this.uSUARIOSTableAdapter1.ClearBeforeFill = true;
+            // 
+            // uSUARIOSBindingSource2
+            // 
+            this.uSUARIOSBindingSource2.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
             // sISTEMAFLETESACARREOSDataSet
             // 
             this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
             this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cHOFERBindingSource
+            // btn_Eliminar
             // 
-            this.cHOFERBindingSource.DataMember = "CHOFER";
-            this.cHOFERBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            this.btn_Eliminar.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
+            this.btn_Eliminar.Location = new System.Drawing.Point(190, 486);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(75, 35);
+            this.btn_Eliminar.TabIndex = 42;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Visible = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-            // btn_Editar
+            // panel2
             // 
-            this.btn_Editar.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Editar.ForeColor = System.Drawing.Color.White;
-            this.btn_Editar.Location = new System.Drawing.Point(54, 521);
-            this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(75, 35);
-            this.btn_Editar.TabIndex = 29;
-            this.btn_Editar.Text = "Editar";
-            this.btn_Editar.UseVisualStyleBackColor = false;
-            this.btn_Editar.Visible = false;
-            this.btn_Editar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbl_Nombre
-            // 
-            this.lbl_Nombre.AutoSize = true;
-            this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Nombre.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Nombre.Location = new System.Drawing.Point(54, 26);
-            this.lbl_Nombre.Name = "lbl_Nombre";
-            this.lbl_Nombre.Size = new System.Drawing.Size(156, 20);
-            this.lbl_Nombre.TabIndex = 30;
-            this.lbl_Nombre.Text = "Listado de Choferes:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkRed;
-            this.panel1.Controls.Add(this.lbl_SetIdChofer);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbl_SetLicencia);
-            this.panel1.Controls.Add(this.lbl_SetDomicilio);
-            this.panel1.Controls.Add(this.lbl_SetCorreo);
-            this.panel1.Controls.Add(this.lbl_SetTelefono);
-            this.panel1.Controls.Add(this.lbl_SetEdad);
-            this.panel1.Controls.Add(this.lbl_SetSexo);
-            this.panel1.Controls.Add(this.lbl_SetAMaterno);
-            this.panel1.Controls.Add(this.lbl_SetAPaterno);
-            this.panel1.Controls.Add(this.lbl_SetNombre);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.lbl_Licencia);
-            this.panel1.Controls.Add(this.lbl_FechaNac);
-            this.panel1.Controls.Add(this.lbl_Domicilio);
-            this.panel1.Controls.Add(this.lbl_Correo);
-            this.panel1.Controls.Add(this.lbl_Telefono);
-            this.panel1.Controls.Add(this.lbl_Edad);
-            this.panel1.Controls.Add(this.lbl_Sexo);
-            this.panel1.Controls.Add(this.lbl_AMaterno);
-            this.panel1.Controls.Add(this.lbl_APaterno);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(654, 49);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 443);
-            this.panel1.TabIndex = 31;
-            this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel2.BackColor = System.Drawing.Color.DarkRed;
+            this.panel2.Controls.Add(this.lbl_SetIdChofer);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lbl_SetLicencia);
+            this.panel2.Controls.Add(this.lbl_SetDomicilio);
+            this.panel2.Controls.Add(this.lbl_SetCorreo);
+            this.panel2.Controls.Add(this.lbl_SetTelefono);
+            this.panel2.Controls.Add(this.lbl_SetEdad);
+            this.panel2.Controls.Add(this.lbl_SetSexo);
+            this.panel2.Controls.Add(this.lbl_SetAMaterno);
+            this.panel2.Controls.Add(this.lbl_SetAPaterno);
+            this.panel2.Controls.Add(this.lbl_SetNombre);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.lbl_Licencia);
+            this.panel2.Controls.Add(this.lbl_FechaNac);
+            this.panel2.Controls.Add(this.lbl_Domicilio);
+            this.panel2.Controls.Add(this.lbl_Correo);
+            this.panel2.Controls.Add(this.lbl_Telefono);
+            this.panel2.Controls.Add(this.lbl_Edad);
+            this.panel2.Controls.Add(this.lbl_Sexo);
+            this.panel2.Controls.Add(this.lbl_AMaterno);
+            this.panel2.Controls.Add(this.lbl_APaterno);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(612, 32);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(412, 443);
+            this.panel2.TabIndex = 41;
             // 
             // lbl_SetIdChofer
             // 
@@ -587,141 +484,84 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre: ";
             // 
-            // btn_Eliminar
+            // lbl_Nombre
             // 
-            this.btn_Eliminar.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.btn_Eliminar.Location = new System.Drawing.Point(216, 521);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(75, 35);
-            this.btn_Eliminar.TabIndex = 32;
-            this.btn_Eliminar.Text = "Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = false;
-            this.btn_Eliminar.Visible = false;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
+            this.lbl_Nombre.AutoSize = true;
+            this.lbl_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nombre.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Nombre.Location = new System.Drawing.Point(12, 9);
+            this.lbl_Nombre.Name = "lbl_Nombre";
+            this.lbl_Nombre.Size = new System.Drawing.Size(156, 20);
+            this.lbl_Nombre.TabIndex = 40;
+            this.lbl_Nombre.Text = "Listado de Choferes:";
             // 
-            // cHOFERTableAdapter
+            // btn_Editar
             // 
-            this.cHOFERTableAdapter.ClearBeforeFill = true;
+            this.btn_Editar.BackColor = System.Drawing.Color.DarkRed;
+            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_Editar.ForeColor = System.Drawing.Color.White;
+            this.btn_Editar.Location = new System.Drawing.Point(12, 486);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(75, 35);
+            this.btn_Editar.TabIndex = 39;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = false;
+            this.btn_Editar.Visible = false;
+            this.btn_Editar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // sISTEMAFLETESACARREOSDataSetBindingSource
+            // dgv_Choferes
             // 
-            this.sISTEMAFLETESACARREOSDataSetBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
-            this.sISTEMAFLETESACARREOSDataSetBindingSource.Position = 0;
-            // 
-            // cHOFERBindingSource2
-            // 
-            this.cHOFERBindingSource2.DataMember = "CHOFER";
-            this.cHOFERBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet;
-            // 
-            // cHOFERTableAdapter1
-            // 
-            this.cHOFERTableAdapter1.ClearBeforeFill = true;
-            // 
-            // cHOFERBindingSource4
-            // 
-            this.cHOFERBindingSource4.DataMember = "CHOFER";
-            this.cHOFERBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet5;
-            // 
-            // cHOFERTableAdapter2
-            // 
-            this.cHOFERTableAdapter2.ClearBeforeFill = true;
-            // 
-            // cHOFERTableAdapter3
-            // 
-            this.cHOFERTableAdapter3.ClearBeforeFill = true;
-            // 
-            // sISTEMAFLETESACARREOSDataSet7BindingSource
-            // 
-            this.sISTEMAFLETESACARREOSDataSet7BindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet7;
-            this.sISTEMAFLETESACARREOSDataSet7BindingSource.Position = 0;
-            // 
-            // cHOFERTableAdapter4
-            // 
-            this.cHOFERTableAdapter4.ClearBeforeFill = true;
-            // 
-            // cHOFERTableAdapter5
-            // 
-            this.cHOFERTableAdapter5.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(654, 521);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 35);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Estatus de Chofer";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // cHOFERTableAdapter6
-            // 
-            this.cHOFERTableAdapter6.ClearBeforeFill = true;
-            // 
-            // dgv_Usuarios
-            // 
-            this.dgv_Usuarios.AutoGenerateColumns = false;
-            this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.contraDataGridViewTextBoxColumn,
-            this.nivelDataGridViewTextBoxColumn,
-            this.enUsoDataGridViewTextBoxColumn});
-            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource;
-            this.dgv_Usuarios.Location = new System.Drawing.Point(363, 521);
-            this.dgv_Usuarios.Name = "dgv_Usuarios";
-            this.dgv_Usuarios.Size = new System.Drawing.Size(240, 150);
-            this.dgv_Usuarios.TabIndex = 36;
-            this.dgv_Usuarios.Visible = false;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // contraDataGridViewTextBoxColumn
-            // 
-            this.contraDataGridViewTextBoxColumn.DataPropertyName = "Contra";
-            this.contraDataGridViewTextBoxColumn.HeaderText = "Contra";
-            this.contraDataGridViewTextBoxColumn.Name = "contraDataGridViewTextBoxColumn";
-            // 
-            // nivelDataGridViewTextBoxColumn
-            // 
-            this.nivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel";
-            this.nivelDataGridViewTextBoxColumn.HeaderText = "Nivel";
-            this.nivelDataGridViewTextBoxColumn.Name = "nivelDataGridViewTextBoxColumn";
-            // 
-            // enUsoDataGridViewTextBoxColumn
-            // 
-            this.enUsoDataGridViewTextBoxColumn.DataPropertyName = "EnUso";
-            this.enUsoDataGridViewTextBoxColumn.HeaderText = "EnUso";
-            this.enUsoDataGridViewTextBoxColumn.Name = "enUsoDataGridViewTextBoxColumn";
-            // 
-            // uSUARIOSBindingSource
-            // 
-            this.uSUARIOSBindingSource.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
-            // 
-            // uSUARIOSTableAdapter
-            // 
-            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // cHOFERTableAdapter7
-            // 
-            this.cHOFERTableAdapter7.ClearBeforeFill = true;
+            this.dgv_Choferes.AllowUserToAddRows = false;
+            this.dgv_Choferes.AllowUserToDeleteRows = false;
+            this.dgv_Choferes.AutoGenerateColumns = false;
+            this.dgv_Choferes.BackgroundColor = System.Drawing.Color.DarkRed;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Choferes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Choferes.ColumnHeadersHeight = 29;
+            this.dgv_Choferes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idChoferDataGridViewTextBoxColumn,
+            this.lICENCIACDataGridViewTextBoxColumn,
+            this.nChoferDataGridViewTextBoxColumn,
+            this.apellidoPCDataGridViewTextBoxColumn,
+            this.apellidoMCDataGridViewTextBoxColumn,
+            this.sexoDataGridViewTextBoxColumn,
+            this.edadDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.fNacDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.disponibleDataGridViewTextBoxColumn});
+            this.dgv_Choferes.DataSource = this.cHOFERBindingSource12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Choferes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Choferes.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dgv_Choferes.Location = new System.Drawing.Point(12, 32);
+            this.dgv_Choferes.Name = "dgv_Choferes";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Choferes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Choferes.Size = new System.Drawing.Size(578, 443);
+            this.dgv_Choferes.TabIndex = 38;
+            this.dgv_Choferes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Choferes_CellClick);
+            this.dgv_Choferes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Choferes_CellMouseClick);
+            this.dgv_Choferes.MouseEnter += new System.EventHandler(this.dgv_Choferes_MouseEnter);
             // 
             // idChoferDataGridViewTextBoxColumn
             // 
@@ -807,62 +647,97 @@
             this.disponibleDataGridViewTextBoxColumn.MaxInputLength = 1;
             this.disponibleDataGridViewTextBoxColumn.Name = "disponibleDataGridViewTextBoxColumn";
             // 
+            // cHOFERBindingSource12
+            // 
+            this.cHOFERBindingSource12.DataMember = "CHOFER";
+            this.cHOFERBindingSource12.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            // 
+            // cHOFERTableAdapter
+            // 
+            this.cHOFERTableAdapter.ClearBeforeFill = true;
+            // 
+            // uSUARIOSTableAdapter
+            // 
+            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
+            // 
             // ListaDeChoferes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 557);
-            this.Controls.Add(this.dgv_Usuarios);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_Eliminar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lbl_Nombre);
-            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.dgv_Choferes);
-            this.Controls.Add(this.btn_AñadirC);
+            this.Controls.Add(this.btn_Editar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaDeChoferes";
             this.Text = "ListaDeChoferes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.ListaDeChoferes_Activated);
             this.Load += new System.EventHandler(this.ListaDeChoferes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Choferes)).EndInit();
+            this.MouseEnter += new System.EventHandler(this.ListaDeChoferes_MouseEnter);
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Choferes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_AñadirC;
-        private System.Windows.Forms.DataGridView dgv_Choferes;
-        private System.Windows.Forms.Button btn_Editar;
-        private System.Windows.Forms.Label lbl_Nombre;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource1;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource2;
+        private System.Windows.Forms.BindingSource sISTEMAFLETESACARREOSDataSetBindingSource;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource3;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource4;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource5;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource6;
+        private System.Windows.Forms.BindingSource sISTEMAFLETESACARREOSDataSet7BindingSource;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource7;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource8;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource9;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource10;
+        private SISTEMAFLETESACARREOSDataSet20 sISTEMAFLETESACARREOSDataSet20;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource11;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.CHOFERTableAdapter cHOFERTableAdapter8;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource1;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter1;
+        private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox lbl_SetIdChofer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox lbl_SetLicencia;
+        private System.Windows.Forms.TextBox lbl_SetDomicilio;
+        private System.Windows.Forms.TextBox lbl_SetCorreo;
+        private System.Windows.Forms.TextBox lbl_SetTelefono;
+        private System.Windows.Forms.TextBox lbl_SetEdad;
+        private System.Windows.Forms.TextBox lbl_SetSexo;
+        private System.Windows.Forms.TextBox lbl_SetAMaterno;
+        private System.Windows.Forms.TextBox lbl_SetAPaterno;
+        private System.Windows.Forms.TextBox lbl_SetNombre;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbl_Licencia;
         private System.Windows.Forms.Label lbl_FechaNac;
@@ -874,56 +749,9 @@
         private System.Windows.Forms.Label lbl_AMaterno;
         private System.Windows.Forms.Label lbl_APaterno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Eliminar;
-        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource;
-        private SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter cHOFERTableAdapter;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource1;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource2;
-        private System.Windows.Forms.BindingSource sISTEMAFLETESACARREOSDataSetBindingSource;
-        private SISTEMAFLETESACARREOSDataSet1 sISTEMAFLETESACARREOSDataSet1;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource3;
-        private SISTEMAFLETESACARREOSDataSet1TableAdapters.CHOFERTableAdapter cHOFERTableAdapter1;
-        private System.Windows.Forms.TextBox lbl_SetLicencia;
-        private System.Windows.Forms.TextBox lbl_SetDomicilio;
-        private System.Windows.Forms.TextBox lbl_SetCorreo;
-        private System.Windows.Forms.TextBox lbl_SetTelefono;
-        private System.Windows.Forms.TextBox lbl_SetEdad;
-        private System.Windows.Forms.TextBox lbl_SetSexo;
-        private System.Windows.Forms.TextBox lbl_SetAMaterno;
-        private System.Windows.Forms.TextBox lbl_SetAPaterno;
-        private System.Windows.Forms.TextBox lbl_SetNombre;
-        private SISTEMAFLETESACARREOSDataSet5 sISTEMAFLETESACARREOSDataSet5;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource4;
-        private SISTEMAFLETESACARREOSDataSet5TableAdapters.CHOFERTableAdapter cHOFERTableAdapter2;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource5;
-        private SISTEMAFLETESACARREOSDataSet6 sISTEMAFLETESACARREOSDataSet6;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource6;
-        private SISTEMAFLETESACARREOSDataSet6TableAdapters.CHOFERTableAdapter cHOFERTableAdapter3;
-        private System.Windows.Forms.BindingSource sISTEMAFLETESACARREOSDataSet7BindingSource;
-        private SISTEMAFLETESACARREOSDataSet7 sISTEMAFLETESACARREOSDataSet7;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource7;
-        private SISTEMAFLETESACARREOSDataSet7TableAdapters.CHOFERTableAdapter cHOFERTableAdapter4;
-        private System.Windows.Forms.TextBox lbl_SetIdChofer;
-        private System.Windows.Forms.Label label2;
-        private SISTEMAFLETESACARREOSDataSet15 sISTEMAFLETESACARREOSDataSet15;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource8;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.CHOFERTableAdapter cHOFERTableAdapter5;
-        private System.Windows.Forms.Button button1;
-        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource9;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.CHOFERTableAdapter cHOFERTableAdapter6;
-        private System.Windows.Forms.DataGridView dgv_Usuarios;
-        private SISTEMAFLETESACARREOSDataSet18 sISTEMAFLETESACARREOSDataSet18;
-        private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
-        private SISTEMAFLETESACARREOSDataSet18TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enUsoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource cHOFERBindingSource10;
-        private SISTEMAFLETESACARREOSDataSet18TableAdapters.CHOFERTableAdapter cHOFERTableAdapter7;
+        private System.Windows.Forms.Label lbl_Nombre;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.DataGridView dgv_Choferes;
         private System.Windows.Forms.DataGridViewTextBoxColumn idChoferDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lICENCIACDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nChoferDataGridViewTextBoxColumn;
@@ -936,5 +764,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fNacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn disponibleDataGridViewTextBoxColumn;
+        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource12;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.CHOFERTableAdapter cHOFERTableAdapter;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource2;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
     }
 }

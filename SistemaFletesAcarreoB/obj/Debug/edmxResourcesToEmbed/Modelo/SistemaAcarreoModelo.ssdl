@@ -5,9 +5,9 @@
       <PropertyRef Name="Id_Autos" />
     </Key>
     <Property Name="Id_Autos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Num_Placas" Type="varchar" MaxLength="6" Nullable="false" />
-    <Property Name="Marca" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Kilometraje" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="Num_Placas" Type="varchar" MaxLength="6" />
+    <Property Name="Marca" Type="varchar" MaxLength="20" />
+    <Property Name="Kilometraje" Type="varchar" MaxLength="9" />
     <Property Name="Cap_A" Type="varchar" MaxLength="9" Nullable="false" />
     <Property Name="Disponible" Type="char" MaxLength="1" Nullable="false" />
   </EntityType>
@@ -23,7 +23,7 @@
     <Property Name="Sexo" Type="char" MaxLength="1" Nullable="false" />
     <Property Name="Edad" Type="varchar" MaxLength="2" Nullable="false" />
     <Property Name="Telefono" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="Correo" Type="varchar" MaxLength="30" />
+    <Property Name="Correo" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="F_Nac" Type="date" Nullable="false" />
     <Property Name="Direccion" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Disponible" Type="char" MaxLength="1" Nullable="false" />
@@ -43,7 +43,7 @@
     <Property Name="Subtotal" Type="float" Nullable="false" />
     <Property Name="IVA" Type="float" Nullable="false" />
     <Property Name="Total" Type="float" Nullable="false" />
-    <Property Name="Fact_material" Type="int" Nullable="false" />
+    <Property Name="Fact_material" Type="varchar" MaxLength="13" Nullable="false" />
     <Property Name="Fact_licencia" Type="varchar" MaxLength="13" Nullable="false" />
     <Property Name="Fact_placas" Type="varchar" MaxLength="6" Nullable="false" />
     <Property Name="Fact_Kilometro" Type="varchar" MaxLength="9" Nullable="false" />
@@ -71,7 +71,7 @@
     <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Contra" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Nivel" Type="char" MaxLength="1" Nullable="false" />
-    <Property Name="EnUso" Type="char" MaxLength="1" />
+    <Property Name="EnUso" Type="char" MaxLength="1" Nullable="false" />
   </EntityType>
   <EntityContainer Name="SISTEMAFLETESACARREOSModelStoreContainer">
     <EntitySet Name="AUTOS" EntityType="Self.AUTOS" Schema="dbo" store:Type="Tables" />

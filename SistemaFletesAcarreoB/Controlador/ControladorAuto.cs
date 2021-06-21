@@ -40,7 +40,7 @@ namespace SistemaFletesAcarreoB.Controlador
                     if (control != 1)
                     {
                         nuevoAuto.Kilometraje = (Math.Round(float.Parse(nuevoAuto.Kilometraje), 2)).ToString(); ;
-                        nuevoAuto.Cap_A = (Math.Round(float.Parse(nuevoAuto.Kilometraje), 2)).ToString(); ;
+                        nuevoAuto.Cap_A = (float.Parse(nuevoAuto.Cap_A)).ToString();
                         ModeloAuto.crearAuto(nuevoAuto);
                     }
                 }

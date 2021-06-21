@@ -59,8 +59,10 @@ namespace SistemaFletesAcarreoB
             {
                 string apellidos = dgv_Choferes.Rows[indice].Cells[3].Value.ToString() + dgv_Choferes.Rows[indice].Cells[4].Value.ToString();
                 if (validarChofer.ValidarLicencia(dgv_Choferes.Rows[indice].Cells[1].Value.ToString()) == true && 
-                    validarChofer.ValidarNombre(dgv_Choferes.Rows[indice].Cells[2].Value.ToString()) == true
-                        && validarChofer.ValidarNombre(apellidos) == true && validarChofer.ValidarNumeroTel(dgv_Choferes.Rows[indice].Cells[7].Value.ToString()) == true
+                    validarChofer.ValidarNombre(dgv_Choferes.Rows[indice].Cells[2].Value.ToString(), "nombre") == true
+                        && validarChofer.ValidarNombre(dgv_Choferes.Rows[indice].Cells[3].Value.ToString(), "apellido paterno") == true
+                        && validarChofer.ValidarNombre(dgv_Choferes.Rows[indice].Cells[3].Value.ToString(), "apellido paterno") == true 
+                        && validarChofer.ValidarNumeroTel(dgv_Choferes.Rows[indice].Cells[7].Value.ToString()) == true
                         && validarChofer.ValidarCorreo(dgv_Choferes.Rows[indice].Cells[8].Value.ToString()) == true)
                 {
                     try
@@ -81,12 +83,13 @@ namespace SistemaFletesAcarreoB
                         ControladorChofer.CrearChofer(nuevoChofer);
 
                         int cantidaddatos = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
-                        this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
+                        this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
                         int cantidadnuevosautos = Int32.Parse(dgv_Choferes.Rows.Count.ToString());
                         if (cantidadnuevosautos == (cantidaddatos + 1))
                         {
                             ModeloChofer.eliminarChofer(IdParametro);
-                            MessageBox.Show("Chofer Actualizado", "Error", MessageBoxButtons.OK);
+                            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
+                            MessageBox.Show("Chofer Actualizado", "Listo", MessageBoxButtons.OK);
                         }
                     }
                     catch (Exception ex)
@@ -105,49 +108,11 @@ namespace SistemaFletesAcarreoB
 
         private void ListaDeChoferes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.CHOFER' Puede moverla o quitarla según sea necesario.
-            this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.USUARIOS' Puede moverla o quitarla según sea necesario.
-            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet18.USUARIOS);
-            
-
-            int xd = (Convert.ToInt32(this.dgv_Usuarios.Rows.Count.ToString()));
-            int us = 0;
-            if (xd == 1)
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
+            if (Login.nivel == "1")
             {
-                for (int i = 0; i < xd - 1; i++)
-                {
-                    int usuarioset = Int32.Parse(dgv_Usuarios.Rows[i].Cells[4].Value.ToString());
-                    us = usuarioset;
-                    if (us == 1)
-                    {
-                        int usuarioadmin = Int32.Parse(dgv_Usuarios.Rows[i].Cells[3].Value.ToString());
-                        if (usuarioadmin == 1)
-                        {
-                            btn_Editar.Visible = true;
-                            btn_AñadirC.Visible= true;
-                            btn_Eliminar.Visible = true;
-                        }
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < xd - 1; i++)
-                {
-                    int usuarioset = Int32.Parse(dgv_Usuarios.Rows[i].Cells[4].Value.ToString());
-                    us = usuarioset;
-                    if (us == 1)
-                    {
-                        int usuarioadmin = Int32.Parse(dgv_Usuarios.Rows[i].Cells[3].Value.ToString());
-                        if (usuarioadmin == 1)
-                        {
-                            btn_Editar.Visible = true;
-                            btn_AñadirC.Visible = true;
-                            btn_Eliminar.Visible = true;
-                        }
-                    }
-                }
+                btn_Editar.Visible = true;
+                btn_Eliminar.Visible = true;
             }
         }
 
@@ -156,7 +121,7 @@ namespace SistemaFletesAcarreoB
             int resultado = Int32.Parse(dgv_Choferes.Rows[Int32.Parse(dgv_Choferes.CurrentRow.Index.ToString())].Cells[0].Value.ToString());
             ModeloChofer.eliminarChofer(resultado);
             MessageBox.Show("El Chofer " + resultado + " ha sido eliminado");
-            this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
             lbl_SetIdChofer.Text = "";
             lbl_SetLicencia.Text = "";
             lbl_SetNombre.Text = "";
@@ -172,7 +137,7 @@ namespace SistemaFletesAcarreoB
 
         private void ListaDeChoferes_Activated(object sender, EventArgs e)
         {
-            this.cHOFERTableAdapter7.Fill(this.sISTEMAFLETESACARREOSDataSet18.CHOFER);
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
         }
 
         private void dgv_Choferes_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -273,6 +238,11 @@ namespace SistemaFletesAcarreoB
                 dateTimePicker1.Value = Convert.ToDateTime(dgv_Choferes.Rows[indice].Cells[9].Value.ToString());
                 lbl_SetDomicilio.Text = dgv_Choferes.Rows[indice].Cells[10].Value.ToString();
             }
+        }
+
+        private void ListaDeChoferes_MouseEnter(object sender, EventArgs e)
+        {
+            //this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
         }
     }
 }

@@ -29,9 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_Volver = new System.Windows.Forms.Button();
             this.btn_Añadir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_ValSexo = new System.Windows.Forms.Label();
+            this.lbl_ValLice = new System.Windows.Forms.Label();
+            this.lbl_ValFecha = new System.Windows.Forms.Label();
+            this.lbl_ValDom = new System.Windows.Forms.Label();
+            this.lbl_ValCorreo = new System.Windows.Forms.Label();
+            this.lbl_ValTel = new System.Windows.Forms.Label();
+            this.lbl_ValAMat = new System.Windows.Forms.Label();
+            this.lbl_ValAPat = new System.Windows.Forms.Label();
+            this.lbl_ValNom = new System.Windows.Forms.Label();
             this.txt_Sexo = new System.Windows.Forms.ComboBox();
             this.dt_FechaNac = new System.Windows.Forms.DateTimePicker();
             this.txt_Licencia = new System.Windows.Forms.TextBox();
@@ -64,38 +72,27 @@
             this.fNacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.disponibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHOFERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
             this.cHOFERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
-            this.cHOFERTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.CHOFERTableAdapter();
+            this.cHOFERTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.CHOFERTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chofer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Volver
-            // 
-            this.btn_Volver.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_Volver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_Volver.ForeColor = System.Drawing.Color.White;
-            this.btn_Volver.Location = new System.Drawing.Point(128, 344);
-            this.btn_Volver.Name = "btn_Volver";
-            this.btn_Volver.Size = new System.Drawing.Size(75, 31);
-            this.btn_Volver.TabIndex = 7;
-            this.btn_Volver.Text = "Volver";
-            this.btn_Volver.UseVisualStyleBackColor = false;
-            this.btn_Volver.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_Añadir
             // 
             this.btn_Añadir.BackColor = System.Drawing.Color.DarkRed;
             this.btn_Añadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Añadir.ForeColor = System.Drawing.Color.White;
-            this.btn_Añadir.Location = new System.Drawing.Point(9, 344);
+            this.btn_Añadir.Location = new System.Drawing.Point(103, 486);
             this.btn_Añadir.Name = "btn_Añadir";
-            this.btn_Añadir.Size = new System.Drawing.Size(75, 31);
-            this.btn_Añadir.TabIndex = 6;
+            this.btn_Añadir.Size = new System.Drawing.Size(75, 35);
+            this.btn_Añadir.TabIndex = 10;
             this.btn_Añadir.Text = "Añadir";
             this.btn_Añadir.UseVisualStyleBackColor = false;
             this.btn_Añadir.Click += new System.EventHandler(this.btn_VolverPKPP_Click);
@@ -103,6 +100,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.panel1.Controls.Add(this.lbl_ValSexo);
+            this.panel1.Controls.Add(this.lbl_ValLice);
+            this.panel1.Controls.Add(this.lbl_ValFecha);
+            this.panel1.Controls.Add(this.lbl_ValDom);
+            this.panel1.Controls.Add(this.lbl_ValCorreo);
+            this.panel1.Controls.Add(this.lbl_ValTel);
+            this.panel1.Controls.Add(this.lbl_ValAMat);
+            this.panel1.Controls.Add(this.lbl_ValAPat);
+            this.panel1.Controls.Add(this.lbl_ValNom);
             this.panel1.Controls.Add(this.txt_Sexo);
             this.panel1.Controls.Add(this.dt_FechaNac);
             this.panel1.Controls.Add(this.txt_Licencia);
@@ -121,10 +127,109 @@
             this.panel1.Controls.Add(this.lbl_AMaterno);
             this.panel1.Controls.Add(this.lbl_APaterno);
             this.panel1.Controls.Add(this.lbl_Nombre);
-            this.panel1.Location = new System.Drawing.Point(228, 12);
+            this.panel1.Location = new System.Drawing.Point(289, -5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(524, 469);
             this.panel1.TabIndex = 8;
+            // 
+            // lbl_ValSexo
+            // 
+            this.lbl_ValSexo.AutoSize = true;
+            this.lbl_ValSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValSexo.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValSexo.Location = new System.Drawing.Point(135, 145);
+            this.lbl_ValSexo.Name = "lbl_ValSexo";
+            this.lbl_ValSexo.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValSexo.TabIndex = 30;
+            this.lbl_ValSexo.Text = "*";
+            // 
+            // lbl_ValLice
+            // 
+            this.lbl_ValLice.AutoSize = true;
+            this.lbl_ValLice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValLice.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValLice.Location = new System.Drawing.Point(223, 388);
+            this.lbl_ValLice.Name = "lbl_ValLice";
+            this.lbl_ValLice.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValLice.TabIndex = 29;
+            this.lbl_ValLice.Text = "*";
+            // 
+            // lbl_ValFecha
+            // 
+            this.lbl_ValFecha.AutoSize = true;
+            this.lbl_ValFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValFecha.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValFecha.Location = new System.Drawing.Point(504, 345);
+            this.lbl_ValFecha.Name = "lbl_ValFecha";
+            this.lbl_ValFecha.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValFecha.TabIndex = 28;
+            this.lbl_ValFecha.Text = "*";
+            // 
+            // lbl_ValDom
+            // 
+            this.lbl_ValDom.AutoSize = true;
+            this.lbl_ValDom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValDom.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValDom.Location = new System.Drawing.Point(504, 264);
+            this.lbl_ValDom.Name = "lbl_ValDom";
+            this.lbl_ValDom.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValDom.TabIndex = 27;
+            this.lbl_ValDom.Text = "*";
+            // 
+            // lbl_ValCorreo
+            // 
+            this.lbl_ValCorreo.AutoSize = true;
+            this.lbl_ValCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValCorreo.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValCorreo.Location = new System.Drawing.Point(415, 227);
+            this.lbl_ValCorreo.Name = "lbl_ValCorreo";
+            this.lbl_ValCorreo.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValCorreo.TabIndex = 26;
+            this.lbl_ValCorreo.Text = "*";
+            // 
+            // lbl_ValTel
+            // 
+            this.lbl_ValTel.AutoSize = true;
+            this.lbl_ValTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValTel.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValTel.Location = new System.Drawing.Point(227, 188);
+            this.lbl_ValTel.Name = "lbl_ValTel";
+            this.lbl_ValTel.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValTel.TabIndex = 25;
+            this.lbl_ValTel.Text = "*";
+            // 
+            // lbl_ValAMat
+            // 
+            this.lbl_ValAMat.AutoSize = true;
+            this.lbl_ValAMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValAMat.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValAMat.Location = new System.Drawing.Point(357, 104);
+            this.lbl_ValAMat.Name = "lbl_ValAMat";
+            this.lbl_ValAMat.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValAMat.TabIndex = 24;
+            this.lbl_ValAMat.Text = "*";
+            // 
+            // lbl_ValAPat
+            // 
+            this.lbl_ValAPat.AutoSize = true;
+            this.lbl_ValAPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValAPat.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValAPat.Location = new System.Drawing.Point(354, 63);
+            this.lbl_ValAPat.Name = "lbl_ValAPat";
+            this.lbl_ValAPat.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValAPat.TabIndex = 23;
+            this.lbl_ValAPat.Text = "*";
+            // 
+            // lbl_ValNom
+            // 
+            this.lbl_ValNom.AutoSize = true;
+            this.lbl_ValNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ValNom.ForeColor = System.Drawing.Color.White;
+            this.lbl_ValNom.Location = new System.Drawing.Point(321, 25);
+            this.lbl_ValNom.Name = "lbl_ValNom";
+            this.lbl_ValNom.Size = new System.Drawing.Size(16, 20);
+            this.lbl_ValNom.TabIndex = 22;
+            this.lbl_ValNom.Text = "*";
             // 
             // txt_Sexo
             // 
@@ -135,7 +240,8 @@
             this.txt_Sexo.Location = new System.Drawing.Point(95, 147);
             this.txt_Sexo.Name = "txt_Sexo";
             this.txt_Sexo.Size = new System.Drawing.Size(34, 21);
-            this.txt_Sexo.TabIndex = 21;
+            this.txt_Sexo.TabIndex = 4;
+            this.txt_Sexo.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Sexo_Validating);
             // 
             // dt_FechaNac
             // 
@@ -143,7 +249,8 @@
             this.dt_FechaNac.Location = new System.Drawing.Point(209, 345);
             this.dt_FechaNac.Name = "dt_FechaNac";
             this.dt_FechaNac.Size = new System.Drawing.Size(289, 26);
-            this.dt_FechaNac.TabIndex = 19;
+            this.dt_FechaNac.TabIndex = 8;
+            this.dt_FechaNac.Validating += new System.ComponentModel.CancelEventHandler(this.dt_FechaNac_Validating);
             // 
             // txt_Licencia
             // 
@@ -152,7 +259,8 @@
             this.txt_Licencia.MaxLength = 13;
             this.txt_Licencia.Name = "txt_Licencia";
             this.txt_Licencia.Size = new System.Drawing.Size(100, 26);
-            this.txt_Licencia.TabIndex = 18;
+            this.txt_Licencia.TabIndex = 9;
+            this.txt_Licencia.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Licencia_Validating);
             // 
             // txt_Domicilio
             // 
@@ -162,7 +270,8 @@
             this.txt_Domicilio.Multiline = true;
             this.txt_Domicilio.Name = "txt_Domicilio";
             this.txt_Domicilio.Size = new System.Drawing.Size(376, 65);
-            this.txt_Domicilio.TabIndex = 17;
+            this.txt_Domicilio.TabIndex = 7;
+            this.txt_Domicilio.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Domicilio_Validating);
             // 
             // txt_Correo
             // 
@@ -171,7 +280,8 @@
             this.txt_Correo.MaxLength = 30;
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(219, 26);
-            this.txt_Correo.TabIndex = 16;
+            this.txt_Correo.TabIndex = 6;
+            this.txt_Correo.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Correo_Validating);
             // 
             // txt_Telefono
             // 
@@ -180,7 +290,8 @@
             this.txt_Telefono.MaxLength = 10;
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(100, 26);
-            this.txt_Telefono.TabIndex = 15;
+            this.txt_Telefono.TabIndex = 5;
+            this.txt_Telefono.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Telefono_Validating);
             // 
             // txt_AMaterno
             // 
@@ -189,7 +300,8 @@
             this.txt_AMaterno.MaxLength = 30;
             this.txt_AMaterno.Name = "txt_AMaterno";
             this.txt_AMaterno.Size = new System.Drawing.Size(173, 26);
-            this.txt_AMaterno.TabIndex = 12;
+            this.txt_AMaterno.TabIndex = 3;
+            this.txt_AMaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txt_AMaterno_Validating);
             // 
             // txt_APaterno
             // 
@@ -198,7 +310,8 @@
             this.txt_APaterno.MaxLength = 30;
             this.txt_APaterno.Name = "txt_APaterno";
             this.txt_APaterno.Size = new System.Drawing.Size(173, 26);
-            this.txt_APaterno.TabIndex = 11;
+            this.txt_APaterno.TabIndex = 2;
+            this.txt_APaterno.Validating += new System.ComponentModel.CancelEventHandler(this.txt_APaterno_Validating);
             // 
             // txt_Nombre
             // 
@@ -207,7 +320,8 @@
             this.txt_Nombre.MaxLength = 30;
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(200, 26);
-            this.txt_Nombre.TabIndex = 10;
+            this.txt_Nombre.TabIndex = 1;
+            this.txt_Nombre.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Nombre_Validating);
             // 
             // lbl_Licencia
             // 
@@ -311,7 +425,7 @@
             // pb_Usuario
             // 
             this.pb_Usuario.Image = global::SistemaFletesAcarreoB.Properties.Resources.usuariodefault;
-            this.pb_Usuario.Location = new System.Drawing.Point(12, 29);
+            this.pb_Usuario.Location = new System.Drawing.Point(36, 12);
             this.pb_Usuario.Name = "pb_Usuario";
             this.pb_Usuario.Size = new System.Drawing.Size(208, 202);
             this.pb_Usuario.TabIndex = 9;
@@ -335,11 +449,11 @@
             this.fNacDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.disponibleDataGridViewTextBoxColumn});
-            this.dgv_Chofer.DataSource = this.cHOFERBindingSource;
-            this.dgv_Chofer.Location = new System.Drawing.Point(9, 411);
+            this.dgv_Chofer.DataSource = this.cHOFERBindingSource1;
+            this.dgv_Chofer.Location = new System.Drawing.Point(758, 409);
             this.dgv_Chofer.Name = "dgv_Chofer";
             this.dgv_Chofer.Size = new System.Drawing.Size(240, 150);
-            this.dgv_Chofer.TabIndex = 10;
+            this.dgv_Chofer.TabIndex = 0;
             this.dgv_Chofer.Visible = false;
             // 
             // idChoferDataGridViewTextBoxColumn
@@ -415,30 +529,34 @@
             this.disponibleDataGridViewTextBoxColumn.HeaderText = "Disponible";
             this.disponibleDataGridViewTextBoxColumn.Name = "disponibleDataGridViewTextBoxColumn";
             // 
+            // cHOFERBindingSource1
+            // 
+            this.cHOFERBindingSource1.DataMember = "CHOFER";
+            this.cHOFERBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // sISTEMAFLETESACARREOSDataSet20
+            // 
+            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
+            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cHOFERBindingSource
             // 
             this.cHOFERBindingSource.DataMember = "CHOFER";
-            this.cHOFERBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
             // 
-            // sISTEMAFLETESACARREOSDataSet16
+            // cHOFERTableAdapter1
             // 
-            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
-            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cHOFERTableAdapter
-            // 
-            this.cHOFERTableAdapter.ClearBeforeFill = true;
+            this.cHOFERTableAdapter1.ClearBeforeFill = true;
             // 
             // AgregarChofer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 506);
+            this.ClientSize = new System.Drawing.Size(1101, 557);
             this.Controls.Add(this.dgv_Chofer);
             this.Controls.Add(this.pb_Usuario);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_Volver);
             this.Controls.Add(this.btn_Añadir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarChofer";
             this.Text = "AgregarChofer";
             this.Load += new System.EventHandler(this.AgregarChofer_Load);
@@ -446,15 +564,14 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Chofer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHOFERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Volver;
         private System.Windows.Forms.Button btn_Añadir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dt_FechaNac;
@@ -476,9 +593,7 @@
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.PictureBox pb_Usuario;
         private System.Windows.Forms.DataGridView dgv_Chofer;
-        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
         private System.Windows.Forms.BindingSource cHOFERBindingSource;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.CHOFERTableAdapter cHOFERTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idChoferDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lICENCIACDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nChoferDataGridViewTextBoxColumn;
@@ -492,5 +607,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn disponibleDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox txt_Sexo;
+        private System.Windows.Forms.Label lbl_ValLice;
+        private System.Windows.Forms.Label lbl_ValFecha;
+        private System.Windows.Forms.Label lbl_ValDom;
+        private System.Windows.Forms.Label lbl_ValCorreo;
+        private System.Windows.Forms.Label lbl_ValTel;
+        private System.Windows.Forms.Label lbl_ValAMat;
+        private System.Windows.Forms.Label lbl_ValAPat;
+        private System.Windows.Forms.Label lbl_ValNom;
+        private System.Windows.Forms.Label lbl_ValSexo;
+        private SISTEMAFLETESACARREOSDataSet20 sISTEMAFLETESACARREOSDataSet20;
+        private System.Windows.Forms.BindingSource cHOFERBindingSource1;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.CHOFERTableAdapter cHOFERTableAdapter1;
     }
 }

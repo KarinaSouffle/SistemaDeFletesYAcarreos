@@ -34,21 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.dgv_ListaMateriales = new System.Windows.Forms.DataGridView();
-            this.mATERIALESBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet16 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16();
-            this.mATERIALESBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet15 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15();
-            this.mATERIALESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet7 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7();
-            this.mATERIALESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet6 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet6();
-            this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIALESBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
             this.sISTEMAFLETESACARREOSDataSet = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet();
-            this.btn_VolverPKPP = new System.Windows.Forms.Button();
+            this.mATERIALESBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.sISTEMAFLETESACARREOSDataSet20 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20();
             this.lbl_Nombre = new System.Windows.Forms.Label();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter();
-            this.mATERIALESTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet6TableAdapters.MATERIALESTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_SetIdMaterial = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,37 +50,30 @@
             this.lbl_SetNombre = new System.Windows.Forms.TextBox();
             this.lbl_APaterno = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.mATERIALESTableAdapter2 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet7TableAdapters.MATERIALESTableAdapter();
-            this.mATERIALESTableAdapter3 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet15TableAdapters.MATERIALESTableAdapter();
             this.btnInvertir = new System.Windows.Forms.Button();
-            this.mATERIALESTableAdapter4 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet16TableAdapters.MATERIALESTableAdapter();
-            this.dgv_Usuarios = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nivelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uSUARIOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESTableAdapter5 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.MATERIALESTableAdapter();
+            this.uSUARIOSTableAdapter1 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet20TableAdapters.USUARIOSTableAdapter();
+            this.mATERIALESBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mATERIALESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSUARIOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sISTEMAFLETESACARREOSDataSet18 = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18();
-            this.uSUARIOSTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSet18TableAdapters.USUARIOSTableAdapter();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mATERIALESTableAdapter = new SistemaFletesAcarreoB.SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMateriales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Editar
@@ -122,7 +109,7 @@
             this.codigoDataGridViewTextBoxColumn,
             this.nombreMDataGridViewTextBoxColumn,
             this.precioDataGridViewTextBoxColumn});
-            this.dgv_ListaMateriales.DataSource = this.mATERIALESBindingSource4;
+            this.dgv_ListaMateriales.DataSource = this.mATERIALESBindingSource6;
             this.dgv_ListaMateriales.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgv_ListaMateriales.Location = new System.Drawing.Point(48, 57);
             this.dgv_ListaMateriales.Name = "dgv_ListaMateriales";
@@ -142,69 +129,46 @@
             this.dgv_ListaMateriales.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_ListaMateriales_CellMouseClick);
             this.dgv_ListaMateriales.MouseEnter += new System.EventHandler(this.dgv_ListaMateriales_MouseEnter);
             // 
-            // mATERIALESBindingSource4
+            // codigoDataGridViewTextBoxColumn
             // 
-            this.mATERIALESBindingSource4.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource4.DataSource = this.sISTEMAFLETESACARREOSDataSet16;
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // sISTEMAFLETESACARREOSDataSet16
+            // nombreMDataGridViewTextBoxColumn
             // 
-            this.sISTEMAFLETESACARREOSDataSet16.DataSetName = "SISTEMAFLETESACARREOSDataSet16";
-            this.sISTEMAFLETESACARREOSDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.nombreMDataGridViewTextBoxColumn.DataPropertyName = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.HeaderText = "Nombre_M";
+            this.nombreMDataGridViewTextBoxColumn.MaxInputLength = 30;
+            this.nombreMDataGridViewTextBoxColumn.Name = "nombreMDataGridViewTextBoxColumn";
             // 
-            // mATERIALESBindingSource3
+            // precioDataGridViewTextBoxColumn
             // 
-            this.mATERIALESBindingSource3.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource3.DataSource = this.sISTEMAFLETESACARREOSDataSet15;
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.MaxInputLength = 6;
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
-            // sISTEMAFLETESACARREOSDataSet15
+            // mATERIALESBindingSource6
             // 
-            this.sISTEMAFLETESACARREOSDataSet15.DataSetName = "SISTEMAFLETESACARREOSDataSet15";
-            this.sISTEMAFLETESACARREOSDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mATERIALESBindingSource2
-            // 
-            this.mATERIALESBindingSource2.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource2.DataSource = this.sISTEMAFLETESACARREOSDataSet7;
-            // 
-            // sISTEMAFLETESACARREOSDataSet7
-            // 
-            this.sISTEMAFLETESACARREOSDataSet7.DataSetName = "SISTEMAFLETESACARREOSDataSet7";
-            this.sISTEMAFLETESACARREOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mATERIALESBindingSource1
-            // 
-            this.mATERIALESBindingSource1.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet6;
-            // 
-            // sISTEMAFLETESACARREOSDataSet6
-            // 
-            this.sISTEMAFLETESACARREOSDataSet6.DataSetName = "SISTEMAFLETESACARREOSDataSet6";
-            this.sISTEMAFLETESACARREOSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mATERIALESBindingSource
-            // 
-            this.mATERIALESBindingSource.DataMember = "MATERIALES";
-            this.mATERIALESBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet;
+            this.mATERIALESBindingSource6.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource6.DataSource = this.sISTEMAFLETESACARREOSDataSet;
             // 
             // sISTEMAFLETESACARREOSDataSet
             // 
             this.sISTEMAFLETESACARREOSDataSet.DataSetName = "SISTEMAFLETESACARREOSDataSet";
             this.sISTEMAFLETESACARREOSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btn_VolverPKPP
+            // mATERIALESBindingSource5
             // 
-            this.btn_VolverPKPP.BackColor = System.Drawing.Color.DarkRed;
-            this.btn_VolverPKPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_VolverPKPP.ForeColor = System.Drawing.Color.White;
-            this.btn_VolverPKPP.Location = new System.Drawing.Point(137, 501);
-            this.btn_VolverPKPP.Name = "btn_VolverPKPP";
-            this.btn_VolverPKPP.Size = new System.Drawing.Size(83, 40);
-            this.btn_VolverPKPP.TabIndex = 30;
-            this.btn_VolverPKPP.Text = "Añadir";
-            this.btn_VolverPKPP.UseVisualStyleBackColor = false;
-            this.btn_VolverPKPP.Visible = false;
-            this.btn_VolverPKPP.Click += new System.EventHandler(this.btn_VolverPKPP_Click);
+            this.mATERIALESBindingSource5.DataMember = "MATERIALES";
+            this.mATERIALESBindingSource5.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
+            // 
+            // sISTEMAFLETESACARREOSDataSet20
+            // 
+            this.sISTEMAFLETESACARREOSDataSet20.DataSetName = "SISTEMAFLETESACARREOSDataSet20";
+            this.sISTEMAFLETESACARREOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_Nombre
             // 
@@ -230,14 +194,6 @@
             this.btn_Eliminar.UseVisualStyleBackColor = false;
             this.btn_Eliminar.Visible = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
-            // 
-            // mATERIALESTableAdapter
-            // 
-            this.mATERIALESTableAdapter.ClearBeforeFill = true;
-            // 
-            // mATERIALESTableAdapter1
-            // 
-            this.mATERIALESTableAdapter1.ClearBeforeFill = true;
             // 
             // panel1
             // 
@@ -319,14 +275,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre: ";
             // 
-            // mATERIALESTableAdapter2
-            // 
-            this.mATERIALESTableAdapter2.ClearBeforeFill = true;
-            // 
-            // mATERIALESTableAdapter3
-            // 
-            this.mATERIALESTableAdapter3.ClearBeforeFill = true;
-            // 
             // btnInvertir
             // 
             this.btnInvertir.BackColor = System.Drawing.Color.DarkRed;
@@ -340,92 +288,46 @@
             this.btnInvertir.UseVisualStyleBackColor = false;
             this.btnInvertir.Click += new System.EventHandler(this.btnInvertir_Click);
             // 
-            // mATERIALESTableAdapter4
+            // uSUARIOSBindingSource1
             // 
-            this.mATERIALESTableAdapter4.ClearBeforeFill = true;
+            this.uSUARIOSBindingSource1.DataMember = "USUARIOS";
+            this.uSUARIOSBindingSource1.DataSource = this.sISTEMAFLETESACARREOSDataSet20;
             // 
-            // dgv_Usuarios
+            // mATERIALESTableAdapter5
             // 
-            this.dgv_Usuarios.AutoGenerateColumns = false;
-            this.dgv_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.contraDataGridViewTextBoxColumn,
-            this.nivelDataGridViewTextBoxColumn,
-            this.enUsoDataGridViewTextBoxColumn});
-            this.dgv_Usuarios.DataSource = this.uSUARIOSBindingSource;
-            this.dgv_Usuarios.Location = new System.Drawing.Point(654, 381);
-            this.dgv_Usuarios.Name = "dgv_Usuarios";
-            this.dgv_Usuarios.Size = new System.Drawing.Size(240, 150);
-            this.dgv_Usuarios.TabIndex = 39;
-            this.dgv_Usuarios.Visible = false;
+            this.mATERIALESTableAdapter5.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // uSUARIOSTableAdapter1
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uSUARIOSTableAdapter1.ClearBeforeFill = true;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // mATERIALESBindingSource4
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.mATERIALESBindingSource4.DataMember = "MATERIALES";
             // 
-            // contraDataGridViewTextBoxColumn
+            // mATERIALESBindingSource3
             // 
-            this.contraDataGridViewTextBoxColumn.DataPropertyName = "Contra";
-            this.contraDataGridViewTextBoxColumn.HeaderText = "Contra";
-            this.contraDataGridViewTextBoxColumn.Name = "contraDataGridViewTextBoxColumn";
+            this.mATERIALESBindingSource3.DataMember = "MATERIALES";
             // 
-            // nivelDataGridViewTextBoxColumn
+            // mATERIALESBindingSource2
             // 
-            this.nivelDataGridViewTextBoxColumn.DataPropertyName = "Nivel";
-            this.nivelDataGridViewTextBoxColumn.HeaderText = "Nivel";
-            this.nivelDataGridViewTextBoxColumn.Name = "nivelDataGridViewTextBoxColumn";
+            this.mATERIALESBindingSource2.DataMember = "MATERIALES";
             // 
-            // enUsoDataGridViewTextBoxColumn
+            // mATERIALESBindingSource1
             // 
-            this.enUsoDataGridViewTextBoxColumn.DataPropertyName = "EnUso";
-            this.enUsoDataGridViewTextBoxColumn.HeaderText = "EnUso";
-            this.enUsoDataGridViewTextBoxColumn.Name = "enUsoDataGridViewTextBoxColumn";
+            this.mATERIALESBindingSource1.DataMember = "MATERIALES";
+            // 
+            // mATERIALESBindingSource
+            // 
+            this.mATERIALESBindingSource.DataMember = "MATERIALES";
             // 
             // uSUARIOSBindingSource
             // 
             this.uSUARIOSBindingSource.DataMember = "USUARIOS";
-            this.uSUARIOSBindingSource.DataSource = this.sISTEMAFLETESACARREOSDataSet18;
             // 
-            // sISTEMAFLETESACARREOSDataSet18
+            // mATERIALESTableAdapter
             // 
-            this.sISTEMAFLETESACARREOSDataSet18.DataSetName = "SISTEMAFLETESACARREOSDataSet18";
-            this.sISTEMAFLETESACARREOSDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSUARIOSTableAdapter
-            // 
-            this.uSUARIOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // codigoDataGridViewTextBoxColumn
-            // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreMDataGridViewTextBoxColumn
-            // 
-            this.nombreMDataGridViewTextBoxColumn.DataPropertyName = "Nombre_M";
-            this.nombreMDataGridViewTextBoxColumn.HeaderText = "Nombre_M";
-            this.nombreMDataGridViewTextBoxColumn.MaxInputLength = 30;
-            this.nombreMDataGridViewTextBoxColumn.Name = "nombreMDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.MaxInputLength = 6;
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.mATERIALESTableAdapter.ClearBeforeFill = true;
             // 
             // ListaDeMateriales
             // 
@@ -433,14 +335,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1101, 557);
-            this.Controls.Add(this.dgv_Usuarios);
             this.Controls.Add(this.btnInvertir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.lbl_Nombre);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.dgv_ListaMateriales);
-            this.Controls.Add(this.btn_VolverPKPP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaDeMateriales";
             this.Text = "ListaDeMateriales";
@@ -448,21 +348,19 @@
             this.Activated += new System.EventHandler(this.ListaDeMateriales_Activated);
             this.Load += new System.EventHandler(this.ListaDeMateriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ListaMateriales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet20)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mATERIALESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSUARIOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sISTEMAFLETESACARREOSDataSet18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,15 +370,10 @@
 
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.DataGridView dgv_ListaMateriales;
-        private System.Windows.Forms.Button btn_VolverPKPP;
         private System.Windows.Forms.Label lbl_Nombre;
         private System.Windows.Forms.Button btn_Eliminar;
-        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource;
-        private SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter;
-        private SISTEMAFLETESACARREOSDataSet6 sISTEMAFLETESACARREOSDataSet6;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource1;
-        private SISTEMAFLETESACARREOSDataSet6TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox lbl_SetIdMaterial;
         private System.Windows.Forms.Label label2;
@@ -488,27 +381,21 @@
         private System.Windows.Forms.TextBox lbl_SetNombre;
         private System.Windows.Forms.Label lbl_APaterno;
         private System.Windows.Forms.Label label1;
-        private SISTEMAFLETESACARREOSDataSet7 sISTEMAFLETESACARREOSDataSet7;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource2;
-        private SISTEMAFLETESACARREOSDataSet7TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter2;
-        private SISTEMAFLETESACARREOSDataSet15 sISTEMAFLETESACARREOSDataSet15;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource3;
-        private SISTEMAFLETESACARREOSDataSet15TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter3;
         private System.Windows.Forms.Button btnInvertir;
-        private SISTEMAFLETESACARREOSDataSet16 sISTEMAFLETESACARREOSDataSet16;
         private System.Windows.Forms.BindingSource mATERIALESBindingSource4;
-        private SISTEMAFLETESACARREOSDataSet16TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter4;
-        private System.Windows.Forms.DataGridView dgv_Usuarios;
-        private SISTEMAFLETESACARREOSDataSet18 sISTEMAFLETESACARREOSDataSet18;
         private System.Windows.Forms.BindingSource uSUARIOSBindingSource;
-        private SISTEMAFLETESACARREOSDataSet18TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nivelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enUsoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private SISTEMAFLETESACARREOSDataSet20 sISTEMAFLETESACARREOSDataSet20;
+        private System.Windows.Forms.BindingSource mATERIALESBindingSource5;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter5;
+        private System.Windows.Forms.BindingSource uSUARIOSBindingSource1;
+        private SISTEMAFLETESACARREOSDataSet20TableAdapters.USUARIOSTableAdapter uSUARIOSTableAdapter1;
+        private SISTEMAFLETESACARREOSDataSet sISTEMAFLETESACARREOSDataSet;
+        private System.Windows.Forms.BindingSource mATERIALESBindingSource6;
+        private SISTEMAFLETESACARREOSDataSetTableAdapters.MATERIALESTableAdapter mATERIALESTableAdapter;
     }
 }

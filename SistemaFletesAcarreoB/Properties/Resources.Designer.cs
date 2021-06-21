@@ -323,6 +323,16 @@ namespace SistemaFletesAcarreoB.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PPP1 {
+            get {
+                object obj = ResourceManager.GetObject("PPP1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usuariodefault {
             get {
                 object obj = ResourceManager.GetObject("usuariodefault", resourceCulture);

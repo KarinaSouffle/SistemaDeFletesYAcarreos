@@ -25,7 +25,7 @@ namespace SistemaFletesAcarreoB.Modelo
         public double Subtotal { get; set; }
         public double IVA { get; set; }
         public double Total { get; set; }
-        public int Fact_material { get; set; }
+        public string Fact_material { get; set; }
         public string Fact_licencia { get; set; }
         public string Fact_placas { get; set; }
         public string Fact_Kilometro { get; set; }

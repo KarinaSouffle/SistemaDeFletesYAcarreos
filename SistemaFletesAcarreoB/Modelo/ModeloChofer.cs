@@ -62,6 +62,23 @@ namespace SistemaFletesAcarreoB.Modelo
                 throw new Exception("Error " + ex.Message);
             }
         }
+        public static List<CHOFER> buscarChoferPorDisponibilidad(String criterio)
+        {
+            try
+            {
+                using (var contextoChofer = new SISTEMAFLETESACARREOSEntities())
+                {
+                    var resultado = (from c in contextoChofer.CHOFER
+                                     where c.Disponible.Contains(criterio)
+                                     select c).ToList();
+                    return resultado;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error " + ex.Message);
+            }
+        }
 
         static public void eliminarChofer(int idChofer)
         {

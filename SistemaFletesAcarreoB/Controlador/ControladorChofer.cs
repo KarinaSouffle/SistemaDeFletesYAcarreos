@@ -93,6 +93,19 @@ namespace SistemaFletesAcarreoB.Controlador
                 throw new Exception("Error " + ex.Message);
             }
         }
+        public static List<CHOFER> BuscarChoferesPorDisponibilidad(String criterio)
+        {
+            try
+            {
+                var resultado = ModeloChofer.buscarChoferPorDisponibilidad(criterio);
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error " + ex.Message);
+            }
+        }
 
         public static void EliminarChofer(int idChofer)
         {

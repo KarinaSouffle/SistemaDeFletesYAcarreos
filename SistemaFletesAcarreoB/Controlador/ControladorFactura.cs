@@ -77,5 +77,18 @@ namespace SistemaFletesAcarreoB.Controlador
                 throw new Exception("Controlador: Error inesperado " + ex.Message);
             }
         }
+        public static List<FACTURA> buscarFacturaPorIDLista(int criterio)
+        {
+            try
+            {
+                var resultado = ModeloFactura.buscarFacturaPorIDLista(criterio);
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Controlador: Error inesperado " + ex.Message);
+            }
+        }
     }
 }

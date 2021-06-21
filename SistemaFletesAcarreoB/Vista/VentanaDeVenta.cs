@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaFletesAcarreoB.Controlador;
 using SistemaFletesAcarreoB.Modelo;
+using SistemaFletesAcarreoB.Vista;
 
 namespace SistemaFletesAcarreoB
 {
@@ -18,7 +19,7 @@ namespace SistemaFletesAcarreoB
         public VentanaDeVenta()
         {
             InitializeComponent();
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,40 +43,113 @@ namespace SistemaFletesAcarreoB
 
         private void btn_VolverPKPP_Click(object sender, EventArgs e)
         {
+            VisorFactura vf = new VisorFactura();
             btn_Aceptar.Visible = false;
             int TotalVentas = (Int32.Parse(dgv_Venta.Rows.Count.ToString()));
             int xd = Convert.ToInt32(this.dgv_Kilometro.Rows.Count.ToString());
             int cantidaddatos = Int32.Parse(dgv_FacturacionConsulta.Rows.Count.ToString());
             Validar validar = new Validar();
-            for (int i = 0; i < TotalVentas - 1; i++)
+            if (TotalVentas >= 1)
             {
-                try
+                if (TotalVentas >= 1)
                 {
-                    var nuevaFactura = new FACTURA();
-                    nuevaFactura.Num_Factura = Int32.Parse(lbl_SetNumero.Text);
-                    nuevaFactura.Fecha = dtp_FechaHora.Value.ToString("dd/MM/yyyy");
-                    nuevaFactura.Hora = dtp_FechaHora.Value.ToString("HH:mm");
-                    nuevaFactura.Materiales = dgv_Venta.Rows[i].Cells[4].Value.ToString();
-                    nuevaFactura.Total_metros = dgv_Venta.Rows[i].Cells[5].Value.ToString();
-                    nuevaFactura.Total_viajes = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[6].Value.ToString()), 2);
-                    nuevaFactura.Total_Kilometros = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[7].Value.ToString()), 2);
-                    nuevaFactura.Subtotal = Math.Round(float.Parse(lbl_SetSubtotal.Text), 2);
-                    nuevaFactura.IVA = Math.Round(float.Parse(lbl_SetIVA.Text), 2);
-                    nuevaFactura.Total = Math.Round(float.Parse(lbl_SetTotal.Text), 2);
-                    nuevaFactura.Fact_material = Int32.Parse(dgv_Venta.Rows[i].Cells[2].Value.ToString()); ;
-                    nuevaFactura.Fact_licencia = lbl_SetChofer.Text.ToString();
-                    nuevaFactura.Fact_placas = dgv_Venta.Rows[i].Cells[1].Value.ToString(); 
-                    nuevaFactura.Fact_Kilometro = dgv_Kilometro.Rows[xd - 2].Cells[1].Value.ToString();
-                    ControladorFactura.CrearFactura(nuevaFactura);
+                    for (int i = 0; i < TotalVentas - 1; i++)
+                    {
+                        try
+                        {
+                            var nuevaFactura = new FACTURA();
+                            nuevaFactura.Num_Factura = Int32.Parse(lbl_SetNumero.Text);
+                            nuevaFactura.Fecha = dtp_FechaHora.Value.ToString("dd/MM/yyyy");
+                            nuevaFactura.Hora = dtp_FechaHora.Value.ToString("HH:mm");
+                            nuevaFactura.Materiales = dgv_Venta.Rows[i].Cells[4].Value.ToString();
+                            nuevaFactura.Total_metros = dgv_Venta.Rows[i].Cells[5].Value.ToString();
+                            nuevaFactura.Total_viajes = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[6].Value.ToString()), 2);
+                            nuevaFactura.Total_Kilometros = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[7].Value.ToString()), 2);
+                            nuevaFactura.Subtotal = Math.Round(float.Parse(lbl_SetSubtotal.Text), 2);
+                            nuevaFactura.IVA = Math.Round(float.Parse(lbl_SetIVA.Text), 2);
+                            nuevaFactura.Total = Math.Round(float.Parse(lbl_SetTotal.Text), 2);
+                            nuevaFactura.Fact_material = dgv_Venta.Rows[i].Cells[2].Value.ToString(); ;
+                            nuevaFactura.Fact_licencia = lbl_SetChofer.Text.ToString();
+                            nuevaFactura.Fact_placas = dgv_Venta.Rows[i].Cells[9].Value.ToString();
+                            nuevaFactura.Fact_Kilometro = dgv_Kilometro.Rows[xd - 2].Cells[1].Value.ToString();
+                            ControladorFactura.CrearFactura(nuevaFactura);
 
-                    
+                            
+                            
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                        }
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                    for (int i = 0; i < TotalVentas - 1; i++)
+                    {
+                        try
+                        {
+                            var nuevaFactura = new FACTURA();
+                            nuevaFactura.Num_Factura = Int32.Parse(lbl_SetNumero.Text);
+                            nuevaFactura.Fecha = dtp_FechaHora.Value.ToString("dd/MM/yyyy");
+                            nuevaFactura.Hora = dtp_FechaHora.Value.ToString("HH:mm");
+                            nuevaFactura.Materiales = dgv_Venta.Rows[i].Cells[4].Value.ToString();
+                            nuevaFactura.Total_metros = dgv_Venta.Rows[i].Cells[5].Value.ToString();
+                            nuevaFactura.Total_viajes = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[6].Value.ToString()), 2);
+                            nuevaFactura.Total_Kilometros = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[7].Value.ToString()), 2);
+                            nuevaFactura.Subtotal = Math.Round(float.Parse(lbl_SetSubtotal.Text), 2);
+                            nuevaFactura.IVA = Math.Round(float.Parse(lbl_SetIVA.Text), 2);
+                            nuevaFactura.Total = Math.Round(float.Parse(lbl_SetTotal.Text), 2);
+                            nuevaFactura.Fact_material = dgv_Venta.Rows[i].Cells[2].Value.ToString();
+                            nuevaFactura.Fact_licencia = lbl_SetChofer.Text.ToString();
+                            nuevaFactura.Fact_placas = dgv_Venta.Rows[i].Cells[9].Value.ToString();
+                            nuevaFactura.Fact_Kilometro = dgv_Kilometro.Rows[xd - 2].Cells[1].Value.ToString();
+                            ControladorFactura.CrearFactura(nuevaFactura);
+                            
+                            
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                        }
+                    }
                 }
             }
-            int indiceventa = (Int32.Parse(this.dgv_Venta.Rows.Count.ToString())) - 1;
+            else
+            {
+                for (int i = 0; i < TotalVentas - 1; i++)
+                {
+                    try
+                    {
+                        var nuevaFactura = new FACTURA();
+                        nuevaFactura.Num_Factura = Int32.Parse(lbl_SetNumero.Text);
+                        nuevaFactura.Fecha = dtp_FechaHora.Value.ToString("dd/MM/yyyy");
+                        nuevaFactura.Hora = dtp_FechaHora.Value.ToString("HH:mm");
+                        nuevaFactura.Materiales = dgv_Venta.Rows[i].Cells[4].Value.ToString();
+                        nuevaFactura.Total_metros = dgv_Venta.Rows[i].Cells[5].Value.ToString();
+                        nuevaFactura.Total_viajes = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[6].Value.ToString()), 2);
+                        nuevaFactura.Total_Kilometros = Math.Round(float.Parse(dgv_Venta.Rows[i].Cells[7].Value.ToString()), 2);
+                        nuevaFactura.Subtotal = Math.Round(float.Parse(lbl_SetSubtotal.Text), 2);
+                        nuevaFactura.IVA = Math.Round(float.Parse(lbl_SetIVA.Text), 2);
+                        nuevaFactura.Total = Math.Round(float.Parse(lbl_SetTotal.Text), 2);
+                        nuevaFactura.Fact_material = dgv_Venta.Rows[i].Cells[2].Value.ToString();
+                        nuevaFactura.Fact_licencia = lbl_SetChofer.Text.ToString();
+                        nuevaFactura.Fact_placas = dgv_Venta.Rows[i].Cells[9].Value.ToString();
+                        nuevaFactura.Fact_Kilometro = dgv_Kilometro.Rows[xd - 2].Cells[1].Value.ToString();
+                        ControladorFactura.CrearFactura(nuevaFactura);
+                        
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hubo un error: " + ex + " ", "Error", MessageBoxButtons.OK);
+                    }
+                }
+            }
+            MessageBox.Show("Factura Registrada", "Listo", MessageBoxButtons.OK);
+            loading();
+            vf.Show();
+
             int indicechofer = Int32.Parse(dgv_Chofer.CurrentRow.Index.ToString());
             int IdParametrochofer = Int32.Parse(dgv_Chofer.Rows[indicechofer].Cells[0].Value.ToString());
 
@@ -142,12 +216,12 @@ namespace SistemaFletesAcarreoB
                 }
             }
 
-            this.fACTURATableAdapter6.Fill(this.sISTEMAFLETESACARREOSDataSet20.FACTURA);
-            int cantidadnuevasventas = Int32.Parse(dgv_FacturacionConsulta.Rows.Count.ToString());
-            if (cantidadnuevasventas > cantidaddatos)
-            {
-                MessageBox.Show("Factura Registrada", "Listo", MessageBoxButtons.OK);
-            }
+            this.fACTURATableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.FACTURA);
+            //int cantidadnuevasventas = Int32.Parse(dgv_FacturacionConsulta.Rows.Count.ToString());
+            //if (cantidadnuevasventas > cantidaddatos)
+            //{
+            //    MessageBox.Show("Factura Registrada", "Listo", MessageBoxButtons.OK);
+            //}
             dgv_Venta.Rows.Clear();
             lbl_SetChofer.Text = "";
             lbl_SetSubtotal.Text = "";
@@ -195,7 +269,7 @@ namespace SistemaFletesAcarreoB
             {
                 dgv_Material.Visible = true;
             }
-            this.mATERIALESTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.MATERIALES);
+            this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
 
         }
 
@@ -209,7 +283,11 @@ namespace SistemaFletesAcarreoB
             {
                 dgv_Chofer.Visible = true;
             }
-            this.cHOFERTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.CHOFER);
+            string busqueda = "1";
+            var buscardisponible = ControladorChofer.BuscarChoferesPorDisponibilidad(busqueda);
+
+            dgv_Chofer.DataSource = buscardisponible;
+
         }
 
         private void btn_AVehiculo_Click(object sender, EventArgs e)
@@ -222,7 +300,7 @@ namespace SistemaFletesAcarreoB
             {
                 dgv_Auto.Visible = true;
             }
-            this.aUTOSTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.AUTOS);
+            this.aUTOSTableAdapter3.Fill(this.sISTEMAFLETESACARREOSDataSet20.AUTOS);
         }
 
         private void panel1_MouseHover(object sender, EventArgs e)
@@ -232,15 +310,15 @@ namespace SistemaFletesAcarreoB
         public void loading()
         {
             // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet19.FACTURA' Puede moverla o quitarla según sea necesario.
-            this.fACTURATableAdapter6.Fill(this.sISTEMAFLETESACARREOSDataSet20.FACTURA);
+            this.fACTURATableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.FACTURA);
             // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet16.KILOMETRO' Puede moverla o quitarla según sea necesario.
-            this.kILOMETROTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.KILOMETRO);
+            this.kILOMETROTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.KILOMETRO);
             // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet16.AUTOS' Puede moverla o quitarla según sea necesario.
-            this.aUTOSTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.AUTOS);
+            this.aUTOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.AUTOS);
             // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet16.CHOFER' Puede moverla o quitarla según sea necesario.
-            this.cHOFERTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.CHOFER);
+            this.cHOFERTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.CHOFER);
             // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet16.MATERIALES' Puede moverla o quitarla según sea necesario.
-            this.mATERIALESTableAdapter2.Fill(this.sISTEMAFLETESACARREOSDataSet16.MATERIALES);
+            this.mATERIALESTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.MATERIALES);
 
             lbl_SetIVA.Text = 16 + "";
             int indice = Int32.Parse(dgv_Venta.Rows.Count.ToString());
@@ -250,11 +328,13 @@ namespace SistemaFletesAcarreoB
             {
                 int valor = Convert.ToInt32(dgv_FacturacionConsulta.Rows[xd - 2].Cells[1].Value.ToString());
                 dgv_Venta.Rows[indice - 1].Cells[0].Value = valor + 1;
+                dgv_Venta.Rows[indice - 1].Cells[8].Value = dgv_Kilometro.Rows[Convert.ToInt32(dgv_Kilometro.Rows.Count.ToString())-1].Cells[1].Value.ToString();
                 lbl_SetNumero.Text = (valor + 1).ToString();
             }
             else
             {
                 dgv_Venta.Rows[indice - 1].Cells[0].Value = 1;
+                dgv_Venta.Rows[indice - 1].Cells[8].Value = dgv_Kilometro.Rows[Convert.ToInt32(dgv_Kilometro.Rows.Count.ToString())-1].Cells[1].Value.ToString();
                 lbl_SetNumero.Text = 1 + "";
             }
         }
@@ -266,8 +346,6 @@ namespace SistemaFletesAcarreoB
         private void dgv_Material_MouseClick(object sender, MouseEventArgs e)//MATERIAL
         {
             int FilaVenta = Convert.ToInt32(this.dgv_Venta.Rows.Count.ToString());
-            int xd = Convert.ToInt32(this.dgv_Kilometro.Rows.Count.ToString());
-            string kilo = dgv_Kilometro.Rows[xd - 1].Cells[1].Value.ToString();
             if (FilaVenta == 1)
             {
                 int indiceventa = (Int32.Parse(this.dgv_Venta.Rows.Count.ToString())) - 1;
@@ -277,19 +355,15 @@ namespace SistemaFletesAcarreoB
                 {
                     if (indicematerial >= 1)
                     {
-                        Console.WriteLine(">=1");
                         dgv_Venta.Rows[indiceventa].Cells[2].Value = IdParametromaterial;
                         dgv_Venta.Rows[indiceventa].Cells[3].Value = dgv_Material.Rows[indicematerial].Cells[2].Value.ToString();
                         dgv_Venta.Rows[indiceventa].Cells[4].Value = dgv_Material.Rows[indicematerial].Cells[1].Value.ToString();
-                        
                     }
                     else
                     {
-                        Console.WriteLine("Else >=1");
                         dgv_Venta.Rows[indiceventa].Cells[2].Value = IdParametromaterial;
                         dgv_Venta.Rows[indiceventa].Cells[3].Value = dgv_Material.Rows[indicematerial].Cells[2].Value.ToString();
                         dgv_Venta.Rows[indiceventa].Cells[4].Value = dgv_Material.Rows[indicematerial].Cells[1].Value.ToString();
-                        
                     }
                 }
                 else
@@ -299,7 +373,6 @@ namespace SistemaFletesAcarreoB
             }
             else
             {
-                Console.WriteLine("La fila no fue igual a 1");
                 int indiceventa = (Int32.Parse(this.dgv_Venta.Rows.Count.ToString())) - 1;
                 int indicematerial = Int32.Parse(dgv_Material.CurrentRow.Index.ToString());
                 int IdParametromaterial = Int32.Parse(dgv_Material.Rows[indicematerial].Cells[0].Value.ToString());
@@ -307,40 +380,12 @@ namespace SistemaFletesAcarreoB
                 dgv_Venta.Rows[indiceventa].Cells[2].Value = IdParametromaterial;
                 dgv_Venta.Rows[indiceventa].Cells[3].Value = dgv_Material.Rows[indicematerial].Cells[2].Value.ToString();
                 dgv_Venta.Rows[indiceventa].Cells[4].Value = dgv_Material.Rows[indicematerial].Cells[1].Value.ToString();
-                
             }
-            int ewe = (Int32.Parse(this.dgv_Venta.Rows.Count.ToString())) - 1;
-            dgv_Venta.Rows[ewe].Cells[8].Value = kilo.ToString();
             dgv_Material.Visible = false;
-
-            if (dgv_Venta.AllowUserToAddRows == false)
+            if (dgv_Material.AllowUserToAddRows == false)
             {
-                dgv_Venta.AllowUserToAddRows = true;
+                dgv_Material.AllowUserToAddRows = true;
             }
-            //int valor;
-
-            //int indice = Int32.Parse(dgv_Venta.Rows.Count.ToString());
-            //int owo = Convert.ToInt32(this.dgv_FacturacionConsulta.Rows.Count.ToString());
-            //int valorfactura = Convert.ToInt32(dgv_FacturacionConsulta.Rows.Count.ToString());
-
-            //if (xd > 1)
-            //{
-            //    if (valorfactura == 0)
-            //    {
-            //        valor = Convert.ToInt32(dgv_FacturacionConsulta.Rows[owo - 2].Cells[1].Value.ToString());
-            //    }
-            //    else
-            //    {
-            //        valor = 0;
-            //    }
-            //    dgv_Venta.Rows[indice - 1].Cells[0].Value = valor + 1;
-            //    lbl_SetNumero.Text = (valor + 1).ToString();
-            //}
-            //else
-            //{
-            //    dgv_Venta.Rows[indice - 1].Cells[0].Value = 1;
-            //    lbl_SetNumero.Text = 1 + "";
-            //}
 
         }
 
@@ -358,19 +403,19 @@ namespace SistemaFletesAcarreoB
                 {
                     if (indicechofer >= 1)
                     {
-                        MessageBox.Show("El Chofer esta disponible.", "Disponible", MessageBoxButtons.OK);
+                        //MessageBox.Show("El Chofer esta disponible.", "Disponible", MessageBoxButtons.OK);
                         lbl_SetChofer.Text = lice.ToString();
                     }
                     else
                     {
-                        MessageBox.Show("El Chofer esta disponible.", "Disponible", MessageBoxButtons.OK);
+                        //MessageBox.Show("El Chofer esta disponible.", "Disponible", MessageBoxButtons.OK);
                         lbl_SetChofer.Text = lice.ToString();
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("El Chofer no esta disponible.", "Error", MessageBoxButtons.OK);
+                    //MessageBox.Show("El Chofer no esta disponible.", "Error", MessageBoxButtons.OK);
                 }
                 dgv_Chofer.Visible = false;
             }
@@ -440,13 +485,15 @@ namespace SistemaFletesAcarreoB
         private void btn_Calcular_Click(object sender, EventArgs e)
         {
             int TotalVentas = (Int32.Parse(dgv_Venta.Rows.Count.ToString()));
-            int Columnas = (Int32.Parse(dgv_Venta.Columns.Count.ToString())); ;;
-            float SumMat = 0, SumMat1 = 0, SumMat2 = 1, SumKilo = 0, SumKilo1 = 1, SumKilo2 = 1, SumKilo3 = 0, Total=0;
+            int Columnas = (Int32.Parse(dgv_Venta.Columns.Count.ToString())); ; ;
+            float SumMat = 0, SumMat1 = 0, SumMat2 = 1, SumKilo = 0, SumKilo1 = 1, SumKilo2 = 1, SumKilo3 = 0, Total = 0;
             int xd = Int32.Parse(dgv_Material.Rows.Count.ToString());
             int control = 0;
+            int filaval = 0;
+            int contsel = 0;
             int cd = 0;
             Validar validar = new Validar();
-            for (int i = 0; i < TotalVentas-1; i++)
+            for (int i = 0; i < TotalVentas - 1; i++)
             {
                 try
                 {
@@ -464,7 +511,7 @@ namespace SistemaFletesAcarreoB
                     }
                     else if (lbl_SetChofer.Text.ToString() == "------")
                     {
-                        MessageBox.Show("No hay Chofer seleccionado en la fila " + i + 1 + ".", "Error", MessageBoxButtons.OK);
+                        MessageBox.Show("No hay Chofer seleccionado.", "Error", MessageBoxButtons.OK);
                         dgv_Venta.AllowUserToAddRows = false;
                         control = 1;
                     }
@@ -473,8 +520,10 @@ namespace SistemaFletesAcarreoB
                         dgv_Venta.Rows[i].Cells[7].Value == null)
                     {
                         control = 1;
-                    }else {
-                        string letras = dgv_Venta.Rows[i].Cells[5].Value.ToString()+ dgv_Venta.Rows[i].Cells[6].Value.ToString()+ dgv_Venta.Rows[i].Cells[7].Value.ToString();
+                    }
+                    else
+                    {
+                        string letras = dgv_Venta.Rows[i].Cells[5].Value.ToString() + dgv_Venta.Rows[i].Cells[6].Value.ToString() + dgv_Venta.Rows[i].Cells[7].Value.ToString();
                         for (int x = 0; x < letras.Length; x++)
                         {
                             if (Char.IsLetter(letras[x]))
@@ -483,60 +532,85 @@ namespace SistemaFletesAcarreoB
                             }
                         }
                     }
-                    if (control != 2 || control != 1)
+                    if (dgv_Venta.Rows[i].Cells[5].Value != null &&
+                        dgv_Venta.Rows[i].Cells[6].Value != null &&
+                        dgv_Venta.Rows[i].Cells[7].Value != null)
                     {
-                        if (validar.ValidarNum(dgv_Venta.Rows[i].Cells[5].Value.ToString()) == true &&
-                            validar.ValidarNum(dgv_Venta.Rows[i].Cells[6].Value.ToString()) == true &&
-                            validar.ValidarNum(dgv_Venta.Rows[i].Cells[7].Value.ToString()) == true)
+                        if (control != 2 || control != 1)
                         {
-                            if (dgv_Venta.Rows[i].Cells[3].Value != null || dgv_Venta.Rows[i].Cells[1].Value != null)
+                            if (validar.ValidarNum(dgv_Venta.Rows[i].Cells[5].Value.ToString(), "total de metros del material") == true &&
+                                validar.ValidarNum(dgv_Venta.Rows[i].Cells[6].Value.ToString(), "total de viajes") == true &&
+                                validar.ValidarNum(dgv_Venta.Rows[i].Cells[7].Value.ToString(), "total de kilometros recorridos por viaje") == true)
                             {
-                                for (int x = 0; x < Columnas - 1; x++)
+                                if (dgv_Venta.Rows[i].Cells[3].Value != null || dgv_Venta.Rows[i].Cells[1].Value != null)
                                 {
-                                    if (x == 3)
+                                    for (int x = 0; x < Columnas - 1; x++)
                                     {
-                                        SumMat1 = float.Parse(dgv_Venta.Rows[i].Cells[3].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                                        if (dgv_Venta.Rows[i].Cells[5].Value == null)
+                                        if (x == 3)
                                         {
-                                            control = 2;
+                                            if (dgv_Venta.Rows[i].Cells[3].Value != null && dgv_Venta.Rows[i].Cells[5].Value != null)
+                                            {
+                                                SumMat1 = float.Parse(dgv_Venta.Rows[i].Cells[3].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+                                                if (dgv_Venta.Rows[i].Cells[5].Value == null)
+                                                {
+                                                    control = 2;
+                                                }
+                                                else
+                                                {
+                                                    SumMat2 = float.Parse(dgv_Venta.Rows[i].Cells[5].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+                                                }
+                                                SumMat = SumMat1 * SumMat2;
+                                            }
+                                            else
+                                            {
+                                                contsel = 1;
+                                            }
                                         }
-                                        else
+                                        else if (x == 6 || x == 7 || x == 8)
                                         {
-                                            SumMat2 = float.Parse(dgv_Venta.Rows[i].Cells[5].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+                                            if (dgv_Venta.Rows[i].Cells[6].Value != null &&
+                                                dgv_Venta.Rows[i].Cells[7].Value != null &&
+                                                dgv_Venta.Rows[i].Cells[8].Value != null)
+                                            {
+                                                if (dgv_Venta.Rows[i].Cells[6].Value == null ||
+                                                dgv_Venta.Rows[i].Cells[7].Value == null)
+                                                {
+                                                    control = 2;
+                                                }
+                                                else
+                                                {
+                                                    SumKilo1 = float.Parse(dgv_Venta.Rows[i].Cells[6].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+                                                    SumKilo2 = float.Parse(dgv_Venta.Rows[i].Cells[7].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+                                                }
+                                                SumKilo3 = float.Parse(dgv_Venta.Rows[i].Cells[8].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
+                                                SumKilo = SumKilo1 * SumKilo2 * SumKilo3;
+                                            }
+                                            else
+                                            {
+                                                contsel = 1;
+                                            }
+
                                         }
-                                        SumMat = SumMat1 * SumMat2;
                                     }
-                                    else if (x == 6 || x == 7 || x == 8)
-                                    {
-                                        if (dgv_Venta.Rows[i].Cells[6].Value == null ||
-                                            dgv_Venta.Rows[i].Cells[7].Value == null)
-                                        {
-                                            control = 2;
-                                        }
-                                        else
-                                        {
-                                            SumKilo1 = float.Parse(dgv_Venta.Rows[i].Cells[6].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                                            SumKilo2 = float.Parse(dgv_Venta.Rows[i].Cells[7].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                                        }
-                                        SumKilo3 = float.Parse(dgv_Venta.Rows[i].Cells[8].Value.ToString(), System.Globalization.CultureInfo.InvariantCulture);
-                                        SumKilo = SumKilo1 * SumKilo2 * SumKilo3;
-                                    }
+                                    Total = Total + SumMat + SumKilo;
                                 }
-                                Total = Total + SumMat + SumKilo;
                             }
                         }
-
-
+                        else
+                        {
+                            control = 2;
+                        }
                     }
                     else
                     {
                         control = 2;
+                        filaval = i;
                     }
-                    
+
                 }
                 catch (Exception ex)
                 {
-                    if(control == 2)
+                    if (control == 2)
                     {
                         MessageBox.Show("Hay valores con formato incorrecto", "Error", MessageBoxButtons.OK);
                         cd = 1;
@@ -544,11 +618,13 @@ namespace SistemaFletesAcarreoB
                     }
                 }
             }
+
+
             float SumaIva = float.Parse((Total * .16).ToString());
             lbl_SetIVA.Text = (Math.Round(SumaIva, 2)).ToString();
             lbl_SetSubtotal.Text = (Math.Round(Total, 2).ToString());
             float Total2 = Total + SumaIva;
-            lbl_SetTotal.Text = (Math.Round(Total, 2).ToString());
+            lbl_SetTotal.Text = (Math.Round(Total2, 2).ToString());
             int controlcapacidad = 0;
             if (cd != 1)
             {
@@ -557,19 +633,41 @@ namespace SistemaFletesAcarreoB
                 SumKilo == 0 || SumKilo1 == 1 || SumKilo2 == 1 ||
                 SumKilo3 == 0 || Total == 0)
                 {
-                    MessageBox.Show("Hay valores vacios.", "Error", MessageBoxButtons.OK);
-                    btn_Aceptar.Visible = false;
-                }else
-                {
-                    for (int i = 0; i < Int32.Parse(dgv_Venta.Rows.Count.ToString())-1 ; i++)
+
+                    if (dgv_Venta.Rows[filaval].Cells[5].Value == null)
                     {
-                        for (int x = 0; x < Int32.Parse(dgv_Venta.Columns.Count.ToString()); x++)
+                        MessageBox.Show("El campo Total de Metros del material esta vacio en la fila " + filaval + 1 + ".", "Error", MessageBoxButtons.OK);
+                    }
+                    else if (dgv_Venta.Rows[filaval].Cells[6].Value == null)
+                    {
+                        MessageBox.Show("El campo Total de Viajes del material esta vacio en la fila " + filaval + 1 + ".", "Error", MessageBoxButtons.OK);
+                    }
+                    else if (dgv_Venta.Rows[filaval].Cells[7].Value == null)
+                    {
+                        MessageBox.Show("El campo Total de Kilometros recorridos del material esta vacio en la fila " + filaval + 1 + ".", "Error", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        if (contsel != 1)
                         {
-                            if (float.Parse(dgv_Venta.Rows[i].Cells[5].Value.ToString()) > float.Parse(dgv_Venta.Rows[i].Cells[10].Value.ToString()))
+                            MessageBox.Show("Hay valores vacios.", "Error", MessageBoxButtons.OK);
+                        }
+                    }
+                    btn_Aceptar.Visible = false;
+                }
+                else
+                {
+                    for (int Fila = 0; Fila < Int32.Parse(dgv_Venta.Rows.Count.ToString()) - 1; Fila++)
+                    {
+                        float metros_Material = float.Parse(dgv_Venta.Rows[Fila].Cells[5].Value.ToString());
+                        float metros_Auto = float.Parse(dgv_Venta.Rows[Fila].Cells[10].Value.ToString());
+                        for (int Columna = 0; Columna < Int32.Parse(dgv_Venta.Columns.Count.ToString()); Columna++)
+                        {
+                            if (metros_Material > metros_Auto)
                             {
-                                MessageBox.Show("La cantidad de metros cubicos del material en la fila "+(i+1)+" sobrepasa la capacidad del auto seleccionado.", "Error", MessageBoxButtons.OK);
+                                MessageBox.Show("La cantidad de metros cubicos del material en la fila " + (Fila + 1) + " sobrepasa la capacidad del auto seleccionado.", "Error", MessageBoxButtons.OK);
                                 controlcapacidad = 1;
-                                x = Int32.Parse(dgv_Venta.Columns.Count.ToString());
+                                Columna = Int32.Parse(dgv_Venta.Columns.Count.ToString());
                                 btn_Aceptar.Visible = false;
                             }
                         }
@@ -580,11 +678,12 @@ namespace SistemaFletesAcarreoB
                         {
                             btn_Aceptar.Visible = true;
                         }
+                        btn_Aceptar.Visible = true;
                     }
-                    
+
                 }
             }
-            
+
         }
 
         private void dgv_Venta_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -605,3 +704,4 @@ namespace SistemaFletesAcarreoB
         }
     }
 }
+

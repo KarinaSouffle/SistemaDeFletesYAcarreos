@@ -37,7 +37,7 @@ namespace SistemaFletesAcarreoB.Vista
             {
                 if (txt_Contraseña.Text == txt_CContraseña.Text)
                 {
-                    if (validar.ValidatePassword(txt_Contraseña.Text) == true && validar.ValidarNombre(txt_Nombre.Text) == true)
+                    if (validar.ValidatePassword(txt_Contraseña.Text) == true && validar.ValidarNombre(txt_Nombre.Text, "nombre de usuario") == true)
                     {
                         try
                         {
@@ -61,7 +61,7 @@ namespace SistemaFletesAcarreoB.Vista
                             ControladorUsuario.crearUsuario(nuevoUsuario);
 
                             int cantidaddatos = Int32.Parse(dgv_Usuarios.Rows.Count.ToString());
-                            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet18.USUARIOS);
+                            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.USUARIOS);
                             int cantidadnuevosautos = Int32.Parse(dgv_Usuarios.Rows.Count.ToString());
                             if (cantidadnuevosautos == (cantidaddatos + 1))
                             {
@@ -75,7 +75,7 @@ namespace SistemaFletesAcarreoB.Vista
                                     txt_Nombre.Text = string.Empty;
                                     txt_Contraseña.Text = string.Empty;
                                     txt_CContraseña.Text = string.Empty;
-                                    this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet18.USUARIOS);
+                                    this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.USUARIOS);
                                 }
                                 else
                                 {
@@ -104,8 +104,8 @@ namespace SistemaFletesAcarreoB.Vista
 
         private void RegistroUsuarioAdmi_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet18.USUARIOS' Puede moverla o quitarla según sea necesario.
-            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet18.USUARIOS);
+            // TODO: esta línea de código carga datos en la tabla 'sISTEMAFLETESACARREOSDataSet.USUARIOS' Puede moverla o quitarla según sea necesario.
+            this.uSUARIOSTableAdapter.Fill(this.sISTEMAFLETESACARREOSDataSet.USUARIOS);
 
         }
 

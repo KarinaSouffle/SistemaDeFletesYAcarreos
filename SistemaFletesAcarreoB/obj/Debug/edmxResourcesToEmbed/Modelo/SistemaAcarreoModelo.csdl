@@ -5,9 +5,9 @@
       <PropertyRef Name="Id_Autos" />
     </Key>
     <Property Name="Id_Autos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Num_Placas" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Kilometraje" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Num_Placas" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Marca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Kilometraje" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
     <Property Name="Cap_A" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Disponible" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
   </EntityType>
@@ -23,7 +23,7 @@
     <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="Edad" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="F_Nac" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Direccion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Disponible" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
@@ -43,7 +43,7 @@
     <Property Name="Subtotal" Type="Double" Nullable="false" />
     <Property Name="IVA" Type="Double" Nullable="false" />
     <Property Name="Total" Type="Double" Nullable="false" />
-    <Property Name="Fact_material" Type="Int32" Nullable="false" />
+    <Property Name="Fact_material" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Fact_licencia" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Fact_placas" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Fact_Kilometro" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
@@ -71,7 +71,7 @@
     <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Contra" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Nivel" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="EnUso" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="EnUso" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
   </EntityType>
   <EntityContainer Name="SISTEMAFLETESACARREOSEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AUTOS" EntityType="Self.AUTOS" />
