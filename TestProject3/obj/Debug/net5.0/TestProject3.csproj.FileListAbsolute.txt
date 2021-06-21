@@ -1,0 +1,5 @@
+C:\Users\jovni\Desktop\SistemaFletesAcarreoB3\SistemaFletesAcarreoB\TestProject3\obj\Debug\net5.0\TestProject3.csproj.AssemblyReference.cache
+C:\Users\jovni\Desktop\SistemaFletesAcarreoB3\SistemaFletesAcarreoB\TestProject3\obj\Debug\net5.0\TestProject3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jovni\Desktop\SistemaFletesAcarreoB3\SistemaFletesAcarreoB\TestProject3\obj\Debug\net5.0\TestProject3.AssemblyInfoInputs.cache
+C:\Users\jovni\Desktop\SistemaFletesAcarreoB3\SistemaFletesAcarreoB\TestProject3\obj\Debug\net5.0\TestProject3.AssemblyInfo.cs
+C:\Users\jovni\Desktop\SistemaFletesAcarreoB3\SistemaFletesAcarreoB\TestProject3\obj\Debug\net5.0\TestProject3.csproj.CoreCompileInputs.cache
